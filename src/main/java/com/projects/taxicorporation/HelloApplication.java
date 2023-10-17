@@ -1,4 +1,4 @@
-package com.projects.korporacjataxi;
+package com.projects.taxicorporation;
 
 import com.sothawo.mapjfx.*;
 import javafx.application.Application;

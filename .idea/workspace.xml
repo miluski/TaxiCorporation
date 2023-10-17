@@ -52,7 +52,7 @@
 }</component>
   <component name="RunManager">
     <configuration name="Start" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.projects.korporacjataxi.HelloApplication" />
+      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.HelloApplication" />
       <module name="TaxiCorporation" />
       <option name="PROGRAM_PARAMETERS" value="--add-opens java.base/java.net=com.sothawo.mapjfx" />
       <method v="2">

@@ -1,8 +1,7 @@
-package com.projects.korporacjataxi;
+package com.projects.taxicorporation;
 
 import com.sothawo.mapjfx.*;
 import com.sothawo.mapjfx.MapView;
-import com.sothawo.mapjfx.offline.OfflineCache;
 import javafx.fxml.FXML;
 
 public class HelloController {
