@@ -12,6 +12,6 @@ module com.projects.korporacjataxi {
     requires com.sothawo.mapjfx;
     requires org.slf4j;
 
-    opens com.projects.taxicorporation to javafx.fxml, javafx.graphics;
-    exports com.projects.taxicorporation;
+    opens com.projects.taxicorporation.client to javafx.fxml, javafx.graphics;
+    exports com.projects.taxicorporation.client;
 }
