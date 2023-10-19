@@ -9,14 +9,13 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
+    public static Stage mainStage;
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        HelloController controller = fxmlLoader.getController();
-        Projection projection = getParameters().getUnnamed().contains("wgs84")? Projection.WGS_84 : Projection.WEB_MERCATOR;
-        controller.initMapAndControls(projection);
-        stage.setTitle("Test MapJFX");
+        mainStage = stage;
+        FXMLLoader fxmlLoader = new FXMLLoader(com.projects.taxicorporation.HelloApplication.class.getResource("LoginForm.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setTitle("Logowanie");
         stage.setScene(scene);
         stage.show();
     }
