@@ -11,6 +11,8 @@ module com.projects.korporacjataxi {
     requires com.almasb.fxgl.all;
     requires com.sothawo.mapjfx;
     requires org.slf4j;
+    requires java.sql;
+    requires com.oracle.database.jdbc;
 
     opens com.projects.taxicorporation.client to javafx.fxml, javafx.graphics;
     exports com.projects.taxicorporation.client;

@@ -1,6 +1,6 @@
 package com.projects.taxicorporation.server;
 
-public interface Task {
-    void sendRequest();
-    void receiveFeedback();
+public abstract class Task {
+    public abstract void sendRequest();
+    public abstract void returnFeedback(String content);
 }

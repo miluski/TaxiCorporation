@@ -5,18 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb0eaed3-f59a-48d9-8ebf-14003dbc0a88" name="Changes" comment="Initialize">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/TestLogin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/LoginTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/RegisterTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/Form.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/FormFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/LoginForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/LoginFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/LoginFormFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/MainStage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RegisterForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RegisterFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RegisterFormFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/StartForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/LoginTaskFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/RegisterTaskFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/TaskFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Login.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Register.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/LoginForm.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/RegisterForm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/HelloApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/TestLogin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/LoginTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/LoginTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/RegisterTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/RegisterTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/Task.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/hello-view.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +41,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -47,6 +62,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -58,18 +76,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "miluski",
-    "last_opened_file_path": "C:/Users/spryt/Desktop/studia/FormsApp",
-    "settings.editor.selected.configurable": "preferences.JavaFX"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Merging backend-tests&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/spryt/Desktop/studia/FormsApp&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="Application.Start">
     <configuration name="Server" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.server.Server" />
       <module name="TaxiCorporation" />
@@ -78,7 +96,7 @@
       </method>
     </configuration>
     <configuration name="Start" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.HelloApplication" />
+      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.StartForm" />
       <module name="TaxiCorporation" />
       <option name="PROGRAM_PARAMETERS" value="--add-opens java.base/java.net=com.sothawo.mapjfx" />
       <method v="2">
@@ -129,7 +147,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initialize" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initialize" />
+    <MESSAGE value="Factory method + production method templates implemented in Form changing views," />
+    <option name="LAST_COMMIT_MESSAGE" value="Factory method + production method templates implemented in Form changing views," />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

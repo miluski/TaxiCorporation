@@ -34,7 +34,7 @@ public class Server implements Runnable {
     private synchronized void process(Socket clientSocket)  {
         try {
             InputStream inputStream = clientSocket.getInputStream();
-            byte[] messageByteArray = new byte[10];
+            byte[] messageByteArray = new byte[15];
             int count = inputStream.read(messageByteArray);
             String operation = new String(messageByteArray, 0, count, StandardCharsets.UTF_8);
             runOperation(operation);
@@ -44,8 +44,16 @@ public class Server implements Runnable {
     }
     private synchronized void runOperation(String operation) {
         switch (operation) {
-            case "LoginTask" -> executorService.execute(new LoginTask(clientSocket));
-            case "RegisterTask" -> executorService.execute(new RegisterTask(clientSocket));
+            case "LoginTask" -> {
+                TaskFactory taskFactory = new LoginTaskFactory();
+                Task task = taskFactory.createTask(clientSocket);
+                executorService.execute((Runnable) task);
+            }
+            case "RegisterTask" -> {
+                TaskFactory taskFactory = new RegisterTaskFactory();
+                Task task = taskFactory.createTask(clientSocket);
+                executorService.execute((Runnable) task);
+            }
         }
     }
     private synchronized void shutdown() {
