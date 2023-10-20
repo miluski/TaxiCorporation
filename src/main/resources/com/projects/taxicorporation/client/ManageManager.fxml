@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="470.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.taxicorporation.ClientPanelController">
+   <children>
+      <SplitPane dividerPositions="0.32620320855614976" prefHeight="470.0" prefWidth="750.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="58.0" layoutY="32.0" text="Panel Admina">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="12.0" layoutY="234.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Zarządzaj menadżerami" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="12.0" layoutY="189.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Dodaj menadżera" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="14.0" layoutY="323.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Mapa kierowcy" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="14.0" layoutY="279.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Zarzadzaj oddziałami" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="12.0" layoutY="419.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(134,134,134);" text="Wyloguj" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="542.0">
+               <children>
+                  <Label layoutX="117.0" layoutY="27.0" text="Zarządzaj menadżerami">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="251.0" layoutY="121.0" text="Przypisz Menadżera do oddziału">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="37.0" layoutY="121.0" text="Wybierz Menadżera z listy">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="118.0" layoutY="398.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="266.0" style="-fx-background-color: rgb(211,20,20);" text="Przydziel" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
