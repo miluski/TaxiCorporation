@@ -30,7 +30,7 @@
                         <Font name="System Bold" size="16.0" />
                      </font>
                   </Button>
-                  <Button layoutX="13.0" layoutY="251.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Usuń oddział" textFill="WHITE">
+                  <Button layoutX="13.0" layoutY="251.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Zarzadzaj oddziałami" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
@@ -45,11 +45,12 @@
                         <Font name="System Bold" size="16.0" />
                      </font>
                   </Button>
-                  <Button layoutX="14.0" layoutY="296.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Dodaj samochód" textFill="WHITE">
+                  <Button layoutX="14.0" layoutY="297.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Dodaj samochód" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="16.0" />
-                     </font></Button>
-                  <Button layoutX="14.0" layoutY="340.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Usuń samochód" textFill="WHITE">
+                     </font>
+                  </Button>
+                  <Button layoutX="14.0" layoutY="344.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Usuń samochód" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
@@ -57,46 +58,17 @@
                </children></AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="542.0">
                <children>
-                  <Label layoutX="101.0" layoutY="27.0" text="Uzupełnij dane menadżera">
+                  <Label layoutX="117.0" layoutY="27.0" text="Usuń konto menadżera ">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                  <ChoiceBox layoutX="294.0" layoutY="163.0" prefWidth="150.0" />
-                  <Label layoutX="294.0" layoutY="214.0" text="Numer telefonu">
+                  <ChoiceBox layoutX="105.0" layoutY="150.0" prefHeight="35.0" prefWidth="266.0" />
+                  <Label layoutX="105.0" layoutY="123.0" prefHeight="20.0" prefWidth="266.0" text="Wybierz menadżera z listy">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
-                  <TextField layoutX="64.0" layoutY="234.0" />
-                  <Label layoutX="294.0" layoutY="288.0" text="Hasło">
-                     <font>
-                        <Font size="14.0" />
-                     </font></Label>
-                  <TextField layoutX="64.0" layoutY="163.0" />
-                  <Label layoutX="64.0" layoutY="214.0" text="Nazwisko">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <TextField layoutX="294.0" layoutY="308.0" />
-                  <Label layoutX="294.0" layoutY="143.0" text="Oddział">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <TextField layoutX="294.0" layoutY="234.0" />
-                  <Label layoutX="64.0" layoutY="143.0" text="Imię">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="64.0" layoutY="288.0" text="Login">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <TextField layoutX="64.0" layoutY="308.0" />
-                  <Button layoutX="118.0" layoutY="398.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="266.0" style="-fx-background-color: rgb(211,20,20);" text="Dodaj " textFill="WHITE">
+                  <Button layoutX="118.0" layoutY="398.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="266.0" style="-fx-background-color: rgb(211,20,20);" text="Usuń wybranego menadżera" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
