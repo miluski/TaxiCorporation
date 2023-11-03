@@ -2,7 +2,6 @@ module com.projects.korporacjataxi {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
-    requires javafx.graphics;
 
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
@@ -12,7 +11,9 @@ module com.projects.korporacjataxi {
     requires com.almasb.fxgl.all;
     requires com.sothawo.mapjfx;
     requires org.slf4j;
+    requires java.sql;
+    requires com.oracle.database.jdbc;
 
-    opens com.projects.taxicorporation;
-    exports com.projects.taxicorporation;
+    opens com.projects.taxicorporation.client to javafx.fxml, javafx.graphics;
+    exports com.projects.taxicorporation.client;
 }
