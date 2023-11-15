@@ -29,7 +29,7 @@ public class DataBase {
         if (!validateLoginData()) {
             try {
                 String query = "INSERT INTO users (id_user, username, password, email, name, id_user_role) " +
-                        "VALUES(users_seq.nextval, ?, ?, ?, ?, 1)";
+                        "VALUES(users_seq.nextval, ?, ?, ?, ?, 6)";
                 PreparedStatement preparedStatement = connect.prepareStatement(query);
                 preparedStatement.setString(1, data.get(0));
                 preparedStatement.setString(2, data.get(1));

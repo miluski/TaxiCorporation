@@ -26,13 +26,13 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="28.0" layoutY="172.0" text="Hasło">
+                  <Label layoutX="29.0" layoutY="119.0" text="Login">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
                   <TextField fx:id="loginTextField" layoutX="81.0" layoutY="120.0" prefHeight="25.0" prefWidth="205.0" />
-                  <Label layoutX="29.0" layoutY="119.0" text="Login">
+                  <Label layoutX="28.0" layoutY="172.0" text="Hasło">
                      <font>
                         <Font size="18.0" />
                      </font>
