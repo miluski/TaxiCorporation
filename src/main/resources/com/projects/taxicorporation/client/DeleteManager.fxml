@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="470.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.taxicorporation.ClientPanelController">
+<AnchorPane prefHeight="470.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.taxicorporation.client.DeleteMenagerController">
    <children>
       <SplitPane dividerPositions="0.32620320855614976" prefHeight="470.0" prefWidth="750.0">
         <items>
@@ -15,42 +15,42 @@
                         <Font name="Arial Bold" size="19.0" />
                      </font>
                   </Label>
-                  <Button layoutX="14.0" layoutY="163.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Zarządzaj menadżerami" textFill="WHITE">
+                  <Button layoutX="14.0" layoutY="74.0" mnemonicParsing="false" onMouseClicked="#onAddManagerButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Dodaj menadżera" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
                   </Button>
-                  <Button layoutX="14.0" layoutY="74.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Dodaj menadżera" textFill="WHITE">
+                  <Button layoutX="14.0" layoutY="120.0" mnemonicParsing="false" onMouseClicked="#onDeleteMenagerButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Usuń menadżera" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
                   </Button>
-                  <Button layoutX="14.0" layoutY="207.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Dodaj oddział" textFill="WHITE">
+                  <Button layoutX="14.0" layoutY="163.0" mnemonicParsing="false" onMouseClicked="#onManageManagersButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Zarządzaj menadżerami" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
                   </Button>
-                  <Button layoutX="13.0" layoutY="251.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Zarzadzaj oddziałami" textFill="WHITE">
+                  <Button layoutX="14.0" layoutY="207.0" mnemonicParsing="false" onMouseClicked="#onAddDepartmentButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Dodaj oddział" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
                   </Button>
-                  <Button layoutX="12.0" layoutY="419.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(134,134,134);" text="Wyloguj" textFill="WHITE">
+                  <Button layoutX="13.0" layoutY="251.0" mnemonicParsing="false" onMouseClicked="#onMenageDepartmentsButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Zarzadzaj oddziałami" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
                   </Button>
-                  <Button layoutX="14.0" layoutY="120.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Usuń menadżera" textFill="WHITE">
+                  <Button layoutX="14.0" layoutY="297.0" mnemonicParsing="false" onMouseClicked="#onAddCarButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Dodaj samochód" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
                   </Button>
-                  <Button layoutX="14.0" layoutY="297.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Dodaj samochód" textFill="WHITE">
+                  <Button layoutX="14.0" layoutY="344.0" mnemonicParsing="false" onMouseClicked="#onDeleteCarButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Usuń samochód" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
                   </Button>
-                  <Button layoutX="14.0" layoutY="344.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Usuń samochód" textFill="WHITE">
+                  <Button layoutX="12.0" layoutY="419.0" mnemonicParsing="false" onMouseClicked="#onLogoutButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(134,134,134);" text="Wyloguj" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
@@ -63,12 +63,12 @@
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                  <ChoiceBox layoutX="105.0" layoutY="150.0" prefHeight="35.0" prefWidth="266.0" />
                   <Label layoutX="105.0" layoutY="123.0" prefHeight="20.0" prefWidth="266.0" text="Wybierz menadżera z listy">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
-                  <Button layoutX="118.0" layoutY="398.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="266.0" style="-fx-background-color: rgb(211,20,20);" text="Usuń wybranego menadżera" textFill="WHITE">
+                  <ChoiceBox fx:id="chooseManagerChoiceBox" layoutX="105.0" layoutY="150.0" prefHeight="35.0" prefWidth="266.0" />
+                  <Button layoutX="118.0" layoutY="398.0" mnemonicParsing="false" onMouseClicked="#onEndDeleteMenagerButtonClicked" prefHeight="39.0" prefWidth="266.0" style="-fx-background-color: rgb(211,20,20);" text="Usuń wybranego menadżera" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>

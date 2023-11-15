@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="470.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.taxicorporation.ClientPanelController">
+<AnchorPane prefHeight="470.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.taxicorporation.client.DriverPanelController">
    <children>
       <SplitPane dividerPositions="0.2862903225806452" prefHeight="470.0" prefWidth="750.0">
         <items>
@@ -15,17 +15,17 @@
                         <Font name="Arial Bold" size="19.0" />
                      </font>
                   </Label>
-                  <Button layoutX="12.0" layoutY="234.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" style="-fx-background-color: rgb(211,20,20);" text="Mapa" textFill="WHITE">
+                  <Button layoutX="12.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#onMyJobsButtonClicked" prefHeight="35.0" prefWidth="180.0" style="-fx-background-color: rgb(211,20,20);" text="Moje zlecenia" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
                   </Button>
-                  <Button layoutX="12.0" layoutY="189.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" style="-fx-background-color: rgb(211,20,20);" text="Moje zlecenia" textFill="WHITE">
+                  <Button layoutX="12.0" layoutY="234.0" mnemonicParsing="false" onMouseClicked="#onMapButtonClicked" prefHeight="35.0" prefWidth="180.0" style="-fx-background-color: rgb(211,20,20);" text="Mapa" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
                   </Button>
-                  <Button layoutX="12.0" layoutY="419.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" style="-fx-background-color: rgb(134,134,134);" text="Wyloguj" textFill="WHITE">
+                  <Button layoutX="12.0" layoutY="419.0" mnemonicParsing="false" onMouseClicked="#onLogoutButtonClicked" prefHeight="35.0" prefWidth="180.0" style="-fx-background-color: rgb(134,134,134);" text="Wyloguj" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
@@ -38,7 +38,7 @@
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                  <Button layoutX="133.0" layoutY="405.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="266.0" style="-fx-background-color: rgb(211,20,20);" text="Przyjmij zlecenie" textFill="WHITE">
+                  <Button layoutX="133.0" layoutY="405.0" mnemonicParsing="false" onMouseClicked="#onAcceptJobButtonClicked" prefHeight="39.0" prefWidth="266.0" style="-fx-background-color: rgb(211,20,20);" text="Przyjmij zlecenie" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
