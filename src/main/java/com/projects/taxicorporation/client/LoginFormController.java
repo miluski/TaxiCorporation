@@ -26,15 +26,15 @@ public class LoginFormController {
     }
     private boolean validateData() {
         if(loginTextField.getText().isEmpty()) {
-            showAlert("Nie wprowadzono loginu!", AlertType.ERROR);
+            AlertDialog.getInstance().setParametersAndShow("Nie wprowadzono loginu!", AlertType.ERROR);
             return false;
         }
         if(passwordTextField.getText().isEmpty()) {
-            showAlert("Nie wprowadzono hasła!", AlertType.ERROR);
+            AlertDialog.getInstance().setParametersAndShow("Nie wprowadzono hasła!", AlertType.ERROR);
             return false;
         }
         else if(!validatePassword()) {
-            showAlert("Wprowadzone hasło jest nieprawidłowe!", AlertType.ERROR);
+            AlertDialog.getInstance().setParametersAndShow("Wprowadzone hasło jest nieprawidłowe!", AlertType.ERROR);
             return false;
         }
         return true;
@@ -42,12 +42,6 @@ public class LoginFormController {
     private boolean validatePassword() {
         String password = passwordTextField.getText();
         return password.length() >= 9 && passPattern.matcher(password).matches();
-    }
-    private void showAlert(String message, AlertType alertType) {
-        Alert alert = new Alert(alertType);
-        alert.setTitle("Informacja");
-        alert.setHeaderText(message);
-        alert.showAndWait();
     }
     private void communicateWithServer() {
         try(Socket socket = new Socket("localhost", 1523)) {
@@ -84,12 +78,12 @@ public class LoginFormController {
         int count = inputStream.read(messageByteArray);
         String feedback = new String(messageByteArray, 0, count, StandardCharsets.UTF_8);
         if(feedback.equals("Success"))
-            showAlert("Pomyślnie zalogowano!", AlertType.INFORMATION);
+            AlertDialog.getInstance().setParametersAndShow("Pomyślnie zalogowano!", AlertType.INFORMATION);
         //TODO: Po sukcesie utworzenie z pomocą fabryki abstrakcyjnej formularza (panelu) odpowiedniego użytkownikowi
         //TODO: Aktualizacja rzeczy zwracanych z bazy - trzeba zwrócić rangę
         else if(feedback.equals("Error"))
-            showAlert("Wprowadzono nieprawidłowe dane!", AlertType.ERROR);
+            AlertDialog.getInstance().setParametersAndShow("Wprowadzono nieprawidłowe dane!", AlertType.ERROR);
         else
-            showAlert("Wystąpił nieoczekiwany błąd!", AlertType.ERROR);
+            AlertDialog.getInstance().setParametersAndShow("Wystąpił nieoczekiwany błąd!", AlertType.ERROR);
     }
 }

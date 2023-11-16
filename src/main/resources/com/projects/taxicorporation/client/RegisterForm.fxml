@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
@@ -50,11 +51,17 @@
                   <Button layoutX="58.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#onRegisterButtonClicked" prefHeight="38.0" prefWidth="110.0" style="-fx-background-color: rgb(211,20,20);" text="Zarejestruj" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
-                     </font></Button>
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
                   <Button layoutX="202.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#onReturnButtonClicked" prefHeight="38.0" prefWidth="110.0" style="-fx-background-color: rgb(134,134,134);" text="Powrót" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
-                     </font></Button>
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
                </children></AnchorPane>
         </items>
       </SplitPane>

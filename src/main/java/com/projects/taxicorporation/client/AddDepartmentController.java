@@ -1,35 +1,33 @@
 package com.projects.taxicorporation.client;
 
-import javafx.scene.input.MouseEvent;
-
 public class AddDepartmentController {
-    public void onAddMenagerButtonClicked(MouseEvent mouseEvent) {
+    public void onAddMenagerButtonClicked() {
     }
 
-    public void onDeleteMenagerButtonClicked(MouseEvent mouseEvent) {
+    public void onDeleteMenagerButtonClicked() {
     }
 
-    public void onMenageMenagersButtonClicked(MouseEvent mouseEvent) {
+    public void onMenageMenagersButtonClicked() {
     }
 
-    public void onAddDepartmentButtonClicked(MouseEvent mouseEvent) {
+    public void onAddDepartmentButtonClicked() {
     }
 
-    public void onMenageDepartmentsButtonClicked(MouseEvent mouseEvent) {
+    public void onMenageDepartmentsButtonClicked() {
     }
 
-    public void onAddCarButtonClicked(MouseEvent mouseEvent) {
+    public void onAddCarButtonClicked() {
     }
 
-    public void onDeleteCarButtonClicked(MouseEvent mouseEvent) {
+    public void onDeleteCarButtonClicked() {
     }
 
-    public void onLogoutButtonClicked(MouseEvent mouseEvent) {
+    public void onLogoutButtonClicked() {
     }
 
-    public void onEndAddDepartmentButtonClicked(MouseEvent mouseEvent) {
+    public void onEndAddDepartmentButtonClicked() {
     }
 
-    public void onEditOrDeleteDepartmentButtonClicked(MouseEvent mouseEvent) {
+    public void onEditOrDeleteDepartmentButtonClicked() {
     }
 }
