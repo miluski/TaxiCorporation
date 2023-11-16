@@ -1,23 +1,21 @@
 package com.projects.taxicorporation.client;
 
-import javafx.scene.input.MouseEvent;
-
 public class AddDriverController {
-    public void onAddDriverButtonClicked(MouseEvent mouseEvent) {
+    public void onAddDriverButtonClicked() {
     }
 
-    public void onHireDriverButtonClicked(MouseEvent mouseEvent) {
+    public void onHireDriverButtonClicked() {
     }
 
-    public void onManageDriversButtonClicked(MouseEvent mouseEvent) {
+    public void onManageDriversButtonClicked() {
     }
 
-    public void onMapButtonClicked(MouseEvent mouseEvent) {
+    public void onMapButtonClicked() {
     }
 
-    public void onLogoutButtonClicked(MouseEvent mouseEvent) {
+    public void onLogoutButtonClicked() {
     }
 
-    public void onEndDriverAddButton(MouseEvent mouseEvent) {
+    public void onEndDriverAddButton() {
     }
 }

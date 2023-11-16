@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
@@ -15,30 +16,42 @@
                         <Font name="Arial Bold" size="19.0" />
                      </font>
                   </Label>
-                  <Button layoutX="12.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#onAddManagerButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Dodaj menadżera" textFill="WHITE">
+                  <Button layoutX="12.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#onAddManagerButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(246,162,162);" text="Dodaj menadżera" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button layoutX="12.0" layoutY="234.0" mnemonicParsing="false" onMouseClicked="#onManageManagersButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Zarządzaj menadżerami" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
                   </Button>
-                  <Button layoutX="14.0" layoutY="279.0" mnemonicParsing="false" onMouseClicked="#onManageDepartmentsButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Zarzadzaj oddziałami" textFill="WHITE">
+                  <Button layoutX="14.0" layoutY="279.0" mnemonicParsing="false" onMouseClicked="#onManageDepartmentsButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(246,162,162);" text="Zarzadzaj oddziałami" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
-                  <Button layoutX="14.0" layoutY="323.0" mnemonicParsing="false" onMouseClicked="#onDriverMapButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Mapa kierowcy" textFill="WHITE">
+                  <Button layoutX="14.0" layoutY="323.0" mnemonicParsing="false" onMouseClicked="#onDriverMapButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(246,162,162);" text="Mapa kierowcy" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button layoutX="12.0" layoutY="419.0" mnemonicParsing="false" onMouseClicked="#onLogoutButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(134,134,134);" text="Wyloguj" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                </children></AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="542.0">
@@ -62,6 +75,9 @@
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                </children></AnchorPane>
         </items>

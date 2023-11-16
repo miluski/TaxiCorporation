@@ -28,7 +28,7 @@ public class LoginTask extends Task implements Runnable {
     public void sendRequest() {
         try {
             DataBase dataBase = new DataBase(data);
-            boolean isLoggedIn = dataBase.validateLoginData();
+            boolean isLoggedIn = dataBase.execute(new LoginCommand());
             dataBase.closeConnect();
             if (isLoggedIn)
                 returnFeedback("Success");

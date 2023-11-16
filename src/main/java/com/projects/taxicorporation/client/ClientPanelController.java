@@ -1,17 +1,15 @@
 package com.projects.taxicorporation.client;
 
-import javafx.scene.input.MouseEvent;
-
 public class ClientPanelController {
-    public void onFindRouteButtonClicked(MouseEvent mouseEvent) {
+    public void onFindRouteButtonClicked() {
     }
 
-    public void onMapButtonClicked(MouseEvent mouseEvent) {
+    public void onMapButtonClicked() {
     }
 
-    public void onLogoutButtonClicked(MouseEvent mouseEvent) {
+    public void onLogoutButtonClicked() {
     }
 
-    public void onEndSearchButtonClicked(MouseEvent mouseEvent) {
+    public void onEndSearchButtonClicked() {
     }
 }

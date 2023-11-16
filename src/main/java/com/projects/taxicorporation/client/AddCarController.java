@@ -35,7 +35,7 @@ public class AddCarController {
             //TODO baza danych
         }
         else
-            showAlert("Wprowadzone dane są nieprawidłowe!", Alert.AlertType.ERROR);
+            AlertDialog.getInstance().setParametersAndShow("Wprowadzone dane są nieprawidłowe!", Alert.AlertType.ERROR);
     }
     private boolean validateCarModel() {
         String carModel = carModelField.getText();
@@ -53,11 +53,5 @@ public class AddCarController {
             isValid = false;
         }
         return isValid;
-    }
-    private void showAlert(String message, Alert.AlertType alertType) {
-        Alert alert = new Alert(alertType);
-        alert.setTitle("Informacja");
-        alert.setHeaderText(message);
-        alert.showAndWait();
     }
 }

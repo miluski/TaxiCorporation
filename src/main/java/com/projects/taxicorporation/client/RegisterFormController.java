@@ -29,32 +29,26 @@ public class RegisterFormController {
     }
     private boolean validateData() {
         if(nameTextField.getText().isEmpty()) {
-            showAlert("Nie wprowadzono imienia!", Alert.AlertType.ERROR);
+            AlertDialog.getInstance().setParametersAndShow("Nie wprowadzono imienia!", Alert.AlertType.ERROR);
             return false;
         }
         if(emailTextField.getText().isEmpty()) {
-            showAlert("Nie wprowadzono adresu email!", Alert.AlertType.ERROR);
+            AlertDialog.getInstance().setParametersAndShow("Nie wprowadzono adresu email!", Alert.AlertType.ERROR);
             return false;
         }
         if(userNameTextField.getText().isEmpty()) {
-            showAlert("Nie wprowadzono loginu!", Alert.AlertType.ERROR);
+            AlertDialog.getInstance().setParametersAndShow("Nie wprowadzono loginu!", Alert.AlertType.ERROR);
             return false;
         }
         if(passwordTextField.getText().isEmpty()) {
-            showAlert("Nie wprowadzono hasła!", Alert.AlertType.ERROR);
+            AlertDialog.getInstance().setParametersAndShow("Nie wprowadzono hasła!", Alert.AlertType.ERROR);
             return false;
         }
         else if(!validatePassword()) {
-            showAlert("Wprowadzone hasło nie spełnia wymogów bezpieczeństwa!", Alert.AlertType.ERROR);
+            AlertDialog.getInstance().setParametersAndShow("Wprowadzone hasło nie spełnia wymogów bezpieczeństwa!", Alert.AlertType.ERROR);
             return false;
         }
         return true;
-    }
-    private void showAlert(String message, Alert.AlertType alertType) {
-        Alert alert = new Alert(alertType);
-        alert.setTitle("Informacja");
-        alert.setHeaderText(message);
-        alert.showAndWait();
     }
     private boolean validatePassword() {
         String password = passwordTextField.getText();
@@ -97,10 +91,10 @@ public class RegisterFormController {
         int count = inputStream.read(messageByteArray);
         String feedback = new String(messageByteArray, 0, count, StandardCharsets.UTF_8);
         if(feedback.equals("Success")) {
-            showAlert("Pomyślnie zarejestrowano!", Alert.AlertType.INFORMATION);
+            AlertDialog.getInstance().setParametersAndShow("Pomyślnie zarejestrowano!", Alert.AlertType.INFORMATION);
             onReturnButtonClicked();
         }
         else
-            showAlert("Wystąpił błąd!", Alert.AlertType.ERROR);
+            AlertDialog.getInstance().setParametersAndShow("Wystąpił błąd!", Alert.AlertType.ERROR);
     }
 }

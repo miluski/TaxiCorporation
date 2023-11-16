@@ -29,7 +29,7 @@ public class RegisterTask extends Task implements Runnable {
     public void sendRequest() {
         try {
             DataBase dataBase = new DataBase(data);
-            boolean isRegisterSuccessfull = dataBase.isRegisterSuccessfull();
+            boolean isRegisterSuccessfull = dataBase.execute(new RegisterCommand());
             dataBase.closeConnect();
             if (isRegisterSuccessfull)
                 returnFeedback("Success");
