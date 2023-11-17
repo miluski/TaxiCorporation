@@ -8,30 +8,38 @@ public class DeleteCarController {
     private ChoiceBox chooseDepartmentChoiceBox;
     @FXML
     private ChoiceBox chooseCarChoiceBox;
-    public void onAddMenagerButtonClicked() {
+    public void onAddCarButtonClicked() throws Exception {
+        FormFactory formFactory = new AddCarFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-
-    public void onDeleteMenagerButtonClicked() {
+    public void onAddMenagerButtonClicked() throws Exception {
+        FormFactory formFactory = new AddManagerFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-
-    public void onMenageMenagersButtonClicked() {
+    public void onDeleteMenagerButtonClicked() throws Exception {
+        FormFactory formFactory = new DeleteManagerFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-
-    public void onAddDepartmentButtonClicked() {
+    public void onMenageMenagersButtonClicked() throws Exception {
+        FormFactory formFactory = new ManageManagerFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-
-    public void onMenageDepartmentsButtonClicked() {
+    public void onAddDepartmentButtonClicked() throws Exception {
+        FormFactory formFactory = new AddDepartmentFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-
-    public void onAddCarButtonClicked() {
+    public void onMenageDepartmentsButtonClicked() throws Exception {
+        FormFactory formFactory = new RenameOrDeleteDepartmentFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-
-    public void onDeleteCarButtonClicked() {
-    }
-
     public void onLogoutButtonClicked() {
     }
-
     public void onEndDeleteCarButtonClicked() {
         boolean isDataValid = chooseCarChoiceBox.getValue() != null && chooseDepartmentChoiceBox.getValue() != null;
         if(isDataValid) {

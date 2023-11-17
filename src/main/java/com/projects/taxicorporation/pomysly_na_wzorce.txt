@@ -1,0 +1,33 @@
+wzorce konstrukcyjne: (lab 8-9)
+
+fabryka abstrakcyjna - zaimplementowana
+metoda wytwórcza - zaimplementowana
+singleton - zaimplementowany
+budowniczy - implementacja do zebrania szczegołów edycji elementów(nie wszystkie pola są obowiązkowe, więc budowniczy oferowałby metody, które umożliwiają ustawienia pól, lecz nie wymuszalby ustawienia ich wszystkich)
+
+wzorce strukturalne: (lab 10-11)
+
+dekorator - zmiana koloru przycisku po najechaniu na niego
+fasada:
+    Sklejanie danych użytkownika, tj:
+    2 klasy użytkownika:
+    UserData - dane użytkownika, login, email, imie itp z metodami get
+    UserOperations - metody umożliwiające wylogowanie się i inne czynności związane z użytkownikiem
+    I fasada:
+    UserFacade z konstruktorem ustawiającym prywatne obiekty UserData i UserOperations
+proxy:
+    opóźnienie ładowania obrazków w aplikacji (np ładowania mapy)
+
+! ! ! Do wymyślenia 1 wzorzec
+
+wzorce operacyjne: (lab 12-13)
+
+polecenie - zaimplementowany w bazie danych
+strategia:
+    zmiana stylu interfejsu z jasnego na ciemny (interfejs InterfaceStyleStrategy z metodą loadStyle)
+mediator:
+    dzielenie i opieka nad wysylanymi żądaniami z serwera do bazy danych
+metoda szablonowa:
+    zwracanie odpowiedzi z bazy danych
+
+
