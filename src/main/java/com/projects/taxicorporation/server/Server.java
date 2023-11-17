@@ -34,7 +34,8 @@ public class Server implements Runnable {
     private synchronized void process(Socket clientSocket)  {
         try {
             InputStream inputStream = clientSocket.getInputStream();
-            byte[] messageByteArray = new byte[15];
+            int messageByteArrayLength = inputStream.read();
+            byte[] messageByteArray = new byte[messageByteArrayLength];
             int count = inputStream.read(messageByteArray);
             String operation = new String(messageByteArray, 0, count, StandardCharsets.UTF_8);
             runOperation(operation);
@@ -43,18 +44,24 @@ public class Server implements Runnable {
         }
     }
     private synchronized void runOperation(String operation) {
+        TaskFactory taskFactory = null;
         switch (operation) {
-            case "LoginTask" -> {
-                TaskFactory taskFactory = new LoginTaskFactory();
-                Task task = taskFactory.createTask(clientSocket);
-                executorService.execute((Runnable) task);
-            }
-            case "RegisterTask" -> {
-                TaskFactory taskFactory = new RegisterTaskFactory();
-                Task task = taskFactory.createTask(clientSocket);
-                executorService.execute((Runnable) task);
-            }
+            case "LoginTask" -> taskFactory = new LoginTaskFactory();
+            case "RegisterTask" -> taskFactory = new RegisterTaskFactory();
+            case "AddCar" -> taskFactory = new AddCarTaskFactory();
+            case "AddDepartment" -> taskFactory = new AddDepartmentTaskFactory();
+            case "AddDriver" -> taskFactory = new AddDriverTaskFactory();
+            case "AddManager" -> taskFactory = new AddManagerTaskFactory();
+            case "DeleteCar" -> taskFactory = new DeleteCarTaskFactory();
+            case "DeleteDriver" -> taskFactory = new DeleteDriverTaskFactory();
+            case "DeleteManager" -> taskFactory = new DeleteManagerTaskFactory();
+            case "RenameDepartment" -> taskFactory = new RenameDepartmentTaskFactory();
+            case "DeleteDepartment" -> taskFactory = new DeleteDepartmentTaskFactory();
+            case "Logout" -> taskFactory = new LogoutTaskFactory();
         }
+        assert taskFactory != null;
+        Task task = taskFactory.createTask(clientSocket);
+        executorService.execute((Runnable) task);
     }
     private synchronized void shutdown() {
         executorService.shutdown();

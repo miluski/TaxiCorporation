@@ -67,7 +67,10 @@ public class RegisterFormController {
     private void sendOperationName(Socket socket) throws IOException {
         OutputStream outputStream = socket.getOutputStream();
         String operation = "RegisterTask";
+        int operationStringLength = operation.length();
         byte[] messageByteArray = operation.getBytes(StandardCharsets.UTF_8);
+        outputStream.write(operationStringLength);
+        outputStream.flush();
         outputStream.write(messageByteArray);
         outputStream.flush();
     }
@@ -81,19 +84,28 @@ public class RegisterFormController {
         dataList.add(emailTextField.getText());
         dataList.add(nameTextField.getText());
         oos.writeObject(dataList);
+        dataList.clear();
         byte[] dataByteArray = bos.toByteArray();
+        int dataByteArraySize = dataByteArray.length;
+        outputStream.write(dataByteArraySize);
+        outputStream.flush();
         outputStream.write(dataByteArray);
         outputStream.flush();
+        oos.reset();
+        bos.reset();
     }
     private void receiveFeedback(Socket socket) throws Exception {
         InputStream inputStream = socket.getInputStream();
-        byte[] messageByteArray = new byte[20];
-        int count = inputStream.read(messageByteArray);
-        String feedback = new String(messageByteArray, 0, count, StandardCharsets.UTF_8);
-        if(feedback.equals("Success")) {
+        int receivedBytesSize = inputStream.read();
+        byte[] receivedBytes = new byte[receivedBytesSize];
+        Object receivedObject = new ObjectInputStream(new ByteArrayInputStream(receivedBytes, 0, inputStream.read(receivedBytes))).readObject();
+        List<String> data = new ArrayList<>((List<String>) receivedObject);
+        if(data.get(0).equals("SuccessfullRegister")) {
             AlertDialog.getInstance().setParametersAndShow("Pomyślnie zarejestrowano!", Alert.AlertType.INFORMATION);
             onReturnButtonClicked();
         }
+        else if(data.get(0).equals("AccountAlreadyExists"))
+            AlertDialog.getInstance().setParametersAndShow("Użytkownik o podanym loginie już istnieje!", Alert.AlertType.ERROR);
         else
             AlertDialog.getInstance().setParametersAndShow("Wystąpił błąd!", Alert.AlertType.ERROR);
     }

@@ -24,7 +24,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button layoutX="14.0" layoutY="120.0" mnemonicParsing="false" onMouseClicked="#onDeleteDriverButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Usuń kierowcę" textFill="WHITE">
+                  <Button layoutX="14.0" layoutY="120.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Usuń kierowcę" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>

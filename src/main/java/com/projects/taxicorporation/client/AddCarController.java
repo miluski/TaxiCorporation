@@ -10,22 +10,37 @@ public class AddCarController {
     private TextField yearOfProductionField;
     @FXML
     private ChoiceBox departmentChoiceBox;
-    public void onAddMenagerButtonClicked() {
+    public void onAddMenagerButtonClicked() throws Exception {
+        FormFactory formFactory = new AddManagerFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-    public void onDeleteMenagerButtonClicked() {
+    public void onDeleteMenagerButtonClicked() throws Exception {
+        FormFactory formFactory = new DeleteManagerFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-    public void onMenageMenagersButtonClicked() {
+    public void onMenageMenagersButtonClicked() throws Exception {
+        FormFactory formFactory = new ManageManagerFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-    public void onAddDepartmentButtonClicked() {
+    public void onAddDepartmentButtonClicked() throws Exception {
+        FormFactory formFactory = new AddDepartmentFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-    public void onMenageDepartmentsButtonClicked() {
+    public void onMenageDepartmentsButtonClicked() throws Exception {
+        FormFactory formFactory = new RenameOrDeleteDepartmentFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-    public void onAddCarButtonClicked() {
+    public void onDeleteCarButtonClicked() throws Exception {
+        FormFactory formFactory = new DeleteCarFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-    public void onDeleteCarButtonClicked() {
-
-    }
-    public void onLogoutButtonClicked() {
+    public void onLogoutButtonClicked() throws Exception  {
         //todo przekazanie loginu zapisanego przy logowaniu do bazy do logouta
     }
     public void onEndAddCarButtonClicked() {
