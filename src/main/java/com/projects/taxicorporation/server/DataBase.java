@@ -8,7 +8,7 @@ public class DataBase {
     private List<String> data;
     public DataBase(List<String> data) throws SQLException, ClassNotFoundException{
         Class.forName("oracle.jdbc.driver.OracleDriver");
-        connect = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "admin");
+        connect = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "john", "abcd1234");
         this.data = new ArrayList<>(data);
     }
     protected boolean validateLoginData() {
