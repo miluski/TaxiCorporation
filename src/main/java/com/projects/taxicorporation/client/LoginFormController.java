@@ -29,15 +29,15 @@ public class LoginFormController {
     }
     private boolean validateData() {
         if(loginTextField.getText().isEmpty()) {
-            showAlert("Nie wprowadzono loginu!", AlertType.ERROR);
+            AlertDialog.getInstance().setParametersAndShow("Nie wprowadzono loginu!", AlertType.ERROR);
             return false;
         }
         if(passwordTextField.getText().isEmpty()) {
-            showAlert("Nie wprowadzono hasła!", AlertType.ERROR);
+            AlertDialog.getInstance().setParametersAndShow("Nie wprowadzono hasła!", AlertType.ERROR);
             return false;
         }
         else if(!validatePassword()) {
-            showAlert("Wprowadzone hasło jest nieprawidłowe!", AlertType.ERROR);
+            AlertDialog.getInstance().setParametersAndShow("Wprowadzone hasło jest nieprawidłowe!", AlertType.ERROR);
             return false;
         }
         return true;
@@ -46,26 +46,23 @@ public class LoginFormController {
         String password = passwordTextField.getText();
         return password.length() >= 9 && passPattern.matcher(password).matches();
     }
-    private void showAlert(String message, AlertType alertType) {
-        Alert alert = new Alert(alertType);
-        alert.setTitle("Informacja");
-        alert.setHeaderText(message);
-        alert.showAndWait();
-    }
     private void communicateWithServer() {
         try(Socket socket = new Socket("localhost", 1523)) {
             sendOperationName(socket);
             sendData(socket);
             receiveFeedback(socket);
         }
-        catch (IOException e) {
+        catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
     private void sendOperationName(Socket socket) throws IOException {
         OutputStream outputStream = socket.getOutputStream();
         String operation = "LoginTask";
+        int operationStringLength = operation.length();
         byte[] messageByteArray = operation.getBytes(StandardCharsets.UTF_8);
+        outputStream.write(operationStringLength);
+        outputStream.flush();
         outputStream.write(messageByteArray);
         outputStream.flush();
     }
@@ -77,22 +74,38 @@ public class LoginFormController {
         dataList.add(loginTextField.getText());
         dataList.add(passwordTextField.getText());
         oos.writeObject(dataList);
+        dataList.clear();
         byte[] dataByteArray = bos.toByteArray();
+        int dataByteArrayLength = dataByteArray.length;
+        outputStream.write(dataByteArrayLength);
+        outputStream.flush();
         outputStream.write(dataByteArray);
         outputStream.flush();
+        oos.reset();
+        bos.reset();
     }
-    private void receiveFeedback(Socket socket) throws IOException {
+    private void receiveFeedback(Socket socket) throws Exception {
+        FormFactory formFactory = null;
         InputStream inputStream = socket.getInputStream();
-        byte[] messageByteArray = new byte[20];
-        int count = inputStream.read(messageByteArray);
-        String feedback = new String(messageByteArray, 0, count, StandardCharsets.UTF_8);
-        if(feedback.equals("Success"))
-            showAlert("Pomyślnie zalogowano!", AlertType.INFORMATION);
-        //TODO: Po sukcesie utworzenie z pomocą fabryki abstrakcyjnej formularza (panelu) odpowiedniego użytkownikowi
-        //TODO: Aktualizacja rzeczy zwracanych z bazy - trzeba zwrócić rangę
-        else if(feedback.equals("Error"))
-            showAlert("Wprowadzono nieprawidłowe dane!", AlertType.ERROR);
+        int receivedBytesSize = inputStream.read();
+        byte[] receivedBytes = new byte[receivedBytesSize];
+        Object receivedObject = new ObjectInputStream(new ByteArrayInputStream(receivedBytes, 0, inputStream.read(receivedBytes))).readObject();
+        List<String> data = new ArrayList<>((List<String>) receivedObject);
+        if(!data.get(0).equals("LoginFailed")) {
+            AlertDialog.getInstance().setParametersAndShow("Pomyślnie zalogowano!", AlertType.INFORMATION);
+            switch(data.get(3)) {
+                case "Dyrektor naczelny" -> formFactory = new AddManagerFactory();
+                case "Menadżer", "Pracownik techniczny", "Mechanik" -> AlertDialog.getInstance().setParametersAndShow("Opcja niezaimplementowana!", AlertType.WARNING);
+                case "Kierowca" -> formFactory = new DriverPanelFactory();
+                case "Klient" -> formFactory = new ClientPanelFactory();
+            }
+            assert formFactory != null;
+            Form form = formFactory.createForm();
+            form.start();
+        }
+        else if(data.get(0).equals("DatabaseConnectError"))
+            AlertDialog.getInstance().setParametersAndShow("Wystąpił nieoczekiwany błąd!", AlertType.ERROR);
         else
-            showAlert("Wystąpił nieoczekiwany błąd!", AlertType.ERROR);
+            AlertDialog.getInstance().setParametersAndShow("Wprowadzono nieprawidłowe dane!", AlertType.ERROR);
     }
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
@@ -15,12 +16,15 @@
                         <Font name="Arial Bold" size="19.0" />
                      </font>
                   </Label>
-                  <Button layoutX="12.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#onFindRouteButtonClicked" prefHeight="35.0" prefWidth="180.0" style="-fx-background-color: rgb(211,20,20);" text="Wyszukaj trasę" textFill="WHITE">
+                  <Button layoutX="12.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#onFindRouteButtonClicked" prefHeight="35.0" prefWidth="180.0" style="-fx-background-color: rgb(246,162,162);" text="Wyszukaj trasę" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
-                  <Button layoutX="12.0" layoutY="234.0" mnemonicParsing="false" onMouseClicked="#onMapButtonClicked" prefHeight="35.0" prefWidth="180.0" style="-fx-background-color: rgb(211,20,20);" text="Mapa" textFill="WHITE">
+                  <Button layoutX="12.0" layoutY="234.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" style="-fx-background-color: rgb(211,20,20);" text="Mapa" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
@@ -29,6 +33,9 @@
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                </children></AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="542.0" />

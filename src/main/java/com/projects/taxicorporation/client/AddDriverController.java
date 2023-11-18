@@ -1,23 +1,28 @@
 package com.projects.taxicorporation.client;
 
-import javafx.scene.input.MouseEvent;
-
 public class AddDriverController {
-    public void onAddDriverButtonClicked(MouseEvent mouseEvent) {
+    public void onAddDriverButtonClicked() throws Exception {
+        FormFactory formFactory = new AddDriverFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-
-    public void onHireDriverButtonClicked(MouseEvent mouseEvent) {
+    public void onHireDriverButtonClicked() throws Exception {
+        FormFactory formFactory = new DeleteDriverFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-
-    public void onManageDriversButtonClicked(MouseEvent mouseEvent) {
+    public void onManageDriversButtonClicked() throws Exception {
+        FormFactory formFactory = new DriverPanelFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-
-    public void onMapButtonClicked(MouseEvent mouseEvent) {
+    public void onMapButtonClicked() throws Exception {
+        FormFactory formFactory = new ShowMapFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-
-    public void onLogoutButtonClicked(MouseEvent mouseEvent) {
+    public void onLogoutButtonClicked() {
     }
-
-    public void onEndDriverAddButton(MouseEvent mouseEvent) {
+    public void onEndDriverAddButton() {
     }
 }

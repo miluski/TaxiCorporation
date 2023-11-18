@@ -1,17 +1,12 @@
 package com.projects.taxicorporation.client;
-
-import javafx.scene.input.MouseEvent;
-
 public class DriverPanelController {
-    public void onMyJobsButtonClicked(MouseEvent mouseEvent) {
+    public void onMapButtonClicked() throws Exception {
+        FormFactory formFactory = new ShowMapFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-
-    public void onMapButtonClicked(MouseEvent mouseEvent) {
+    public void onLogoutButtonClicked() {
     }
-
-    public void onLogoutButtonClicked(MouseEvent mouseEvent) {
-    }
-
-    public void onAcceptJobButtonClicked(MouseEvent mouseEvent) {
+    public void onAcceptJobButtonClicked() {
     }
 }

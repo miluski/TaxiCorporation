@@ -1,35 +1,80 @@
 package com.projects.taxicorporation.client;
 
-import javafx.scene.input.MouseEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
 
 public class AddDepartmentController {
-    public void onAddMenagerButtonClicked(MouseEvent mouseEvent) {
+    @FXML
+    private TextField departmentNameField;
+    @FXML
+    private TextField departmentCityField;
+    @FXML
+    private TextField departmentStreetField;
+    @FXML
+    public void onAddMenagerButtonClicked() throws Exception {
+        FormFactory formFactory = new AddManagerFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-
-    public void onDeleteMenagerButtonClicked(MouseEvent mouseEvent) {
+    public void onDeleteMenagerButtonClicked() throws Exception {
+        FormFactory formFactory = new DeleteManagerFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-
-    public void onMenageMenagersButtonClicked(MouseEvent mouseEvent) {
+    public void onMenageMenagersButtonClicked() throws Exception {
+        FormFactory formFactory = new ManageManagerFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-
-    public void onAddDepartmentButtonClicked(MouseEvent mouseEvent) {
+    public void onAddCarButtonClicked() throws Exception {
+        FormFactory formFactory = new AddCarFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-
-    public void onMenageDepartmentsButtonClicked(MouseEvent mouseEvent) {
+    public void onMenageDepartmentsButtonClicked() throws Exception {
+        FormFactory formFactory = new RenameOrDeleteDepartmentFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-
-    public void onAddCarButtonClicked(MouseEvent mouseEvent) {
+    public void onDeleteCarButtonClicked() throws Exception {
+        FormFactory formFactory = new DeleteCarFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-
-    public void onDeleteCarButtonClicked(MouseEvent mouseEvent) {
+    public void onLogoutButtonClicked() {
     }
-
-    public void onLogoutButtonClicked(MouseEvent mouseEvent) {
+    public void onEndAddDepartmentButtonClicked() {
     }
-
-    public void onEndAddDepartmentButtonClicked(MouseEvent mouseEvent) {
+    public void onEditOrDeleteDepartmentButtonClicked() {
     }
-
-    public void onEditOrDeleteDepartmentButtonClicked(MouseEvent mouseEvent) {
+    private boolean validateDepartmentName() {
+        String departmentName = departmentNameField.getText();
+        try {
+            Integer.parseInt(departmentName);
+        }
+        catch (Exception e) {
+            return departmentName.length() >= 4;
+        }
+        return false;
+    }
+    private boolean validateDepartmentCity() {
+        String departmentCity = departmentCityField.getText();
+        try {
+            Integer.parseInt(departmentCity);
+        }
+        catch (Exception e) {
+            return departmentCity.length() >= 6;
+        }
+        return false;
+    }
+    private boolean validateDepartmentStreet() {
+        String departmentStreet = departmentStreetField.getText();
+        try {
+            Integer.parseInt(departmentStreet);
+        }
+        catch (Exception e) {
+            return departmentStreet.length() >= 5;
+        }
+        return false;
     }
 }

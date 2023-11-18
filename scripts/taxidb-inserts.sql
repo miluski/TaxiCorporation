@@ -1,11 +1,11 @@
 -- Insert "Dyrektor Naczelny"
-INSERT INTO user_roles VALUES(1,'Dyrektor Naczelny');
+INSERT INTO user_roles VALUES(1,'Dyrektor naczelny');
 
 -- Insert "Menadżer"
 INSERT INTO user_roles VALUES(2,'Menadżer');
 
 -- Insert "Pracownik Techniczny"
-INSERT INTO user_roles VALUES(3,'Pracownik Techniczny');
+INSERT INTO user_roles VALUES(3,'Pracownik techniczny');
 
 -- Insert "Mechanik"
 INSERT INTO user_roles VALUES(4,'Mechanik');

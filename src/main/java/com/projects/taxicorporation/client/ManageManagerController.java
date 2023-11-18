@@ -1,23 +1,23 @@
 package com.projects.taxicorporation.client;
 
-import javafx.scene.input.MouseEvent;
-
 public class ManageManagerController {
-    public void onAddManagerButtonClicked(MouseEvent mouseEvent) {
+    public void onAddManagerButtonClicked() throws Exception {
+        FormFactory formFactory = new AddManagerFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-
-    public void onManageManagersButtonClicked(MouseEvent mouseEvent) {
+    public void onManageDepartmentsButtonClicked() throws Exception {
+        FormFactory formFactory = new RenameOrDeleteDepartmentFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-
-    public void onManageDepartmentsButtonClicked(MouseEvent mouseEvent) {
+    public void onDriverMapButtonClicked() throws Exception {
+        FormFactory formFactory = new ShowMapFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-
-    public void onDriverMapButtonClicked(MouseEvent mouseEvent) {
+    public void onLogoutButtonClicked() {
     }
-
-    public void onLogoutButtonClicked(MouseEvent mouseEvent) {
-    }
-
-    public void onAssignMenagerButtonClicked(MouseEvent mouseEvent) {
+    public void onAssignMenagerButtonClicked() {
     }
 }

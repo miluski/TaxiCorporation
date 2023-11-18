@@ -1,14 +1,10 @@
 package com.projects.taxicorporation.client;
-
-import javafx.scene.input.MouseEvent;
-
 public class ShowMapController {
-    public void onFindRouteButtonClicked(MouseEvent mouseEvent) {
+    public void onFindRouteButtonClicked() throws Exception {
+        FormFactory formFactory = new ClientPanelFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
-
-    public void onMapButtonClicked(MouseEvent mouseEvent) {
-    }
-
-    public void onLogoutButtonClicked(MouseEvent mouseEvent) {
+    public void onLogoutButtonClicked() {
     }
 }
