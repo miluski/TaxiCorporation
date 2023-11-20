@@ -6,6 +6,6 @@ public class LoginFormFactory implements FormFactory {
      */
     @Override
     public Form createForm() {
-        return new LoginForm();
+        return new LoginFormView();
     }
 }

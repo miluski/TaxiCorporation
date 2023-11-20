@@ -6,6 +6,6 @@ public class AddCarFactory implements FormFactory {
      */
     @Override
     public Form createForm() {
-        return new AddCar();
+        return new AddCarView();
     }
 }
