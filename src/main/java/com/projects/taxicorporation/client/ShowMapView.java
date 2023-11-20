@@ -4,7 +4,7 @@ import com.sothawo.mapjfx.*;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 
-public class ShowMap extends Form {
+public class ShowMapView extends Form {
     @Override
     public void start() throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(StartForm.class.getResource("ShowMap.fxml"));

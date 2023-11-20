@@ -9,6 +9,6 @@ public class RegisterFormFactory implements FormFactory {
      */
     @Override
     public Form createForm() {
-        return new RegisterForm();
+        return new RegisterFormView();
     }
 }

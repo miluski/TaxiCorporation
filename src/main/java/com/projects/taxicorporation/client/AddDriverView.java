@@ -3,7 +3,7 @@ package com.projects.taxicorporation.client;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 
-public class AddDriver extends Form {
+public class AddDriverView extends Form {
     @Override
     public void start() throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(StartForm.class.getResource("AddDriver.fxml"));
