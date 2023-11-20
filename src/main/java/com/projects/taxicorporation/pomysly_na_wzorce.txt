@@ -18,7 +18,7 @@ fasada:
 proxy:
     opóźnienie ładowania obrazków w aplikacji (np ładowania mapy)
 
-! ! ! Do wymyślenia 1 wzorzec
+mvc - separacja komponentów interfejsu użytkownika na trzy części - model / widok / kontroler
 
 wzorce operacyjne: (lab 12-13)
 

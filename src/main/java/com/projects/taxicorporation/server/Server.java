@@ -9,21 +9,22 @@ public class Server implements Runnable {
     private ServerSocket serverSocket;
     private Socket clientSocket;
     private final ExecutorService executorService;
+
     private Server(ExecutorService executorService) {
         this.executorService = executorService;
         try {
             this.serverSocket = new ServerSocket(1523);
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             System.out.println(e.getMessage());
             shutdown();
         }
     }
+
     @Override
     public void run() {
         System.out.println("Server started");
         try {
-            while(true) {
+            while (true) {
                 clientSocket = serverSocket.accept();
                 process(clientSocket);
             }
@@ -31,7 +32,8 @@ public class Server implements Runnable {
             System.out.println(e.getMessage());
         }
     }
-    private synchronized void process(Socket clientSocket)  {
+
+    private synchronized void process(Socket clientSocket) {
         try {
             InputStream inputStream = clientSocket.getInputStream();
             int messageByteArrayLength = inputStream.read();
@@ -43,6 +45,7 @@ public class Server implements Runnable {
             System.out.println(e.getMessage());
         }
     }
+
     private synchronized void runOperation(String operation) {
         TaskFactory taskFactory = null;
         switch (operation) {
@@ -58,14 +61,17 @@ public class Server implements Runnable {
             case "RenameDepartment" -> taskFactory = new RenameDepartmentTaskFactory();
             case "DeleteDepartment" -> taskFactory = new DeleteDepartmentTaskFactory();
             case "Logout" -> taskFactory = new LogoutTaskFactory();
+            case "GetAvailableRoutes" -> taskFactory = new GetAvailableRoutesTaskFactory();
         }
         assert taskFactory != null;
         Task task = taskFactory.createTask(clientSocket);
         executorService.execute((Runnable) task);
     }
+
     private synchronized void shutdown() {
         executorService.shutdown();
     }
+
     public static void main(String[] args) {
         Server server = new Server(Executors.newCachedThreadPool());
         server.run();

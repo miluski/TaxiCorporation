@@ -3,12 +3,12 @@ package com.projects.taxicorporation.client;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 
-public class ShowMap extends Form {
+public class AddDepartmentView extends Form {
     @Override
     public void start() throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(StartForm.class.getResource("ShowMap.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(StartForm.class.getResource("AddDepartment.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        MainStage.getInstance().setTitle("Mapa");
+        MainStage.getInstance().setTitle("Dodawanie oddziału");
         MainStage.getInstance().setScene(scene);
         MainStage.getInstance().show();
     }

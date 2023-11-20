@@ -20,9 +20,12 @@ public class LoginFormController {
         Form form = formFactory.createForm();
         form.start();
     }
-    public void onLoginButtonClicked() {
+    public void onLoginButtonClicked() throws Exception {
         if(validateData())
             communicateWithServer();
+        FormFactory formFactory = new ClientPanelFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
     private boolean validateData() {
         if(loginTextField.getText().isEmpty()) {
