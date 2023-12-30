@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
 
 public class LoginFormController {
     @FXML
-    private TextField loginTextField;
+    public TextField loginTextField;
     @FXML
     private PasswordField passwordTextField;
     private final Pattern passPattern = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–{}:;',?/*~$^+=<>]).{8,20}$");
@@ -88,9 +88,11 @@ public class LoginFormController {
         byte[] receivedBytes = new byte[receivedBytesSize];
         Object receivedObject = new ObjectInputStream(new ByteArrayInputStream(receivedBytes, 0, inputStream.read(receivedBytes))).readObject();
         List<String> data = new ArrayList<>((List<String>) receivedObject);
-        if(!data.get(0).equals("LoginFailed")) {
+        if(data.isEmpty())
+            AlertDialog.getInstance().setParametersAndShow("Wprowadzono nieprawidłowe dane!", AlertType.ERROR);
+        else if(!data.get(0).equals("LoginFailed")) {
             AlertDialog.getInstance().setParametersAndShow("Pomyślnie zalogowano!", AlertType.INFORMATION);
-            switch(data.get(3)) {
+            switch(data.get(5)) {
                 case "Dyrektor naczelny" -> formFactory = new AddManagerFactory();
                 case "Menadżer", "Pracownik techniczny", "Mechanik" -> AlertDialog.getInstance().setParametersAndShow("Opcja niezaimplementowana!", AlertType.WARNING);
                 case "Kierowca" -> formFactory = new DriverPanelFactory();
@@ -102,7 +104,5 @@ public class LoginFormController {
         }
         else if(data.get(0).equals("DatabaseConnectError"))
             AlertDialog.getInstance().setParametersAndShow("Wystąpił nieoczekiwany błąd!", AlertType.ERROR);
-        else
-            AlertDialog.getInstance().setParametersAndShow("Wprowadzono nieprawidłowe dane!", AlertType.ERROR);
     }
 }

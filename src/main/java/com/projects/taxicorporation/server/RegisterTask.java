@@ -1,31 +1,85 @@
 package com.projects.taxicorporation.server;
 
-import java.util.*;
+import com.projects.taxicorporation.client.*;
+
 import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.sql.SQLException;
 import java.net.Socket;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class RegisterTask extends Task implements Runnable {
     private final Socket clientSocket;
-    private List<String> data;
+    private final List<String> data = new ArrayList<>();
+
     public RegisterTask(Socket clientSocket) {
         this.clientSocket = clientSocket;
     }
     @Override
     public void run() {
-        try {
-            InputStream socketReceive = clientSocket.getInputStream();
-            int receivedBytesSize = socketReceive.read();
-            byte[] receivedBytes = new byte[receivedBytesSize];
-            Object receivedObject = new ObjectInputStream(new ByteArrayInputStream(receivedBytes, 0, socketReceive.read(receivedBytes))).readObject();
-            data = new ArrayList<>((List<String>) receivedObject);
+        try (InputStream inputStream = clientSocket.getInputStream();
+             ObjectInputStream ois = new ObjectInputStream(inputStream)) {
+            User user = (User) ois.readObject();
+            if(user instanceof ChiefExecutive chiefExecutive) {
+                data.add(chiefExecutive.getUsername());
+                data.add(chiefExecutive.getPassword());
+                data.add(chiefExecutive.getEmail());
+                data.add(chiefExecutive.getRank());
+                data.add(chiefExecutive.getDepartment());
+                data.add(chiefExecutive.getCity());
+                data.add(chiefExecutive.getStreet());
+            }
+            else if(user instanceof Manager manager){
+                data.add(manager.getUsername());
+                data.add(manager.getPassword());
+                data.add(manager.getEmail());
+                data.add(manager.getRank());
+                data.add(manager.getDepartment());
+                data.add(manager.getCity());
+                data.add(manager.getStreet());
+            }
+            else if(user instanceof TechnicalWorker technicalWorker){
+                data.add(technicalWorker.getUsername());
+                data.add(technicalWorker.getPassword());
+                data.add(technicalWorker.getEmail());
+                data.add(technicalWorker.getRank());
+                data.add(technicalWorker.getDepartment());
+                data.add("");
+                data.add("");
+            }
+            else if(user instanceof Driver driver){
+                data.add(driver.getUsername());
+                data.add(driver.getPassword());
+                data.add(driver.getEmail());
+                data.add(driver.getRank());
+                data.add("");
+                data.add("");
+                data.add("");
+            }
+            else if(user instanceof Client client){
+                data.add(client.getUsername());
+                data.add(client.getPassword());
+                data.add(client.getEmail());
+                data.add(client.getRank());
+                data.add("");
+                data.add("");
+                data.add("");
+            }
+            else if(user instanceof Mechanic mechanic){
+                data.add(mechanic.getUsername());
+                data.add(mechanic.getPassword());
+                data.add(mechanic.getEmail());
+                data.add(mechanic.getRank());
+                data.add(mechanic.getDepartment());
+                data.add("");
+                data.add("");
+            }
             sendRequest();
-        }
-        catch (IOException | ClassNotFoundException e) {
+        } catch (IOException | ClassNotFoundException e) {
             System.out.println(e.getMessage());
         }
     }
+
     @Override
     public void sendRequest() {
         List<String> databaseLoginRequestFeedback = new ArrayList<>();
@@ -33,15 +87,14 @@ public class RegisterTask extends Task implements Runnable {
             DataBase dataBase = new DataBase(data);
             databaseLoginRequestFeedback.addAll(dataBase.execute(new RegisterCommand()));
             dataBase.closeConnect();
-        }
-        catch (SQLException | ClassNotFoundException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             System.out.println(e.getMessage());
             databaseLoginRequestFeedback.add("DatabaseConnectError");
-        }
-        finally {
+        } finally {
             returnFeedback(databaseLoginRequestFeedback);
         }
     }
+
     @Override
     public void returnFeedback(List<String> retrievedData) {
         try {
@@ -59,6 +112,7 @@ public class RegisterTask extends Task implements Runnable {
             oos.reset();
             bos.reset();
         } catch (IOException e) {
+            e.printStackTrace();
             System.out.println(e.getMessage());
         }
     }

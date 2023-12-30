@@ -57,11 +57,10 @@ public class RegisterFormController {
     private void communicateWithServer() {
         try(Socket socket = new Socket("localhost", 1523)) {
             sendOperationName(socket);
-            sendData(socket);
-            receiveFeedback(socket);
+            handleData(socket);
         }
         catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println(e.getMessage() + "ddd");
         }
     }
     private void sendOperationName(Socket socket) throws IOException {
@@ -74,25 +73,26 @@ public class RegisterFormController {
         outputStream.write(messageByteArray);
         outputStream.flush();
     }
-    private void sendData(Socket socket) throws IOException {
-        OutputStream outputStream = socket.getOutputStream();
-        ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        ObjectOutputStream oos = new ObjectOutputStream(bos);
+    private void handleData(Socket socket) {
         List<String> dataList = new ArrayList<>();
         dataList.add(userNameTextField.getText());
         dataList.add(passwordTextField.getText());
         dataList.add(emailTextField.getText());
-        dataList.add(nameTextField.getText());
-        oos.writeObject(dataList);
+        dataList.add("Client");
+        SendRegisterData sendRegisterData = new SendRegisterData(new ClientBuilder(), dataList);
+        User user = sendRegisterData.build();
         dataList.clear();
-        byte[] dataByteArray = bos.toByteArray();
-        int dataByteArraySize = dataByteArray.length;
-        outputStream.write(dataByteArraySize);
-        outputStream.flush();
-        outputStream.write(dataByteArray);
-        outputStream.flush();
-        oos.reset();
-        bos.reset();
+        sendData(socket, user);
+    }
+    private void sendData(Socket socket, User user) {
+        try (OutputStream outputStream = socket.getOutputStream();
+             ObjectOutputStream oos = new ObjectOutputStream(outputStream)) {
+            oos.writeObject(user);
+            oos.flush();
+            receiveFeedback(socket);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
     private void receiveFeedback(Socket socket) throws Exception {
         InputStream inputStream = socket.getInputStream();

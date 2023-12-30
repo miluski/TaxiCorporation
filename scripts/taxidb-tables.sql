@@ -35,9 +35,12 @@ CREATE TABLE departments (
 CREATE TABLE users (
     id_user NUMBER PRIMARY KEY,
     email VARCHAR2(255),
-    name VARCHAR2(255),
+    rank VARCHAR2(255),
     username VARCHAR2(255),
     password VARCHAR2(255),
+    department VARCHAR2(255),
+    city VARCHAR2(255),
+    street VARCHAR2(255),
     id_user_role NUMBER REFERENCES user_roles(id_user_role)
 );
 
