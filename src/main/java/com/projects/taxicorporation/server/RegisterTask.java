@@ -82,17 +82,11 @@ public class RegisterTask extends Task implements Runnable {
 
     @Override
     public void sendRequest() {
-        List<String> databaseLoginRequestFeedback = new ArrayList<>();
-        try {
-            DataBase dataBase = new DataBase(data);
-            databaseLoginRequestFeedback.addAll(dataBase.execute(new RegisterCommand()));
-            dataBase.closeConnect();
-        } catch (SQLException | ClassNotFoundException e) {
-            System.out.println(e.getMessage());
-            databaseLoginRequestFeedback.add("DatabaseConnectError");
-        } finally {
-            returnFeedback(databaseLoginRequestFeedback);
-        }
+        AbstractDataBase abstractDataBase = new DataBase();
+        Command registerCommand = new RegisterCommand();
+        ConcreteCommunicateMediator concreteCommunicateMediator = new ConcreteCommunicateMediator(registerCommand, abstractDataBase);
+        List<String> databaseLoginRequestFeedback = new ArrayList<>(concreteCommunicateMediator.mediate(data));
+        returnFeedback(databaseLoginRequestFeedback);
     }
 
     @Override
@@ -112,7 +106,6 @@ public class RegisterTask extends Task implements Runnable {
             oos.reset();
             bos.reset();
         } catch (IOException e) {
-            e.printStackTrace();
             System.out.println(e.getMessage());
         }
     }

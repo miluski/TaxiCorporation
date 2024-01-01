@@ -1,5 +1,6 @@
 package com.projects.taxicorporation.client;
 
+import com.sothawo.mapjfx.Projection;
 import javafx.application.Application;
 import javafx.stage.Stage;
 

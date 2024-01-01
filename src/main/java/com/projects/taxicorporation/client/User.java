@@ -10,4 +10,6 @@ public abstract class User implements Serializable {
     protected String department = "";
     protected String city = "";
     protected String street = "";
+    public abstract String getUsername();
+    public abstract String getEmail();
 }

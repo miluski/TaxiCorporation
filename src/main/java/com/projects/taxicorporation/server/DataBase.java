@@ -1,20 +1,13 @@
 package com.projects.taxicorporation.server;
 
 import java.sql.*;
-import java.util.*;
 
-public class DataBase {
-    private final Connection connect;
-    private final List<String> data;
-    public DataBase(List<String> data) throws SQLException, ClassNotFoundException{
+public class DataBase extends AbstractDataBase {
+    public void connect () throws SQLException, ClassNotFoundException {
         Class.forName("oracle.jdbc.driver.OracleDriver");
         connect = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "admin");
-        this.data = new ArrayList<>(data);
     }
-    protected List<String> execute(Command command) {
-        return command.execute(data, connect);
-    }
-    protected void closeConnect() throws SQLException {
+    public void closeConnect() throws SQLException {
         connect.close();
     }
 }

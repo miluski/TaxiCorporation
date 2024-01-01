@@ -1,7 +1,7 @@
 package com.projects.taxicorporation.client;
 
 public class BlackButtonPrototype implements ButtonPrototype {
-    private String text;
+    public String text;
     @Override
     public ButtonPrototype clone() throws CloneNotSupportedException {
         return (ButtonPrototype) super.clone();
@@ -16,4 +16,5 @@ public class BlackButtonPrototype implements ButtonPrototype {
     public String getText() {
         return this.text;
     }
+
 }
