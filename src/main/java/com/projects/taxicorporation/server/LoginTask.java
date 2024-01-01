@@ -26,19 +26,11 @@ public class LoginTask extends Task implements Runnable {
     }
     @Override
     public void sendRequest() {
-        List<String> databaseLoginRequestFeedback = new ArrayList<>();
-        try {
-            DataBase dataBase = new DataBase(data);
-            databaseLoginRequestFeedback.addAll(dataBase.execute(new LoginCommand()));
-            dataBase.closeConnect();
-        }
-        catch (SQLException | ClassNotFoundException e) {
-            databaseLoginRequestFeedback.add("DatabaseConnectError");
-            System.out.println(e.getMessage());
-        }
-        finally {
-            returnFeedback(databaseLoginRequestFeedback);
-        }
+        AbstractDataBase abstractDataBase = new DataBase();
+        Command loginCommand = new LoginCommand();
+        ConcreteCommunicateMediator concreteCommunicateMediator = new ConcreteCommunicateMediator(loginCommand, abstractDataBase);
+        List<String> databaseLoginRequestFeedback = new ArrayList<>(concreteCommunicateMediator.mediate(data));
+        returnFeedback(databaseLoginRequestFeedback);
     }
     @Override
     public void returnFeedback(List<String> retrievedData) {
