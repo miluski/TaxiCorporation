@@ -1,6 +1,12 @@
 package com.projects.taxicorporation.client;
 
-public class RenameOrDeleteDepartmentController {
+import javafx.fxml.FXML;
+import javafx.scene.layout.AnchorPane;
+
+public class RenameOrDeleteDepartmentController implements Controller {
+    @FXML
+    private AnchorPane buttonsAnchorPane;
+
     public void onAddMenagerButtonClicked() throws Exception {
         FormFactory formFactory = new AddManagerFactory();
         Form form = formFactory.createForm();
@@ -36,5 +42,10 @@ public class RenameOrDeleteDepartmentController {
     public void onConfirmDepartmentEditButton() {
     }
     public void onDeleteChoosedDepartmentButtonClicked() {
+    }
+
+    @Override
+    public AnchorPane getButtonsAnchorPane() {
+        return this.buttonsAnchorPane;
     }
 }

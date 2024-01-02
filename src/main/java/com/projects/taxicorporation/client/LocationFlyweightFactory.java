@@ -10,7 +10,6 @@ public class LocationFlyweightFactory {
         if (locationFlyweights.containsKey(key)) {
             return locationFlyweights.get(key);
         } else {
-            // W przeciwnym razie utwórz nowy pyłek i zapisz go w mapie
             LocationFlyweight location = new ConcreteLocationFlyweight(name,
                     latitude, longitude);
             locationFlyweights.put(key, location);

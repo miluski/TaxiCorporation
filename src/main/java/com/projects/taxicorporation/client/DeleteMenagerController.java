@@ -1,5 +1,12 @@
 package com.projects.taxicorporation.client;
-public class DeleteMenagerController {
+
+import javafx.fxml.FXML;
+import javafx.scene.layout.AnchorPane;
+
+public class DeleteMenagerController implements Controller {
+    @FXML
+    private AnchorPane buttonsAnchorPane;
+
     public void onAddManagerButtonClicked() throws Exception {
         FormFactory formFactory = new AddManagerFactory();
         Form form = formFactory.createForm();
@@ -33,5 +40,10 @@ public class DeleteMenagerController {
     public void onLogoutButtonClicked() {
     }
     public void onEndDeleteMenagerButtonClicked() {
+    }
+
+    @Override
+    public AnchorPane getButtonsAnchorPane() {
+        return this.buttonsAnchorPane;
     }
 }

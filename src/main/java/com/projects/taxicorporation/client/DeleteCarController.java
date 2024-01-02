@@ -2,12 +2,15 @@ package com.projects.taxicorporation.client;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 
-public class DeleteCarController {
+public class DeleteCarController implements Controller {
     @FXML
     private ChoiceBox chooseDepartmentChoiceBox;
     @FXML
     private ChoiceBox chooseCarChoiceBox;
+    @FXML
+    private AnchorPane buttonsAnchorPane;
     public void onAddCarButtonClicked() throws Exception {
         FormFactory formFactory = new AddCarFactory();
         Form form = formFactory.createForm();
@@ -53,5 +56,10 @@ public class DeleteCarController {
         alert.setTitle("Informacja");
         alert.setHeaderText(message);
         alert.showAndWait();
+    }
+
+    @Override
+    public AnchorPane getButtonsAnchorPane() {
+        return this.buttonsAnchorPane;
     }
 }
