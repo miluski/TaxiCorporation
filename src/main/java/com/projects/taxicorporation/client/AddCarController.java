@@ -2,14 +2,17 @@ package com.projects.taxicorporation.client;
 
 import javafx.scene.control.*;
 import javafx.fxml.FXML;
+import javafx.scene.layout.AnchorPane;
 
-public class AddCarController {
+public class AddCarController implements Controller {
     @FXML
     private TextField carModelField;
     @FXML
     private TextField yearOfProductionField;
     @FXML
     private ChoiceBox departmentChoiceBox;
+    @FXML
+    private AnchorPane buttonsAnchorPane;
     public void onAddMenagerButtonClicked() throws Exception {
         FormFactory formFactory = new AddManagerFactory();
         Form form = formFactory.createForm();
@@ -68,5 +71,10 @@ public class AddCarController {
             isValid = false;
         }
         return isValid;
+    }
+
+    @Override
+    public AnchorPane getButtonsAnchorPane() {
+        return this.buttonsAnchorPane;
     }
 }

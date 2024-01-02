@@ -1,11 +1,11 @@
 package com.projects.taxicorporation.client;
 
-public class AddDriverController {
-    public void onAddDriverButtonClicked() throws Exception {
-        FormFactory formFactory = new AddDriverFactory();
-        Form form = formFactory.createForm();
-        form.start();
-    }
+import javafx.fxml.FXML;
+import javafx.scene.layout.AnchorPane;
+
+public class AddDriverController implements Controller {
+    @FXML
+    private AnchorPane buttonsAnchorPane;
     public void onHireDriverButtonClicked() throws Exception {
         FormFactory formFactory = new DeleteDriverFactory();
         Form form = formFactory.createForm();
@@ -24,5 +24,10 @@ public class AddDriverController {
     public void onLogoutButtonClicked() {
     }
     public void onEndDriverAddButton() {
+    }
+
+    @Override
+    public AnchorPane getButtonsAnchorPane() {
+        return this.buttonsAnchorPane;
     }
 }

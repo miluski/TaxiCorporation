@@ -1,6 +1,5 @@
 package com.projects.taxicorporation.client;
 
-import com.sothawo.mapjfx.Projection;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -14,6 +13,7 @@ public class StartForm extends Application {
         mainStage = stage;
         FormFactory formFactory = new LoginFormFactory();
         Form form = formFactory.createForm();
+        MainStage.getInstance().setThemeName("Light");
         form.start();
     }
     public static void main(String[] args) {

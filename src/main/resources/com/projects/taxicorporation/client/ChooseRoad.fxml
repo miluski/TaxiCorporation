@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="470.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.taxicorporation.client.ChooseRoadController">
+<AnchorPane fx:id="buttonsAnchorPane" prefHeight="470.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.taxicorporation.client.ChooseRoadController">
    <children>
       <SplitPane dividerPositions="0.2862903225806452" prefHeight="470.0" prefWidth="750.0">
         <items>
@@ -16,27 +15,6 @@
                         <Font name="Arial Bold" size="19.0" />
                      </font>
                   </Label>
-                  <Button layoutX="12.0" layoutY="189.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" style="-fx-background-color: rgb(211,20,20);" text="Wyszukaj trasę" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="16.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="12.0" layoutY="234.0" mnemonicParsing="false" onMouseClicked="#onMapButtonClicked" prefHeight="35.0" prefWidth="180.0" style="-fx-background-color: rgb(246,162,162);" text="Mapa" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-                  <Button layoutX="12.0" layoutY="419.0" mnemonicParsing="false" onMouseClicked="#onLogoutButtonClicked" prefHeight="35.0" prefWidth="180.0" style="-fx-background-color: rgb(134,134,134);" text="Wyloguj" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
                </children></AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="542.0">
                <children>

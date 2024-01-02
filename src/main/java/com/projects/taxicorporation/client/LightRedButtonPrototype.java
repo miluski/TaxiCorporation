@@ -1,6 +1,6 @@
 package com.projects.taxicorporation.client;
 
-public class WhiteButtonPrototype implements ButtonPrototype, Cloneable {
+public class LightRedButtonPrototype implements ButtonPrototype, Cloneable {
     private String text;
     private double width;
     private double height;

@@ -7,8 +7,9 @@ import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 import java.util.regex.Pattern;
 import javafx.fxml.FXML;
+import javafx.scene.layout.AnchorPane;
 
-public class RegisterFormController {
+public class RegisterFormController implements Controller {
     @FXML
     private TextField nameTextField;
     @FXML
@@ -108,5 +109,10 @@ public class RegisterFormController {
             AlertDialog.getInstance().setParametersAndShow("Użytkownik o podanym loginie już istnieje!", Alert.AlertType.ERROR);
         else
             AlertDialog.getInstance().setParametersAndShow("Wystąpił błąd!", Alert.AlertType.ERROR);
+    }
+
+    @Override
+    public AnchorPane getButtonsAnchorPane() {
+        return null;
     }
 }

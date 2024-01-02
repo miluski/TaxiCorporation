@@ -5,13 +5,17 @@ import java.io.*;
 import javafx.scene.control.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.layout.AnchorPane;
+
 import java.nio.charset.StandardCharsets;
 import java.net.Socket;
 import java.util.regex.Pattern;
 
-public class LoginFormController {
+public class LoginFormController implements Controller {
     @FXML
-    public TextField loginTextField;
+    private TextField loginTextField;
+    @FXML
+    private AnchorPane buttonsAnchorPane;
     @FXML
     private PasswordField passwordTextField;
     private final Pattern passPattern = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–{}:;',?/*~$^+=<>]).{8,20}$");
@@ -20,12 +24,9 @@ public class LoginFormController {
         Form form = formFactory.createForm();
         form.start();
     }
-    public void onLoginButtonClicked() throws Exception {
+    public void onLoginButtonClicked() {
         if(validateData())
             communicateWithServer();
-        FormFactory formFactory = new ClientPanelFactory();
-        Form form = formFactory.createForm();
-        form.start();
     }
     private boolean validateData() {
         if(loginTextField.getText().isEmpty()) {
@@ -96,10 +97,11 @@ public class LoginFormController {
         else if(!data.get(0).equals("LoginFailed")) {
             AlertDialog.getInstance().setParametersAndShow("Pomyślnie zalogowano!", AlertType.INFORMATION);
             switch(data.get(5)) {
-                case "Dyrektor naczelny" -> formFactory = new AddManagerFactory();
-                case "Menadżer", "Pracownik techniczny", "Mechanik" -> AlertDialog.getInstance().setParametersAndShow("Opcja niezaimplementowana!", AlertType.WARNING);
+                case "Dyrektor naczelny"-> formFactory = new AddManagerFactory();
+                case "Menadżer" -> formFactory = new AddDriverFactory();
+                case "Pracownik techniczny", "Mechanik" -> formFactory = new DriverPanelFactory();
                 case "Kierowca" -> formFactory = new DriverPanelFactory();
-                case "Klient" -> formFactory = new ClientPanelFactory();
+                case "Klient" -> formFactory = new AddDriverFactory();
             }
             assert formFactory != null;
             Form form = formFactory.createForm();
@@ -107,5 +109,10 @@ public class LoginFormController {
         }
         else if(data.get(0).equals("DatabaseConnectError"))
             AlertDialog.getInstance().setParametersAndShow("Wystąpił nieoczekiwany błąd!", AlertType.ERROR);
+    }
+
+    @Override
+    public AnchorPane getButtonsAnchorPane() {
+        return this.buttonsAnchorPane;
     }
 }
