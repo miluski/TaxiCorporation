@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="buttonsAnchorPane" prefHeight="400.0" prefWidth="583.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.taxicorporation.client.LoginFormController">
+   <children>
+      <SplitPane dividerPositions="0.5" prefHeight="400.0" prefWidth="583.0" style="-fx-background-color: dimgray;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+            <ImageView fitHeight="398.0" fitWidth="270.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Login.jpg" />
+               </image>
+            </ImageView>
+          <Pane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="286.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Logowanie">
+                     <font>
+                        <Font name="Arial Bold" size="41.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="66.0" text="Zaloguj się do swojego konta!">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="29.0" layoutY="119.0" text="Login">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="loginTextField" layoutX="81.0" layoutY="120.0" prefHeight="25.0" prefWidth="205.0" />
+                  <Label layoutX="28.0" layoutY="172.0" text="Hasło">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="passwordTextField" layoutX="81.0" layoutY="173.0" prefHeight="25.0" prefWidth="205.0" />
+                  <Label layoutX="81.0" layoutY="300.0" prefHeight="17.0" prefWidth="92.0" text="Nie masz konta?" />
+                  <Label layoutX="173.0" layoutY="300.0" onMouseClicked="#onRegisterButtonClicked" text="Zarejestruj się!" textFill="#d31414">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <Bloom threshold="1.0" />
+                     </effect></Label>
+               </children>
+            </Pane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

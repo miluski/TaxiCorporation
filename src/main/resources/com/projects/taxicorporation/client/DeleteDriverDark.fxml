@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="buttonsAnchorPane" prefHeight="470.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.taxicorporation.client.DeleteDriverController">
+   <children>
+      <SplitPane dividerPositions="0.32620320855614976" prefHeight="470.0" prefWidth="750.0" style="-fx-background-color: dimgray;">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="44.0" layoutY="31.0" text="Panel Menadżera">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="542.0">
+               <children>
+                  <Label layoutX="91.0" layoutY="151.0" text="Wybierz kierowce z listy i zwolnij go">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="chooseDriverChoiceBox" layoutX="91.0" layoutY="171.0" prefHeight="25.0" prefWidth="337.0" />
+                  <Label layoutX="163.0" layoutY="27.0" text="Zwolnij kierowce">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
