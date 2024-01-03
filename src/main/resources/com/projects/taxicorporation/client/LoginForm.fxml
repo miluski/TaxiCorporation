@@ -48,6 +48,11 @@
                      <effect>
                         <Bloom threshold="1.0" />
                      </effect></Label>
+                  <Button layoutX="250.0" layoutY="374.0" mnemonicParsing="false" style="-fx-background-color: lightgrey;" text="Light/Dark">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Button>
                </children>
             </Pane>
         </items>
