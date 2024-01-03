@@ -41,6 +41,7 @@ CREATE TABLE users (
     department VARCHAR2(255),
     city VARCHAR2(255),
     street VARCHAR2(255),
+    loggedIn BOOLEAN DEFAULT false,
     id_user_role NUMBER REFERENCES user_roles(id_user_role)
 );
 
