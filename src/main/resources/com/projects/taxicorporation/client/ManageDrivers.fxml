@@ -4,7 +4,8 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="470.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.taxicorporation.client.DeleteDriverController">
+<?import javafx.scene.Cursor?>
+<AnchorPane fx:id="buttonsAnchorPane" prefHeight="470.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.taxicorporation.client.ManageDriversController">
    <children>
       <SplitPane dividerPositions="0.32620320855614976" prefHeight="470.0" prefWidth="750.0">
         <items>
@@ -15,10 +16,13 @@
                         <Font name="Arial Bold" size="19.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" style="-fx-background-color: lightgrey;" text="Light/Dark">
+                   <Button mnemonicParsing="false" onMouseClicked="#onChangeThemeButtonClicked" style="-fx-background-color: lightgrey;" text="Light/Dark">
                      <font>
                         <Font size="10.0" />
                      </font>
+                      <cursor>
+                          <Cursor fx:constant="OPEN_HAND" />
+                      </cursor>
                   </Button>
                </children></AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="542.0">

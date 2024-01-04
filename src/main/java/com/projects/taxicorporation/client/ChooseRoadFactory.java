@@ -1,8 +1,10 @@
 package com.projects.taxicorporation.client;
 
+import java.util.Objects;
+
 public class ChooseRoadFactory implements FormFactory {
     @Override
     public Form createForm() {
-        return new ChooseRoadView();
+        return Objects.equals(MainStage.getInstance().getThemeName(), "Light") ? new ChooseRoadView() : new ChooseRoadDarkView();
     }
 }

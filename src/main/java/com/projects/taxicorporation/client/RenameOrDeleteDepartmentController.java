@@ -1,7 +1,10 @@
 package com.projects.taxicorporation.client;
 
 import javafx.fxml.FXML;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+
+import java.util.Objects;
 
 public class RenameOrDeleteDepartmentController implements Controller {
     @FXML
@@ -47,5 +50,16 @@ public class RenameOrDeleteDepartmentController implements Controller {
     @Override
     public AnchorPane getButtonsAnchorPane() {
         return this.buttonsAnchorPane;
+    }
+
+    public void onChangeThemeButtonClicked() throws Exception {
+        if (Objects.equals(MainStage.getInstance().getThemeName(), "Light")) {
+            new DarkTheme().applyTheme();
+        } else {
+            new LightTheme().applyTheme();
+        }
+        FormFactory formFactory = new RenameOrDeleteDepartmentFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
 }

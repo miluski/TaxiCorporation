@@ -1,8 +1,10 @@
 package com.projects.taxicorporation.client;
 
+import java.util.Objects;
+
 public class DeleteDriverFactory implements FormFactory {
     @Override
     public Form createForm() {
-        return new DeleteDriverView();
+        return Objects.equals(MainStage.getInstance().getThemeName(), "Light") ? new DeleteDriverView() : new DeleteDriverDarkView();
     }
 }
