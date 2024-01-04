@@ -12,12 +12,12 @@
         <items>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                 <children>
-                    <Label layoutX="45.0" layoutY="32.0" text="Panel Menadżera">
+                    <Label layoutX="44.0" layoutY="31.0" text="Panel Menadżera">
                         <font>
                             <Font name="Arial Bold" size="19.0" />
                         </font>
                     </Label>
-                    <Button layoutX="13.0" layoutY="226.0" mnemonicParsing="false" onMouseClicked="#onFindRouteButtonClicked" prefHeight="35.0" prefWidth="219.0" style="-fx-background-color: rgb(246,162,162);" text="Zarządzaj kierowcami" textFill="WHITE">
+                    <Button layoutX="13.0" layoutY="120.0" mnemonicParsing="false" onMouseClicked="#onAddDriverButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(246,162,162);" text="Dodaj kierowcę" textFill="WHITE">
                         <font>
                             <Font name="System Bold" size="16.0" />
                         </font>
@@ -25,12 +25,28 @@
                             <Cursor fx:constant="HAND" />
                         </cursor>
                     </Button>
-                    <Button layoutX="13.0" layoutY="276.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="219.0" style="-fx-background-color: rgb(211,20,20);" text="Mapa" textFill="WHITE">
+                    <Button layoutX="13.0" layoutY="163.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(246,162,162);" text="Usuń kierowcę" textFill="WHITE">
                         <font>
                             <Font name="System Bold" size="16.0" />
                         </font>
                     </Button>
-                    <Button layoutX="12.0" layoutY="419.0" mnemonicParsing="false" onMouseClicked="#onLogoutButtonClicked" prefHeight="35.0" prefWidth="219.0" style="-fx-background-color: rgb(134,134,134);" text="Wyloguj" textFill="WHITE">
+                    <Button layoutX="13.0" layoutY="207.0" mnemonicParsing="false" onMouseClicked="#onMenageDriversButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(246,162,162);" text="Zarządzaj kierowcami" textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="16.0" />
+                        </font>
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+                    <Button layoutX="13.0" layoutY="251.0" mnemonicParsing="false" onMouseClicked="#onMapButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Mapa" textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="16.0" />
+                        </font>
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+                    <Button layoutX="13.0" layoutY="419.0" mnemonicParsing="false" onMouseClicked="#onLogoutButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(134,134,134);" text="Wyloguj" textFill="WHITE">
                         <font>
                             <Font name="System Bold" size="16.0" />
                         </font>
