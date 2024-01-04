@@ -5,6 +5,7 @@ import java.io.*;
 import javafx.scene.control.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 import java.nio.charset.StandardCharsets;
@@ -114,5 +115,16 @@ public class LoginFormController implements Controller {
     @Override
     public AnchorPane getButtonsAnchorPane() {
         return this.buttonsAnchorPane;
+    }
+
+    public void onChangeThemeButtonClicked() throws Exception {
+        if (Objects.equals(MainStage.getInstance().getThemeName(), "Light")) {
+            new DarkTheme().applyTheme();
+        } else {
+            new LightTheme().applyTheme();
+        }
+        FormFactory formFactory = new LoginFormFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
 }

@@ -1,5 +1,7 @@
 package com.projects.taxicorporation.client;
 
+import java.util.Objects;
+
 /**
  * Wzorzec projektowy fabryka abstrakcyjna
  */
@@ -9,6 +11,6 @@ public class RegisterFormFactory implements FormFactory {
      */
     @Override
     public Form createForm() {
-        return new RegisterFormView();
+        return Objects.equals(MainStage.getInstance().getThemeName(), "Light") ? new RegisterFormView() : new RegisterFormDarkView();
     }
 }

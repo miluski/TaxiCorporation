@@ -38,7 +38,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button mnemonicParsing="false" style="-fx-background-color: grey;" text="Light/Dark">
+                  <Button mnemonicParsing="false" onMouseClicked="#onChangeThemeButtonClicked" style="-fx-background-color: lightgrey;" text="Light/Dark">
                      <font>
                         <Font size="10.0" />
                      </font>

@@ -16,7 +16,7 @@
                                 <Font name="Arial Bold" size="19.0" />
                             </font>
                         </Label>
-                        <Button mnemonicParsing="false" style="-fx-background-color: grey;" text="Light/Dark">
+                        <Button mnemonicParsing="false" onMouseClicked="#onChangeThemeButtonClicked" style="-fx-background-color: lightgrey;" text="Light/Dark">
                             <font>
                                 <Font size="10.0" />
                             </font>

@@ -7,6 +7,7 @@ import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 import java.util.regex.Pattern;
 import javafx.fxml.FXML;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 public class RegisterFormController implements Controller {
@@ -114,5 +115,16 @@ public class RegisterFormController implements Controller {
     @Override
     public AnchorPane getButtonsAnchorPane() {
         return null;
+    }
+
+    public void onChangeThemeButtonClicked() throws Exception {
+        if (Objects.equals(MainStage.getInstance().getThemeName(), "Light")) {
+            new DarkTheme().applyTheme();
+        } else {
+            new LightTheme().applyTheme();
+        }
+        FormFactory formFactory = new RegisterFormFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
 }

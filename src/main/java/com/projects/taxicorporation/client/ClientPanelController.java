@@ -5,6 +5,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
+import java.util.Objects;
+
 public class ClientPanelController implements Controller {
     @FXML
     private TextField startPointField;
@@ -39,5 +41,16 @@ public class ClientPanelController implements Controller {
     @Override
     public AnchorPane getButtonsAnchorPane() {
         return this.buttonsAnchorPane;
+    }
+
+    public void onChangeThemeButtonClicked() throws Exception {
+        if (Objects.equals(MainStage.getInstance().getThemeName(), "Light")) {
+            new DarkTheme().applyTheme();
+        } else {
+            new LightTheme().applyTheme();
+        }
+        FormFactory formFactory = new ClientPanelFactory();
+        Form form = formFactory.createForm();
+        form.start();
     }
 }
