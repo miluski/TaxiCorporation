@@ -2,7 +2,7 @@
 INSERT INTO user_roles VALUES(1,'Dyrektor naczelny');
 
 -- Insert "Menadżer"
-INSERT INTO user_roles VALUES(2,'Menadżer');
+INSERT INTO user_roles VALUES(2,'Menadzer');
 
 -- Insert "Pracownik Techniczny"
 INSERT INTO user_roles VALUES(3,'Pracownik techniczny');

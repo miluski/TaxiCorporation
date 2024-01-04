@@ -1,0 +1,16 @@
+Index: src/main/java/com/projects/taxicorporation/pomysly_na_wzorce.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>wzorce konstrukcyjne: (lab 8-9)\r\n\r\nfabryka abstrakcyjna - zaimplementowana\r\nmetoda wytwórcza - zaimplementowana\r\nsingleton - zaimplementowany\r\nbudowniczy - implementacja do zebrania szczegołów edycji elementów(nie wszystkie pola są obowiązkowe, więc budowniczy oferowałby metody, które umożliwiają ustawienia pól, lecz nie wymuszalby ustawienia ich wszystkich)\r\n\r\nwzorce strukturalne: (lab 10-11)\r\n\r\ndekorator - zmiana koloru przycisku po najechaniu na niego\r\nfasada:\r\n    Sklejanie danych użytkownika, tj:\r\n    2 klasy użytkownika:\r\n    UserData - dane użytkownika, login, email, imie itp z metodami get\r\n    UserOperations - metody umożliwiające wylogowanie się i inne czynności związane z użytkownikiem\r\n    I fasada:\r\n    UserFacade z konstruktorem ustawiającym prywatne obiekty UserData i UserOperations\r\nproxy:\r\n    opóźnienie ładowania obrazków w aplikacji (np ładowania mapy)\r\n\r\n! ! ! Do wymyślenia 1 wzorzec\r\n\r\nwzorce operacyjne: (lab 12-13)\r\n\r\npolecenie - zaimplementowany w bazie danych\r\nstrategia:\r\n    zmiana stylu interfejsu z jasnego na ciemny (interfejs InterfaceStyleStrategy z metodą loadStyle)\r\nmediator:\r\n    dzielenie i opieka nad wysylanymi żądaniami z serwera do bazy danych\r\nmetoda szablonowa:\r\n    zwracanie odpowiedzi z bazy danych\r\n\r\n\r\n
+===================================================================
+diff --git a/src/main/java/com/projects/taxicorporation/pomysly_na_wzorce.txt b/src/main/java/com/projects/taxicorporation/pomysly_na_wzorce.txt
+--- a/src/main/java/com/projects/taxicorporation/pomysly_na_wzorce.txt	
++++ b/src/main/java/com/projects/taxicorporation/pomysly_na_wzorce.txt	
+@@ -5,6 +5,7 @@
+ singleton - zaimplementowany
+ budowniczy - implementacja do zebrania szczegołów edycji elementów(nie wszystkie pola są obowiązkowe, więc budowniczy oferowałby metody, które umożliwiają ustawienia pól, lecz nie wymuszalby ustawienia ich wszystkich)
+ 
++
+ wzorce strukturalne: (lab 10-11)
+ 
+ dekorator - zmiana koloru przycisku po najechaniu na niego
