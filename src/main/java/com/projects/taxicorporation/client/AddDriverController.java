@@ -20,7 +20,7 @@ public class AddDriverController implements Controller {
         form.start();
     }
     public void onMapButtonClicked() throws Exception {
-        FormFactory formFactory = new ShowDriverMapFactory();
+        FormFactory formFactory = new ShowManagerMapFactory();
         Form form = formFactory.createForm();
         form.start();
     }
