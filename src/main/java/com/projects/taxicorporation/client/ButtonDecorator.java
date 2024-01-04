@@ -61,14 +61,5 @@ public abstract class ButtonDecorator implements ButtonPrototype {
     public double getY() {
         return decoratedButton.getY();
     }
-    public void setOnButtonPressedHandle(Button button, HandleButtonClick handleButtonClick) {
-        button.setOnAction(event -> {
-            try {
-                handleButtonClick.handleButtonClick();
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-        });
-    }
     public abstract void draw(Controller controller, HandleButtonClick handleButtonClick);
 }

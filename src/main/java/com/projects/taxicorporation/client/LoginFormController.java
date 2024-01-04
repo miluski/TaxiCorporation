@@ -102,7 +102,7 @@ public class LoginFormController implements Controller {
                 case "Menadzer" -> formFactory = new AddDriverFactory();
                 case "Pracownik techniczny", "Mechanik" -> formFactory = new DriverPanelFactory();
                 case "Kierowca" -> formFactory = new DriverPanelFactory();
-                case "Klient" -> formFactory = new AddDriverFactory();
+                case "Klient" -> formFactory = new ClientPanelFactory();
             }
             assert formFactory != null;
             Form form = formFactory.createForm();
