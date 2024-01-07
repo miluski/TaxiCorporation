@@ -5,9 +5,9 @@
 <?import javafx.scene.text.*?>
 
 <?import javafx.scene.Cursor?>
-<AnchorPane fx:id="buttonsAnchorPane" prefHeight="470.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.taxicorporation.client.ManageDriversController">
+<AnchorPane prefHeight="470.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.taxicorporation.client.ManageDriversController">
    <children>
-      <SplitPane dividerPositions="0.32620320855614976" prefHeight="470.0" prefWidth="750.0">
+      <SplitPane dividerPositions="0.32620320855614976" prefHeight="470.0" prefWidth="750.0" style="-fx-background-color: dimgrey;">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>

@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="buttonsAnchorPane" prefHeight="470.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.taxicorporation.client.ManageManagerController">
+<AnchorPane fx:id="buttonsAnchorPane" prefHeight="470.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.taxicorporation.client.DeleteMenagerController">
    <children>
-      <SplitPane dividerPositions="0.32620320855614976" prefHeight="470.0" prefWidth="750.0">
+      <SplitPane dividerPositions="0.32620320855614976" prefHeight="470.0" prefWidth="750.0" style="-fx-background-color: dimgray;">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
@@ -27,21 +27,16 @@
                </children></AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="542.0">
                <children>
-                  <Label layoutX="117.0" layoutY="27.0" text="Zarządzaj menadżerami">
+                  <Label layoutX="117.0" layoutY="27.0" text="Usuń konto menadżera ">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                  <Label layoutX="37.0" layoutY="121.0" text="Wybierz Menadżera z listy">
+                  <Label layoutX="105.0" layoutY="123.0" prefHeight="20.0" prefWidth="266.0" text="Wybierz menadżera z listy">
                      <font>
                         <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="251.0" layoutY="121.0" text="Przypisz Menadżera do oddziału">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
+                     </font></Label>
+                  <ChoiceBox fx:id="chooseManagerChoiceBox" layoutX="105.0" layoutY="150.0" prefHeight="35.0" prefWidth="266.0" />
                </children></AnchorPane>
         </items>
       </SplitPane>
