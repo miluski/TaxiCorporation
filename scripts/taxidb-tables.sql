@@ -35,7 +35,6 @@ CREATE TABLE departments (
 CREATE TABLE users (
     id_user NUMBER PRIMARY KEY,
     email VARCHAR2(255),
-    rank VARCHAR2(255),
     username VARCHAR2(255),
     password VARCHAR2(255),
     department VARCHAR2(255),

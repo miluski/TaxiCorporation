@@ -18,7 +18,7 @@ public class RealDarkMap extends Form implements IMap {
 
     @Override
     public void start() throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(StartForm.class.getResource("ShowDarkMap.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(StartForm.class.getResource("ShowMapDark.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         showMapController = fxmlLoader.getController();
         displayMap();
