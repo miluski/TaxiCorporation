@@ -11,8 +11,10 @@ public class AddCarDarkView extends Form {
     public void start() throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(StartForm.class.getResource("AddCarDark.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        AddCarController addCarController = fxmlLoader.getController();
         setButtonPrototypesCredentials();
-        drawAllButtons(fxmlLoader.getController());
+        drawAllButtons(addCarController);
+        addCarController.fetchDepartmentsData();
         MainStage.getInstance().setTitle("Dodawanie samochodu");
         MainStage.getInstance().setScene(scene);
         MainStage.getInstance().show();

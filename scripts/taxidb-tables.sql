@@ -55,7 +55,8 @@ CREATE TABLE managers (
 CREATE TABLE cars (
     id_car NUMBER PRIMARY KEY,
     model VARCHAR2(255),
-    model_year NUMBER
+    model_year NUMBER,
+    department_name VARCHAR2(255)
 );
 
 -- Tabela "taxi_drivers"

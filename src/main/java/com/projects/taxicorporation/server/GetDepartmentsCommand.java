@@ -17,12 +17,8 @@ public class GetDepartmentsCommand implements Command {
             Statement statement = connect.createStatement();
             ResultSet resultSet = statement.executeQuery(query);
             informationData.add("FetchedDepartments");
-            if(!resultSet.next()) {
-                informationData.add("FetchingDepartmentsDataError");
-            }
             while(resultSet.next()) {
-                informationData.add(resultSet.getString(1));
-                informationData.add(resultSet.getString(2));
+                informationData.add(resultSet.getString(1) + ", " + resultSet.getString(2));
             }
         }
         catch (SQLException e) {

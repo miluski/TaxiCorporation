@@ -12,10 +12,11 @@ public class AddCarCommand implements Command {
     public List<String> execute(List<String> data, Connection connect) {
         List<String> informationData = new ArrayList<>();
         try {
-            String query = "INSERT INTO cars (id_car, model, model_year) VALUES (cars_seq.nextval, ?, ?)";
+            String query = "INSERT INTO cars (id_car, model, model_year, department_name) VALUES (cars_seq.nextval, ?, ?, ?)";
             PreparedStatement preparedStatement = connect.prepareStatement(query);
             preparedStatement.setString(1, data.get(0));
             preparedStatement.setInt(2, Integer.parseInt(data.get(1)));
+            preparedStatement.setString(3, data.get(2));
             ResultSet resultSet = preparedStatement.executeQuery();
             if(resultSet.next())
                 informationData.add("AddCarSuccessfull");

@@ -61,7 +61,7 @@ public class AddCarController implements Controller {
     public void onEndAddCarButtonClicked() {
         boolean isDataValid = validateCarModel() && validateYearOfProduction() &&
                 departmentChoiceBox.getValue() != null;
-        if(isDataValid) {
+        if(isDataValid && !Objects.equals(departmentChoiceBox.getValue(), "Brak oddziałów")) {
             communicateWithServer("AddCar");
         }
         else
@@ -130,8 +130,11 @@ public class AddCarController implements Controller {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         ObjectOutputStream oos = new ObjectOutputStream(bos);
         List<String> dataList = new ArrayList<>();
-        dataList.add(carModelField.getText());
-        dataList.add(yearOfProductionField.getText());
+        if(validateCarModel() && validateYearOfProduction()) {
+            dataList.add(carModelField.getText());
+            dataList.add(yearOfProductionField.getText());
+            dataList.add(departmentChoiceBox.getValue().substring(0, departmentChoiceBox.getValue().indexOf(",")));
+        } else dataList.add("");
         oos.writeObject(dataList);
         dataList.clear();
         byte[] dataByteArray = bos.toByteArray();
@@ -162,6 +165,8 @@ public class AddCarController implements Controller {
                 }
                 case "FetchedDepartments" -> {
                     data.remove(0);
+                    if(data.isEmpty())
+                        data.add("Brak oddziałów");
                     ObservableList<String> observableList = FXCollections.observableArrayList(data);
                     departmentChoiceBox.setItems(observableList);
                     departmentChoiceBox.getSelectionModel().select(0);
