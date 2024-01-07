@@ -5,10 +5,10 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DeleteManagerTask extends Task implements Runnable {
+public class GetManagersTask extends Task implements Runnable {
     private final Socket clientSocket;
     private List<String> data;
-    public DeleteManagerTask(Socket clientSocket) {
+    public GetManagersTask(Socket clientSocket) {
         this.clientSocket = clientSocket;
     }
     @Override
@@ -27,11 +27,12 @@ public class DeleteManagerTask extends Task implements Runnable {
     @Override
     public void sendRequest() {
         AbstractDataBase abstractDataBase = new DataBase();
-        Command deleteManagerCommand = new DeleteManagerCommand();
-        ConcreteCommunicateMediator concreteCommunicateMediator = new ConcreteCommunicateMediator(deleteManagerCommand, abstractDataBase);
+        Command getManagersCommand = new GetManagersCommand();
+        ConcreteCommunicateMediator concreteCommunicateMediator = new ConcreteCommunicateMediator(getManagersCommand, abstractDataBase);
         List<String> databaseLoginRequestFeedback = new ArrayList<>(concreteCommunicateMediator.mediate(data));
         returnFeedback(databaseLoginRequestFeedback);
     }
+
     @Override
     public void returnFeedback(List<String> retrievedData) {
         try {
