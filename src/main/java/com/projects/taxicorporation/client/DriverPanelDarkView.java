@@ -19,7 +19,7 @@ public class DriverPanelDarkView extends Form {
     }
     private void setButtonPrototypesCredentials() throws CloneNotSupportedException {
         lightRedButtonPrototype.setHeight(35.0d);
-        lightRedButtonPrototype.setWidth(215.0d);
+        lightRedButtonPrototype.setWidth(180.0d);
         lightRedButtonPrototype.setX(13.0d);
         lightRedButtonPrototype.setY(74.0d);
         redButtonPrototype = lightRedButtonPrototype.clone();
@@ -33,13 +33,13 @@ public class DriverPanelDarkView extends Form {
     }
     private void drawMyOrdersButton(DriverPanelController driverPanelController) {
         ButtonDecorator drawButtonDecorator = new RedButtonDecorator(redButtonPrototype);
-        drawButtonDecorator.setY(119.0d);
-        drawButtonDecorator.setText("Moje zlecenia");
+        drawButtonDecorator.setY(189.0d);
+        drawButtonDecorator.setText("Rezerwacje");
         drawButtonDecorator.draw(driverPanelController, null);
     }
     private void drawMapButton(DriverPanelController driverPanelController) {
         ButtonDecorator drawButtonDecorator = new LightRedButtonDecorator(lightRedButtonPrototype);
-        drawButtonDecorator.setY(156.0d);
+        drawButtonDecorator.setY(234.0d);
         drawButtonDecorator.setText("Mapa");
         drawButtonDecorator.draw(driverPanelController, driverPanelController::onMapButtonClicked);
     }

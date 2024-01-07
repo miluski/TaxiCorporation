@@ -60,6 +60,16 @@ public class DeleteMenagerController implements Controller {
     public void onEndDeleteMenagerButtonClicked() {
         communicateWithServer("DeleteManager");
     }
+    public void onChangeThemeButtonClicked() throws Exception {
+        if (Objects.equals(MainStage.getInstance().getThemeName(), "Light")) {
+            new DarkTheme().applyTheme();
+        } else {
+            new LightTheme().applyTheme();
+        }
+        FormFactory formFactory = new DeleteManagerFactory();
+        Form form = formFactory.createForm();
+        form.start();
+    }
     protected void fetchManagersData() {
         communicateWithServer("GetManagers");
     }
@@ -142,16 +152,5 @@ public class DeleteMenagerController implements Controller {
     @Override
     public AnchorPane getButtonsAnchorPane() {
         return this.buttonsAnchorPane;
-    }
-
-    public void onChangeThemeButtonClicked() throws Exception {
-        if (Objects.equals(MainStage.getInstance().getThemeName(), "Light")) {
-            new DarkTheme().applyTheme();
-        } else {
-            new LightTheme().applyTheme();
-        }
-        FormFactory formFactory = new DeleteManagerFactory();
-        Form form = formFactory.createForm();
-        form.start();
     }
 }
