@@ -11,8 +11,10 @@ public class AddDriverView extends Form {
     public void start() throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(StartForm.class.getResource("AddDriver.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        AddDriverController addDriverController = fxmlLoader.getController();
         setButtonPrototypesCredentials();
-        drawAllButtons(fxmlLoader.getController());
+        drawAllButtons(addDriverController);
+        addDriverController.fetchDepartmentsData();
         MainStage.getInstance().setTitle("Dodawanie kierowcy");
         MainStage.getInstance().setScene(scene);
         MainStage.getInstance().show();
