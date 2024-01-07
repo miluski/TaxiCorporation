@@ -33,7 +33,7 @@ public class ChooseRoadView extends Form {
     private void drawFindRouteButton(ChooseRoadController chooseRoadController) {
         ButtonDecorator drawButtonDecorator = new RedButtonDecorator(redButtonPrototype);
         drawButtonDecorator.setY(119.0d);
-        drawButtonDecorator.setText("Wyszukaj trasę");
+        drawButtonDecorator.setText("Rezerwacje");
         drawButtonDecorator.draw(chooseRoadController, null);
     }
     private void drawMapButton(ChooseRoadController chooseRoadController) {

@@ -11,8 +11,10 @@ public class RenameOrDeleteDepartmentDarkView extends Form {
     public void start() throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(StartForm.class.getResource("RenameOrDeleteDepartmentDark.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        RenameOrDeleteDepartmentController renameOrDeleteDepartmentController = fxmlLoader.getController();
         setButtonPrototypesCredentials();
-        drawAllButtons(fxmlLoader.getController());
+        drawAllButtons(renameOrDeleteDepartmentController);
+        renameOrDeleteDepartmentController.fetchDepartmentsData();
         MainStage.getInstance().setTitle("Zmień nazwę lub usuń oddział");
         MainStage.getInstance().setScene(scene);
         MainStage.getInstance().show();
@@ -88,7 +90,7 @@ public class RenameOrDeleteDepartmentDarkView extends Form {
         ButtonDecorator drawButtonDecorator = new RedButtonDecorator(redButtonPrototype);
         drawButtonDecorator.setX(400.0d);
         drawButtonDecorator.setY(354.0d);
-        drawButtonDecorator.setText("Zatwierdź");
+        drawButtonDecorator.setText("Zatwierdź edycję");
         drawButtonDecorator.draw(renameOrDeleteDepartmentController, renameOrDeleteDepartmentController::onConfirmDepartmentEditButton);
     }
     private void drawFinallyDeleteDepartmentButton(RenameOrDeleteDepartmentController renameOrDeleteDepartmentController) {
