@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.sothawo.mapjfx.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<?import com.sothawo.mapjfx.MapView?>
-<?import javafx.scene.Cursor?>
 <AnchorPane prefHeight="470.0" prefWidth="750.0" style="-fx-background-color: dimgrey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.taxicorporation.client.ShowManagerMapController">
    <children>
       <SplitPane dividerPositions="0.32620320855614976" prefHeight="470.0" prefWidth="750.0" style="-fx-background-color: dimgrey;">
@@ -25,10 +25,13 @@
                             <Cursor fx:constant="HAND" />
                         </cursor>
                     </Button>
-                    <Button layoutX="13.0" layoutY="163.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(246,162,162);" text="Usuń kierowcę" textFill="WHITE">
+                    <Button layoutX="13.0" layoutY="163.0" mnemonicParsing="false" onMouseClicked="#onDeleteDriverButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(246,162,162);" text="Zwolnij kierowcę" textFill="WHITE">
                         <font>
                             <Font name="System Bold" size="16.0" />
                         </font>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
                     </Button>
                     <Button layoutX="13.0" layoutY="207.0" mnemonicParsing="false" onMouseClicked="#onMenageDriversButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(246,162,162);" text="Zarządzaj kierowcami" textFill="WHITE">
                         <font>

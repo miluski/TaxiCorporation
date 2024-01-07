@@ -34,6 +34,12 @@ public class ShowManagerMapController {
         form.start();
     }
 
+    public void onDeleteDriverButtonClicked() throws Exception {
+        FormFactory formFactory = new DeleteDriverFactory();
+        Form form = formFactory.createForm();
+        form.start();
+    }
+
     public void onMenageDriversButtonClicked() throws Exception {
         FormFactory formFactory = new ManageDriversFactory();
         Form form = formFactory.createForm();
