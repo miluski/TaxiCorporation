@@ -66,6 +66,7 @@ public class UserOperations {
         else {
             if (data.get(0).equals("SuccessfullLogout")) {
                 AlertDialog.getInstance().setParametersAndShow("Pomyślnie wylogowano!", Alert.AlertType.INFORMATION);
+                MainStage.getInstance().getUser().userName = "";
                 FormFactory loginFormFactory = new LoginFormFactory();
                 Form loginForm = loginFormFactory.createForm();
                 loginForm.start();

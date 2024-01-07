@@ -20,8 +20,8 @@ public class RegisterCommand implements Command {
         else {
             try {
                 int userRoleNumber = getUserRoleNumber(data);
-                String query = "INSERT INTO users (id_user, username, password, email, rank, department, city, street, id_user_role) " +
-                        "VALUES(users_seq.nextval, ?, ?, ?, ?, ?, ?, ?, ?)";
+                String query = "INSERT INTO users (id_user, username, password, email, department, city, street, id_user_role) " +
+                        "VALUES(users_seq.nextval, ?, ?, ?, ?, ?, ?, ?)";
                 PreparedStatement preparedStatement = connect.prepareStatement(query);
                 preparedStatement.setString(1, data.get(0));
                 preparedStatement.setString(2, data.get(1));
@@ -29,8 +29,7 @@ public class RegisterCommand implements Command {
                 preparedStatement.setString(4, data.get(3));
                 preparedStatement.setString(5, data.get(4));
                 preparedStatement.setString(6, data.get(5));
-                preparedStatement.setString(7, data.get(6));
-                preparedStatement.setInt(8, userRoleNumber);
+                preparedStatement.setInt(7, userRoleNumber);
                 preparedStatement.execute();
                 informationData.add("SuccessfullRegister");
             } catch (SQLException e) {
