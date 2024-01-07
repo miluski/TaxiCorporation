@@ -65,6 +65,7 @@ public class Server implements Runnable {
             case "GetCars" -> taskFactory = new GetCarsTaskFactory();
             case "GetDrivers" -> taskFactory = new GetDriversTaskFactory();
             case "AssignManagerDepartment" -> taskFactory = new AssignManagerDepartmentTaskFactory();
+            case "AssignDriverDepartment" -> taskFactory = new AssignDriverDepartmentTaskFactory();
         }
         assert taskFactory != null;
         Task task = taskFactory.createTask(clientSocket);

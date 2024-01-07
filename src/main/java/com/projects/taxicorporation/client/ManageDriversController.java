@@ -1,19 +1,28 @@
 package com.projects.taxicorporation.client;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.AnchorPane;
-
+import java.io.*;
+import java.net.Socket;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class ManageDriversController implements Controller {
     @FXML
     private AnchorPane buttonsAnchorPane;
-
-    @Override
-    public AnchorPane getButtonsAnchorPane() {
-        return this.buttonsAnchorPane;
-    }
+    @FXML
+    private ChoiceBox<String> driverChoiceBox;
+    @FXML
+    private ChoiceBox<String> departmentChoiceBox;
+    private List<String> numberOfDriverIds;
+    private List<String> numberOfDepartmentStreets;
 
     public void onChangeThemeButtonClicked() throws Exception {
         if (Objects.equals(MainStage.getInstance().getThemeName(), "Light")) {
@@ -51,5 +60,116 @@ public class ManageDriversController implements Controller {
     }
 
     public void onFinallyAssignButtonClicked() throws Exception {
+        communicateWithServer("AssignDriverDepartment");
+    }
+    protected void fetchDepartmentsData() {
+        communicateWithServer("GetDepartments");
+    }
+
+    protected void fetchDriversData() {
+        communicateWithServer("GetDrivers");
+    }
+
+    private void communicateWithServer(String operationName) {
+        try (Socket socket = new Socket("localhost", 1523)) {
+            sendOperationName(socket, operationName);
+            sendData(socket);
+            receiveFeedback(socket);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    private void sendOperationName(Socket socket, String operationName) throws IOException {
+        OutputStream outputStream = socket.getOutputStream();
+        int operationStringLength = operationName.length();
+        byte[] messageByteArray = operationName.getBytes(StandardCharsets.UTF_8);
+        outputStream.write(operationStringLength);
+        outputStream.flush();
+        outputStream.write(messageByteArray);
+        outputStream.flush();
+    }
+
+    private void sendData(Socket socket) throws IOException {
+        OutputStream outputStream = socket.getOutputStream();
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        ObjectOutputStream oos = new ObjectOutputStream(bos);
+        List<String> dataList = getStrings();
+        oos.writeObject(dataList);
+        dataList.clear();
+        byte[] dataByteArray = bos.toByteArray();
+        int dataByteArrayLength = dataByteArray.length;
+        outputStream.write(dataByteArrayLength);
+        outputStream.flush();
+        outputStream.write(dataByteArray);
+        outputStream.flush();
+        oos.reset();
+        bos.reset();
+    }
+
+    private List<String> getStrings() {
+        List<String> dataList = new ArrayList<>();
+        if (departmentChoiceBox.getValue() != null && driverChoiceBox.getValue() != null) {
+            dataList.add(departmentChoiceBox.getValue().substring(0, departmentChoiceBox.getValue().indexOf(",")));
+            dataList.add(departmentChoiceBox.getValue().substring(departmentChoiceBox.getValue().indexOf(",") + 2));
+            dataList.add(numberOfDepartmentStreets.get(departmentChoiceBox.getSelectionModel().getSelectedIndex()).replace("Street: ", ""));
+            dataList.add(numberOfDriverIds.get(driverChoiceBox.getSelectionModel().getSelectedIndex()));
+        } else dataList.add("");
+        return dataList;
+    }
+
+    private void receiveFeedback(Socket socket) throws Exception {
+        InputStream inputStream = socket.getInputStream();
+        int receivedBytesSize = inputStream.read();
+        byte[] receivedBytes = new byte[receivedBytesSize];
+        Object receivedObject = new ObjectInputStream(new ByteArrayInputStream(receivedBytes, 0, inputStream.read(receivedBytes))).readObject();
+        List<String> data = new ArrayList<>((List<String>) receivedObject);
+        if (data.isEmpty())
+            AlertDialog.getInstance().setParametersAndShow("Wystąpił nieoczekiwany błąd!", Alert.AlertType.ERROR);
+        else {
+            String response = data.get(0);
+            switch (response) {
+                case "AssignDriverDepartmentSuccessfull" -> {
+                    AlertDialog.getInstance().setParametersAndShow("Pomyślnie przydzielono nowy oddział dla wybranego kierowcy!", Alert.AlertType.INFORMATION);
+                    driverChoiceBox.getItems().removeAll();
+                    departmentChoiceBox.getItems().removeAll();
+                    fetchDriversData();
+                    fetchDepartmentsData();
+                }
+                case "FetchedDepartments" -> {
+                    data.remove(0);
+                    if (data.isEmpty()) data.add("Brak oddziałów");
+                    List<String> filteredData = data.stream()
+                            .filter(item -> !item.matches("\\d+"))
+                            .filter(item -> !item.startsWith("Street: "))
+                            .collect(Collectors.toList());
+                    numberOfDepartmentStreets = data.stream().
+                            filter(item -> item.startsWith("Street: ")).
+                            collect(Collectors.toList());
+                    ObservableList<String> observableList = FXCollections.observableArrayList(filteredData);
+                    departmentChoiceBox.setItems(observableList);
+                    departmentChoiceBox.getSelectionModel().select(0);
+                }
+                case "FetchedDrivers" -> {
+                    data.remove(0);
+                    if (data.isEmpty()) data.add("Brak kont kierowców");
+                    List<String> filteredData = data.stream()
+                            .filter(item -> !item.matches("\\d+"))
+                            .collect(Collectors.toList());
+                    numberOfDriverIds = data.stream()
+                            .filter(item -> item.matches("\\d+"))
+                            .collect(Collectors.toList());
+                    ObservableList<String> observableList = FXCollections.observableArrayList(filteredData);
+                    driverChoiceBox.setItems(observableList);
+                    driverChoiceBox.getSelectionModel().select(0);
+                }
+                case "AssignDriverDepartmentUnsuccessfull" ->
+                        AlertDialog.getInstance().setParametersAndShow("Wystąpił błąd przy przydzielaniu wybranego oddziału dla kierowcy!", Alert.AlertType.ERROR);
+            }
+        }
+    }
+    @Override
+    public AnchorPane getButtonsAnchorPane() {
+        return this.buttonsAnchorPane;
     }
 }

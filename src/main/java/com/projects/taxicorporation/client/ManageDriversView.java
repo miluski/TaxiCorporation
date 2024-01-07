@@ -11,8 +11,11 @@ public class ManageDriversView extends Form {
     public void start() throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(StartForm.class.getResource("ManageDrivers.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        ManageDriversController manageDriversController = fxmlLoader.getController();
         setButtonPrototypesCredentials();
-        drawAllButtons(fxmlLoader.getController());
+        drawAllButtons(manageDriversController);
+        manageDriversController.fetchDriversData();
+        manageDriversController.fetchDepartmentsData();
         MainStage.getInstance().setTitle("Zarządzanie kierowcami");
         MainStage.getInstance().setScene(scene);
         MainStage.getInstance().show();
