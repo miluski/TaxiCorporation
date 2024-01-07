@@ -33,6 +33,9 @@ public class ClientPanelController implements Controller {
     }
 
     public void onLogoutButtonClicked() {
+        UserOperations userOperations = new UserOperations();
+        UserFacade userFacade = new UserFacade(MainStage.getInstance().getUser(), userOperations);
+        userFacade.logOutUser();
     }
 
     public void onEndSearchButtonClicked() {

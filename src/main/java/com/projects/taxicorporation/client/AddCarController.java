@@ -47,7 +47,9 @@ public class AddCarController implements Controller {
         form.start();
     }
     public void onLogoutButtonClicked() throws Exception  {
-        //todo przekazanie loginu zapisanego przy logowaniu do bazy do logouta
+        UserOperations userOperations = new UserOperations();
+        UserFacade userFacade = new UserFacade(MainStage.getInstance().getUser(), userOperations);
+        userFacade.logOutUser();
     }
     public void onEndAddCarButtonClicked() {
         boolean isDataValid = validateCarModel() && validateYearOfProduction() &&

@@ -1,63 +1,69 @@
 package com.projects.taxicorporation.client;
 
-import java.util.*;
-import java.io.*;
-import javafx.scene.control.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
-import java.nio.charset.StandardCharsets;
+import java.io.*;
 import java.net.Socket;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 import java.util.regex.Pattern;
 
 public class LoginFormController implements Controller {
+    private final Pattern passPattern = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–{}:;',?/*~$^+=<>]).{8,20}$");
     @FXML
     private TextField loginTextField;
     @FXML
     private AnchorPane buttonsAnchorPane;
     @FXML
     private PasswordField passwordTextField;
-    private final Pattern passPattern = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–{}:;',?/*~$^+=<>]).{8,20}$");
+
     public void onRegisterButtonClicked() throws Exception {
         FormFactory formFactory = new RegisterFormFactory();
         Form form = formFactory.createForm();
         form.start();
     }
+
     public void onLoginButtonClicked() {
-        if(validateData())
+        if (validateData())
             communicateWithServer();
     }
+
     private boolean validateData() {
-        if(loginTextField.getText().isEmpty()) {
+        if (loginTextField.getText().isEmpty()) {
             AlertDialog.getInstance().setParametersAndShow("Nie wprowadzono loginu!", AlertType.ERROR);
             return false;
         }
-        if(passwordTextField.getText().isEmpty()) {
+        if (passwordTextField.getText().isEmpty()) {
             AlertDialog.getInstance().setParametersAndShow("Nie wprowadzono hasła!", AlertType.ERROR);
             return false;
-        }
-        else if(!validatePassword()) {
+        } else if (!validatePassword()) {
             AlertDialog.getInstance().setParametersAndShow("Wprowadzone hasło jest nieprawidłowe!", AlertType.ERROR);
             return false;
         }
         return true;
     }
+
     private boolean validatePassword() {
         String password = passwordTextField.getText();
         return password.length() >= 9 && passPattern.matcher(password).matches();
     }
+
     private void communicateWithServer() {
-        try(Socket socket = new Socket("localhost", 1523)) {
+        try (Socket socket = new Socket("localhost", 1523)) {
             sendOperationName(socket);
             sendData(socket);
             receiveFeedback(socket);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
+
     private void sendOperationName(Socket socket) throws IOException {
         OutputStream outputStream = socket.getOutputStream();
         String operation = "LoginTask";
@@ -68,6 +74,7 @@ public class LoginFormController implements Controller {
         outputStream.write(messageByteArray);
         outputStream.flush();
     }
+
     private void sendData(Socket socket) throws IOException {
         OutputStream outputStream = socket.getOutputStream();
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
@@ -86,30 +93,42 @@ public class LoginFormController implements Controller {
         oos.reset();
         bos.reset();
     }
+
     private void receiveFeedback(Socket socket) throws Exception {
-        FormFactory formFactory = null;
         InputStream inputStream = socket.getInputStream();
         int receivedBytesSize = inputStream.read();
         byte[] receivedBytes = new byte[receivedBytesSize];
         Object receivedObject = new ObjectInputStream(new ByteArrayInputStream(receivedBytes, 0, inputStream.read(receivedBytes))).readObject();
         List<String> data = new ArrayList<>((List<String>) receivedObject);
-        if(data.isEmpty())
+        if (data.isEmpty())
             AlertDialog.getInstance().setParametersAndShow("Wprowadzono nieprawidłowe dane!", AlertType.ERROR);
-        else if(!data.get(0).equals("LoginFailed")) {
-            AlertDialog.getInstance().setParametersAndShow("Pomyślnie zalogowano!", AlertType.INFORMATION);
-            switch(data.get(5)) {
-                case "Dyrektor naczelny"-> formFactory = new AddManagerFactory();
-                case "Menadzer" -> formFactory = new AddDriverFactory();
-                case "Pracownik techniczny", "Mechanik" -> formFactory = new DriverPanelFactory();
-                case "Kierowca" -> formFactory = new DriverPanelFactory();
-                case "Klient" -> formFactory = new ClientPanelFactory();
-            }
-            assert formFactory != null;
-            Form form = formFactory.createForm();
-            form.start();
-        }
-        else if(data.get(0).equals("DatabaseConnectError"))
+        else if (!data.get(0).equals("LoginFailed")) {
+            if (!Objects.equals(data.get(6), "true")) {
+                AlertDialog.getInstance().setParametersAndShow("Pomyślnie zalogowano!", AlertType.INFORMATION);
+                setUserDetails(data.get(0));
+                redirectUser(data.get(5));
+            } else
+                AlertDialog.getInstance().setParametersAndShow("Na podane konto ktoś jest już zalogowany!", AlertType.ERROR);
+        } else if (data.get(0).equals("DatabaseConnectError"))
             AlertDialog.getInstance().setParametersAndShow("Wystąpił nieoczekiwany błąd!", AlertType.ERROR);
+    }
+
+    private void setUserDetails(String username) {
+        MainStage.getInstance().getUser().userName = username;
+    }
+
+    private void redirectUser(String userRank) throws Exception {
+        FormFactory formFactory = null;
+        switch (userRank) {
+            case "Dyrektor naczelny" -> formFactory = new AddManagerFactory();
+            case "Menadzer" -> formFactory = new AddDriverFactory();
+            case "Pracownik techniczny", "Mechanik" -> formFactory = new DriverPanelFactory();
+            case "Kierowca" -> formFactory = new DriverPanelFactory();
+            case "Klient" -> formFactory = new ClientPanelFactory();
+        }
+        assert formFactory != null;
+        Form form = formFactory.createForm();
+        form.start();
     }
 
     @Override

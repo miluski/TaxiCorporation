@@ -11,6 +11,7 @@ public class MainStage {
     private static final Stage mainStage = StartForm.getMainStage();
     private static MapView proxyMapView;
     private static String themeName = "Light";
+    private static final User user = new Client();
     private MainStage() {
         ProxyMap proxyMap = new ProxyMap();
         proxyMap.displayMap();
@@ -38,5 +39,8 @@ public class MainStage {
     }
     protected void show() {
         mainStage.show();
+    }
+    protected User getUser() {
+        return user;
     }
 }
