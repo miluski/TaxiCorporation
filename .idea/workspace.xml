@@ -4,27 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69a6e2d8-7d6b-49c1-948b-d54c5bee0429" name="Changes" comment="Implemented delete manager backend functionallity">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AssignManagerDepartmentCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AssignManagerDepartmentTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AssignManagerDepartmentTaskFactory.java" afterDir="false" />
+    <list default="true" id="69a6e2d8-7d6b-49c1-948b-d54c5bee0429" name="Changes" comment="Implemented manage manager backend functionallity">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DriverPanelDarkView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DriverPanelDarkView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DriverPanelView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DriverPanelView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ManageManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ManageManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ManageManagerDarkView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ManageManagerDarkView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ManageManagerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ManageManagerView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AddDriverCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AddDriverTask.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AddDriverTaskFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AddManagerCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AddManagerTask.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AddManagerTaskFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/DeleteCar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/DeleteCar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/DeleteCarDark.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/DeleteCarDark.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ManageManager.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ManageManager.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ManageManagerDark.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ManageManagerDark.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadDarkView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadDarkView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RenameOrDeleteDepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RenameOrDeleteDepartmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RenameOrDeleteDepartmentDarkView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RenameOrDeleteDepartmentDarkView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RenameOrDeleteDepartmentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RenameOrDeleteDepartmentView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DeleteDepartmentCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DeleteDepartmentCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DeleteDepartmentTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DeleteDepartmentTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/RenameDepartmentCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/RenameDepartmentCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/RenameDepartmentTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/RenameDepartmentTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ChooseRoad.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ChooseRoad.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ChooseRoadDark.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ChooseRoadDark.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/DriverMap.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/DriverMap.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/DriverMapDark.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/DriverMapDark.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/RenameOrDeleteDepartment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/RenameOrDeleteDepartment.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/RenameOrDeleteDepartmentDark.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/RenameOrDeleteDepartmentDark.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,9 +60,10 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Client.executor": "Run",
     "Application.Server.executor": "Run",
+    "Application.StartForm.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "manage-managers-feature",
+    "git-widget-placeholder": "manage-departments-feature",
     "last_directory_selection": "C:/Users/spryt/IdeaProjects/TaxiCorporation/src/main/java/com/projects/taxicorporation/client",
     "last_opened_file_path": "C:/Users/spryt/IdeaProjects/TaxiCorporation/src/main/resources/com/projects/taxicorporation/client"
   }
@@ -78,7 +76,7 @@
       <recent name="C:\Users\spryt\IdeaProjects\TaxiCorporation\src\main\resources\com\projects\taxicorporation\client" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Server">
     <configuration name="Client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.StartForm" />
       <module name="TaxiCorporation" />
@@ -163,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704653388717</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Implemented manage manager backend functionallity">
+      <option name="closed" value="true" />
+      <created>1704655809518</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1704655809518</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -174,6 +180,7 @@
     <MESSAGE value="Implemented adding car backend functionallity" />
     <MESSAGE value="Fixed adding car and fetching departments data bugs" />
     <MESSAGE value="Implemented delete manager backend functionallity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented delete manager backend functionallity" />
+    <MESSAGE value="Implemented manage manager backend functionallity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented manage manager backend functionallity" />
   </component>
 </project>

@@ -10,7 +10,7 @@ public class ChooseRoadController implements Controller {
     @FXML
     private AnchorPane buttonsAnchorPane;
     public void onMapButtonClicked() throws Exception {
-        FormFactory formFactory = new ShowMapFactory();
+        FormFactory formFactory = new ShowDriverMapFactory();
         Form form = formFactory.createForm();
         form.start();
     }
