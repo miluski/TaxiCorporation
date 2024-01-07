@@ -15,6 +15,9 @@ public class ChooseRoadController implements Controller {
         form.start();
     }
     public void onLogoutButtonClicked() {
+        UserOperations userOperations = new UserOperations();
+        UserFacade userFacade = new UserFacade(MainStage.getInstance().getUser(), userOperations);
+        userFacade.logOutUser();
     }
 
     @Override

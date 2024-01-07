@@ -60,7 +60,7 @@ public class Server implements Runnable {
             case "DeleteManager" -> taskFactory = new DeleteManagerTaskFactory();
             case "RenameDepartment" -> taskFactory = new RenameDepartmentTaskFactory();
             case "DeleteDepartment" -> taskFactory = new DeleteDepartmentTaskFactory();
-            case "Logout" -> taskFactory = new LogoutTaskFactory();
+            case "LogoutTask" -> taskFactory = new LogoutTaskFactory();
             case "GetAvailableRoutes" -> taskFactory = new GetAvailableRoutesTaskFactory();
         }
         assert taskFactory != null;
