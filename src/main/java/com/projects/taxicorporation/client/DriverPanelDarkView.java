@@ -34,7 +34,7 @@ public class DriverPanelDarkView extends Form {
     private void drawMyOrdersButton(DriverPanelController driverPanelController) {
         ButtonDecorator drawButtonDecorator = new RedButtonDecorator(redButtonPrototype);
         drawButtonDecorator.setY(189.0d);
-        drawButtonDecorator.setText("Moje zlecenia");
+        drawButtonDecorator.setText("Rezerwacje");
         drawButtonDecorator.draw(driverPanelController, null);
     }
     private void drawMapButton(DriverPanelController driverPanelController) {

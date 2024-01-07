@@ -11,8 +11,10 @@ public class DeleteDriverView extends Form {
     public void start() throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(StartForm.class.getResource("DeleteDriver.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        DeleteDriverController deleteDriverController = fxmlLoader.getController();
         setButtonPrototypesCredentials();
-        drawAllButtons(fxmlLoader.getController());
+        drawAllButtons(deleteDriverController);
+        deleteDriverController.fetchDriversData();
         MainStage.getInstance().setTitle("Usuwanie kierowcy");
         MainStage.getInstance().setScene(scene);
         MainStage.getInstance().show();

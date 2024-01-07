@@ -4,19 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69a6e2d8-7d6b-49c1-948b-d54c5bee0429" name="Changes" comment="Implemented delete car backend functionallity">
+    <list default="true" id="69a6e2d8-7d6b-49c1-948b-d54c5bee0429" name="Changes" comment="Implemented add driver backend functionallity">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetDriversCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetDriversTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetDriversTaskFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/AddDriverController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/AddDriverController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/AddDriverDarkView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/AddDriverDarkView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/AddDriverView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/AddDriverView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DriverPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DriverPanelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DeleteDriverController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DeleteDriverController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DeleteDriverDarkView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DeleteDriverDarkView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DeleteDriverView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DeleteDriverView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DriverPanelDarkView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DriverPanelDarkView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DriverPanelView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DriverPanelView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ShowDriverMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ShowDriverMapController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/AddDriver.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/AddDriver.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/AddDriverDark.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/AddDriverDark.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/DriverMap.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/DriverMap.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/DriverMapDark.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/DriverMapDark.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DeleteDriverCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DeleteDriverCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DeleteDriverTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DeleteDriverTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +58,7 @@
     "Application.StartForm.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "add-driver-feature",
+    "git-widget-placeholder": "delete-driver-feature",
     "last_directory_selection": "C:/Users/spryt/IdeaProjects/TaxiCorporation/src/main/java/com/projects/taxicorporation/client",
     "last_opened_file_path": "C:/Users/spryt/IdeaProjects/TaxiCorporation/src/main/resources/com/projects/taxicorporation/client"
   }
@@ -180,7 +180,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704664692136</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Implemented add driver backend functionallity">
+      <option name="closed" value="true" />
+      <created>1704666026386</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1704666026386</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -194,6 +202,7 @@
     <MESSAGE value="Implemented manage manager backend functionallity" />
     <MESSAGE value="Implemented rename/delete department backend functionallity" />
     <MESSAGE value="Implemented delete car backend functionallity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented delete car backend functionallity" />
+    <MESSAGE value="Implemented add driver backend functionallity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented add driver backend functionallity" />
   </component>
 </project>

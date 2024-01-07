@@ -91,7 +91,7 @@ public class AddDriverController implements Controller {
         } else {
             new LightTheme().applyTheme();
         }
-        FormFactory formFactory = new AddManagerFactory();
+        FormFactory formFactory = new AddDriverFactory();
         Form form = formFactory.createForm();
         form.start();
     }
