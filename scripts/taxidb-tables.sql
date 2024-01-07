@@ -56,7 +56,7 @@ CREATE TABLE cars (
     id_car NUMBER PRIMARY KEY,
     model VARCHAR2(255),
     model_year NUMBER,
-    department_name VARCHAR2(255)
+    id_department NUMBER REFERENCES departments(id_department)
 );
 
 -- Tabela "taxi_drivers"
