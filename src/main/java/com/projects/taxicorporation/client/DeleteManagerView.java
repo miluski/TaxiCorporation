@@ -11,8 +11,10 @@ public class DeleteManagerView extends Form {
     public void start() throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(StartForm.class.getResource("DeleteManager.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        DeleteMenagerController deleteMenagerController = fxmlLoader.getController();
         setButtonPrototypesCredentials();
-        drawAllButtons(fxmlLoader.getController());
+        drawAllButtons(deleteMenagerController);
+        deleteMenagerController.fetchManagersData();
         MainStage.getInstance().setTitle("Usuwanie menadżera");
         MainStage.getInstance().setScene(scene);
         MainStage.getInstance().show();

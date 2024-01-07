@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.sothawo.mapjfx.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<?import javafx.scene.Cursor?>
-<?import com.sothawo.mapjfx.MapView?>
 <AnchorPane prefHeight="470.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.taxicorporation.client.ShowDriverMapController">
    <children>
       <SplitPane dividerPositions="0.2862903225806452" prefHeight="470.0" prefWidth="750.0" style="-fx-background-color: dimgrey;">
@@ -17,7 +17,7 @@
                             <Font name="Arial Bold" size="19.0" />
                         </font>
                     </Label>
-                    <Button layoutX="13.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#onFindRouteButtonClicked" prefHeight="35.0" prefWidth="180.0" style="-fx-background-color: rgb(246,162,162);" text="Wyszukaj trasę" textFill="WHITE">
+                    <Button layoutX="13.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#onFindRouteButtonClicked" prefHeight="35.0" prefWidth="180.0" style="-fx-background-color: rgb(246,162,162);" text="Rezerwacje" textFill="WHITE">
                         <font>
                             <Font name="System Bold" size="16.0" />
                         </font>

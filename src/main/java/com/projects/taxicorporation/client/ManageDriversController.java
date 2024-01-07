@@ -27,10 +27,13 @@ public class ManageDriversController implements Controller {
     }
 
     public void onLogoutButtonClicked() {
+        UserOperations userOperations = new UserOperations();
+        UserFacade userFacade = new UserFacade(MainStage.getInstance().getUser(), userOperations);
+        userFacade.logOutUser();
     }
 
     public void onMapButtonClicked() throws Exception {
-        FormFactory formFactory = new ShowDriverMapFactory();
+        FormFactory formFactory = new ShowManagerMapFactory();
         Form form = formFactory.createForm();
         form.start();
     }

@@ -2,9 +2,9 @@ package com.projects.taxicorporation.server;
 
 import java.net.Socket;
 
-public class AddDriverTaskFactory implements TaskFactory {
+public class GetManagersTaskFactory implements TaskFactory {
     @Override
     public Task createTask(Socket socket) {
-        return new AddDriverTask(socket);
+        return new GetManagersTask(socket);
     }
 }

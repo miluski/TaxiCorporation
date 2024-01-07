@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="buttonsAnchorPane" prefHeight="470.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.taxicorporation.client.ManageManagerController">
+   <children>
+      <SplitPane dividerPositions="0.32620320855614976" prefHeight="470.0" prefWidth="750.0" style="-fx-background-color: dimgray;">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="58.0" layoutY="32.0" text="Panel Admina">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Label>
+                   <Button mnemonicParsing="false" onMouseClicked="#onChangeThemeButtonClicked" style="-fx-background-color: lightgrey;" text="Light/Dark">
+                       <font>
+                           <Font size="10.0" />
+                       </font>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                   </Button>
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="542.0">
+               <children>
+                  <Label layoutX="117.0" layoutY="27.0" text="Zarządzaj menadżerami">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="37.0" layoutY="121.0" text="Wybierz Menadżera z listy">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="251.0" layoutY="121.0" text="Przypisz Menadżera do oddziału">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

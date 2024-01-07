@@ -35,13 +35,12 @@ CREATE TABLE departments (
 CREATE TABLE users (
     id_user NUMBER PRIMARY KEY,
     email VARCHAR2(255),
-    rank VARCHAR2(255),
     username VARCHAR2(255),
     password VARCHAR2(255),
     department VARCHAR2(255),
     city VARCHAR2(255),
     street VARCHAR2(255),
-    loggedIn BOOLEAN DEFAULT false,
+    loggedIn VARCHAR2(5),
     id_user_role NUMBER REFERENCES user_roles(id_user_role)
 );
 
@@ -56,7 +55,8 @@ CREATE TABLE managers (
 CREATE TABLE cars (
     id_car NUMBER PRIMARY KEY,
     model VARCHAR2(255),
-    model_year NUMBER
+    model_year NUMBER,
+    id_department NUMBER REFERENCES departments(id_department)
 );
 
 -- Tabela "taxi_drivers"

@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="583.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.taxicorporation.client.LoginFormController">
+<AnchorPane fx:id="buttonsAnchorPane" prefHeight="400.0" prefWidth="583.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.taxicorporation.client.LoginFormController">
    <children>
       <SplitPane dividerPositions="0.5" prefHeight="400.0" prefWidth="583.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
@@ -40,14 +40,6 @@
                      </font>
                   </Label>
                   <PasswordField fx:id="passwordTextField" layoutX="81.0" layoutY="173.0" prefHeight="25.0" prefWidth="205.0" />
-                  <Button layoutX="81.0" layoutY="260.0" mnemonicParsing="false" onMouseClicked="#onLoginButtonClicked" prefHeight="25.0" prefWidth="186.0" style="-fx-background-color: rgb(211,20,20);" text="Zaloguj się" textAlignment="CENTER" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
                   <Label layoutX="81.0" layoutY="300.0" prefHeight="17.0" prefWidth="92.0" text="Nie masz konta?" />
                   <Label layoutX="173.0" layoutY="300.0" onMouseClicked="#onRegisterButtonClicked" text="Zarejestruj się!" textFill="#d31414">
                      <cursor>
@@ -56,6 +48,14 @@
                      <effect>
                         <Bloom threshold="1.0" />
                      </effect></Label>
+                  <Button mnemonicParsing="false" onMouseClicked="#onChangeThemeButtonClicked" style="-fx-background-color: lightgrey;" text="Light/Dark">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </Button>
                </children>
             </Pane>
         </items>

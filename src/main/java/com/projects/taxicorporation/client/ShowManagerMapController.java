@@ -12,6 +12,9 @@ public class ShowManagerMapController {
     }
 
     public void onLogoutButtonClicked() {
+        UserOperations userOperations = new UserOperations();
+        UserFacade userFacade = new UserFacade(MainStage.getInstance().getUser(), userOperations);
+        userFacade.logOutUser();
     }
 
     public void onChangeThemeButtonClicked() throws Exception {
@@ -27,6 +30,12 @@ public class ShowManagerMapController {
 
     public void onAddDriverButtonClicked() throws Exception {
         FormFactory formFactory = new AddDriverFactory();
+        Form form = formFactory.createForm();
+        form.start();
+    }
+
+    public void onDeleteDriverButtonClicked() throws Exception {
+        FormFactory formFactory = new DeleteDriverFactory();
         Form form = formFactory.createForm();
         form.start();
     }

@@ -11,8 +11,10 @@ public class AddManagerDarkView extends Form {
     public void start() throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(StartForm.class.getResource("AddManagerDark.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        AddManagerController addManagerController = fxmlLoader.getController();
         setButtonPrototypesCredentials();
-        drawAllButtons(fxmlLoader.getController());
+        drawAllButtons(addManagerController);
+        addManagerController.fetchDepartmentsData();
         MainStage.getInstance().setTitle("Dodawanie menadżera");
         MainStage.getInstance().setScene(scene);
         MainStage.getInstance().show();

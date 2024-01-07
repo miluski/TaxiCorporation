@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="buttonsAnchorPane" prefHeight="470.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.taxicorporation.client.ClientPanelController">
+    <children>
+        <SplitPane dividerPositions="0.2862903225806452" prefHeight="470.0" prefWidth="750.0" style="-fx-background-color: dimgray;">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <Label layoutX="45.0" layoutY="32.0" text="Panel Klienta">
+                            <font>
+                                <Font name="Arial Bold" size="19.0" />
+                            </font>
+                        </Label>
+                        <Button mnemonicParsing="false" onMouseClicked="#onChangeThemeButtonClicked" style="-fx-background-color: lightgrey;" text="Light/Dark">
+                            <font>
+                                <Font size="10.0" />
+                            </font>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                        </Button>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="542.0">
+                    <children>
+                        <Label layoutX="176.0" layoutY="88.0" text="Znajdź przejazd">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="129.0" layoutY="186.0" text="Skąd">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="startPointField" layoutX="190.0" layoutY="187.0" prefHeight="25.0" prefWidth="266.0" />
+                        <Label layoutX="116.0" layoutY="264.0" text="Dokąd">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="destinationField" layoutX="188.0" layoutY="265.0" prefHeight="25.0" prefWidth="266.0" />
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

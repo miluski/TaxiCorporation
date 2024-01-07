@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="470.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.taxicorporation.client.DeleteDriverController">
+<?import javafx.scene.Cursor?>
+<AnchorPane fx:id="buttonsAnchorPane" prefHeight="470.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.taxicorporation.client.ManageDriversController">
    <children>
       <SplitPane dividerPositions="0.32620320855614976" prefHeight="470.0" prefWidth="750.0">
         <items>
@@ -16,42 +16,13 @@
                         <Font name="Arial Bold" size="19.0" />
                      </font>
                   </Label>
-                  <Button layoutX="14.0" layoutY="74.0" mnemonicParsing="false" onMouseClicked="#onAddDriverButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(246,162,162);" text="Dodaj kierowcę" textFill="WHITE">
+                   <Button mnemonicParsing="false" onMouseClicked="#onChangeThemeButtonClicked" style="-fx-background-color: lightgrey;" text="Light/Dark">
                      <font>
-                        <Font name="System Bold" size="16.0" />
+                        <Font size="10.0" />
                      </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-                  <Button layoutX="14.0" layoutY="120.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(246,162,162);" text="Usuń kierowcę" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="16.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="14.0" layoutY="163.0" mnemonicParsing="false" onMouseClicked="#onMenageDriversButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(211,20,20);" text="Zarządzaj kierowcami" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-                  <Button layoutX="14.0" layoutY="207.0" mnemonicParsing="false" onMouseClicked="#onMapButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(246,162,162);" text="Mapa" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-                  <Button layoutX="12.0" layoutY="419.0" mnemonicParsing="false" onMouseClicked="#onLogoutButtonClicked" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: rgb(134,134,134);" text="Wyloguj" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="16.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
+                      <cursor>
+                          <Cursor fx:constant="OPEN_HAND" />
+                      </cursor>
                   </Button>
                </children></AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="542.0">
@@ -66,14 +37,6 @@
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                  <Button layoutX="118.0" layoutY="398.0" mnemonicParsing="false" onMouseClicked="#onEndHireDriverButtonClicked" prefHeight="39.0" prefWidth="266.0" style="-fx-background-color: rgb(211,20,20);" text="Przydziel" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
                   <Label layoutX="303.0" layoutY="119.0" text="Przydziel oddział kierowcy">
                      <font>
                         <Font size="14.0" />
