@@ -11,8 +11,11 @@ public class ManageManagerView extends Form {
     public void start() throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(StartForm.class.getResource("ManageManager.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        ManageManagerController manageManagerController = fxmlLoader.getController();
         setButtonPrototypesCredentials();
-        drawAllButtons(fxmlLoader.getController());
+        drawAllButtons(manageManagerController);
+        manageManagerController.fetchManagersData();
+        manageManagerController.fetchDepartmentsData();
         MainStage.getInstance().setTitle("Zarządzanie menadżerami");
         MainStage.getInstance().setScene(scene);
         MainStage.getInstance().show();

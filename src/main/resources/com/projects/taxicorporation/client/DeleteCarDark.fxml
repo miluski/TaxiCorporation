@@ -38,12 +38,6 @@
                      </font>
                   </Label>
                   <ChoiceBox fx:id="chooseDepartmentChoiceBox" layoutX="64.0" layoutY="127.0" prefHeight="25.0" prefWidth="390.0" />
-                  <Label layoutX="64.0" layoutY="205.0" text="Wybierz samochód">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <ChoiceBox fx:id="chooseCarChoiceBox" layoutX="61.0" layoutY="225.0" prefHeight="25.0" prefWidth="390.0" />
                </children></AnchorPane>
         </items>
       </SplitPane>
