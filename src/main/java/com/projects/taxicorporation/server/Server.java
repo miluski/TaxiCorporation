@@ -53,8 +53,6 @@ public class Server implements Runnable {
             case "RegisterTask" -> taskFactory = new RegisterTaskFactory();
             case "AddCar" -> taskFactory = new AddCarTaskFactory();
             case "AddDepartment" -> taskFactory = new AddDepartmentTaskFactory();
-            case "AddDriver" -> taskFactory = new AddDriverTaskFactory();
-            case "AddManager" -> taskFactory = new AddManagerTaskFactory();
             case "DeleteCar" -> taskFactory = new DeleteCarTaskFactory();
             case "DeleteDriver" -> taskFactory = new DeleteDriverTaskFactory();
             case "DeleteManager" -> taskFactory = new DeleteManagerTaskFactory();
@@ -64,6 +62,7 @@ public class Server implements Runnable {
             case "GetAvailableRoutes" -> taskFactory = new GetAvailableRoutesTaskFactory();
             case "GetDepartments" -> taskFactory = new GetDepartmentsTaskFactory();
             case "GetManagers" -> taskFactory = new GetManagersTaskFactory();
+            case "AssignManagerDepartment" -> taskFactory = new AssignManagerDepartmentTaskFactory();
         }
         assert taskFactory != null;
         Task task = taskFactory.createTask(clientSocket);
