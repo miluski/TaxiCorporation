@@ -6,7 +6,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.AnchorPane;
-
 import java.io.*;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
@@ -114,13 +113,7 @@ public class ManageManagerController implements Controller {
         OutputStream outputStream = socket.getOutputStream();
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         ObjectOutputStream oos = new ObjectOutputStream(bos);
-        List<String> dataList = new ArrayList<>();
-        if (departmentChoiceBox.getValue() != null && managerChoiceBox.getValue() != null) {
-            dataList.add(departmentChoiceBox.getValue().substring(0, departmentChoiceBox.getValue().indexOf(",")));
-            dataList.add(departmentChoiceBox.getValue().substring(departmentChoiceBox.getValue().indexOf(",") + 2));
-            dataList.add(numberOfDepartmentStreets.get(departmentChoiceBox.getSelectionModel().getSelectedIndex()).replace("Street: ", ""));
-            dataList.add(numberOfManagerIds.get(managerChoiceBox.getSelectionModel().getSelectedIndex()));
-        } else dataList.add("");
+        List<String> dataList = getStrings();
         oos.writeObject(dataList);
         dataList.clear();
         byte[] dataByteArray = bos.toByteArray();
@@ -131,6 +124,17 @@ public class ManageManagerController implements Controller {
         outputStream.flush();
         oos.reset();
         bos.reset();
+    }
+
+    private List<String> getStrings() {
+        List<String> dataList = new ArrayList<>();
+        if (departmentChoiceBox.getValue() != null && managerChoiceBox.getValue() != null) {
+            dataList.add(departmentChoiceBox.getValue().substring(0, departmentChoiceBox.getValue().indexOf(",")));
+            dataList.add(departmentChoiceBox.getValue().substring(departmentChoiceBox.getValue().indexOf(",") + 2));
+            dataList.add(numberOfDepartmentStreets.get(departmentChoiceBox.getSelectionModel().getSelectedIndex()).replace("Street: ", ""));
+            dataList.add(numberOfManagerIds.get(managerChoiceBox.getSelectionModel().getSelectedIndex()));
+        } else dataList.add("");
+        return dataList;
     }
 
     private void receiveFeedback(Socket socket) throws Exception {
