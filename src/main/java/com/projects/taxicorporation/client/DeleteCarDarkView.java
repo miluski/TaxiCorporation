@@ -11,8 +11,10 @@ public class DeleteCarDarkView extends Form {
     public void start() throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(StartForm.class.getResource("DeleteCarDark.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        DeleteCarController deleteCarController = fxmlLoader.getController();
         setButtonPrototypesCredentials();
-        drawAllButtons(fxmlLoader.getController());
+        drawAllButtons(deleteCarController);
+        deleteCarController.fetchCarsData();
         MainStage.getInstance().setTitle("Usuwanie samochodu");
         MainStage.getInstance().setScene(scene);
         MainStage.getInstance().show();

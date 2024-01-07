@@ -62,6 +62,7 @@ public class Server implements Runnable {
             case "GetAvailableRoutes" -> taskFactory = new GetAvailableRoutesTaskFactory();
             case "GetDepartments" -> taskFactory = new GetDepartmentsTaskFactory();
             case "GetManagers" -> taskFactory = new GetManagersTaskFactory();
+            case "GetCars" -> taskFactory = new GetCarsTaskFactory();
             case "AssignManagerDepartment" -> taskFactory = new AssignManagerDepartmentTaskFactory();
         }
         assert taskFactory != null;
