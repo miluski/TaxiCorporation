@@ -5,11 +5,11 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AddCarTask extends Task implements Runnable {
+public class GetDepartmentsTask extends Task implements Runnable {
     private final Socket clientSocket;
     private List<String> data;
 
-    public AddCarTask(Socket clientSocket) {
+    public GetDepartmentsTask(Socket clientSocket) {
         this.clientSocket = clientSocket;
     }
 
@@ -30,8 +30,8 @@ public class AddCarTask extends Task implements Runnable {
     @Override
     public void sendRequest() {
         AbstractDataBase abstractDataBase = new DataBase();
-        Command addCarCommand = new AddCarCommand();
-        ConcreteCommunicateMediator concreteCommunicateMediator = new ConcreteCommunicateMediator(addCarCommand, abstractDataBase);
+        Command getDepartmentsCommand = new GetDepartmentsCommand();
+        ConcreteCommunicateMediator concreteCommunicateMediator = new ConcreteCommunicateMediator(getDepartmentsCommand, abstractDataBase);
         List<String> databaseLoginRequestFeedback = new ArrayList<>(concreteCommunicateMediator.mediate(data));
         returnFeedback(databaseLoginRequestFeedback);
     }

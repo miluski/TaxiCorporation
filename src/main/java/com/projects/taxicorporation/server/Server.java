@@ -62,6 +62,7 @@ public class Server implements Runnable {
             case "DeleteDepartment" -> taskFactory = new DeleteDepartmentTaskFactory();
             case "LogoutTask" -> taskFactory = new LogoutTaskFactory();
             case "GetAvailableRoutes" -> taskFactory = new GetAvailableRoutesTaskFactory();
+            case "GetDepartments" -> taskFactory = new GetDepartmentsTaskFactory();
         }
         assert taskFactory != null;
         Task task = taskFactory.createTask(clientSocket);

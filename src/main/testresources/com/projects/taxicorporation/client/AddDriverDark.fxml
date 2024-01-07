@@ -5,13 +5,13 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="buttonsAnchorPane" prefHeight="470.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.taxicorporation.client.AddManagerController">
+<AnchorPane fx:id="buttonsAnchorPane" prefHeight="470.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.taxicorporation.client.AddDriverController">
    <children>
-      <SplitPane dividerPositions="0.32620320855614976" prefHeight="470.0" prefWidth="750.0">
+      <SplitPane dividerPositions="0.32620320855614976" prefHeight="470.0" prefWidth="750.0" style="-fx-background-color: dimgray;">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Label layoutX="58.0" layoutY="32.0" text="Panel Admina">
+                  <Label layoutX="42.0" layoutY="31.0" text="Panel Menadżera">
                      <font>
                         <Font name="Arial Bold" size="19.0" />
                      </font>
@@ -27,7 +27,7 @@
                </children></AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="542.0">
                <children>
-                  <Label layoutX="101.0" layoutY="27.0" text="Uzupełnij dane menadżera">
+                  <Label layoutX="163.0" layoutY="27.0" text="Dodaj kierowcę">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
@@ -37,35 +37,35 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="nameField" layoutX="64.0" layoutY="163.0" />
+                  <TextField layoutX="64.0" layoutY="163.0" />
                   <Label layoutX="294.0" layoutY="143.0" text="Oddział">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <ChoiceBox fx:id="departmentChoiceBox" layoutX="294.0" layoutY="163.0" prefWidth="150.0" />
+                  <ChoiceBox layoutX="294.0" layoutY="163.0" prefWidth="150.0" />
                   <Label layoutX="64.0" layoutY="214.0" text="Nazwisko">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="surnameField" layoutX="64.0" layoutY="234.0" />
+                  <TextField layoutX="64.0" layoutY="234.0" />
                   <Label layoutX="294.0" layoutY="214.0" text="Numer telefonu">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
-                  <TextField fx:id="phoneNumberField" layoutX="294.0" layoutY="234.0" />
+                  <TextField layoutX="294.0" layoutY="234.0" />
                   <Label layoutX="64.0" layoutY="288.0" text="Login">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="loginField" layoutX="64.0" layoutY="308.0" />
+                  <TextField layoutX="64.0" layoutY="308.0" />
                   <Label layoutX="294.0" layoutY="288.0" text="Hasło">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
-                  <TextField fx:id="passwordField" layoutX="294.0" layoutY="308.0" />
+                  <TextField layoutX="294.0" layoutY="308.0" />
                </children></AnchorPane>
         </items>
       </SplitPane>
