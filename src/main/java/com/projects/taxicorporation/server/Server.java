@@ -59,7 +59,7 @@ public class Server implements Runnable {
             case "RenameDepartment" -> taskFactory = new RenameDepartmentTaskFactory();
             case "DeleteDepartment" -> taskFactory = new DeleteDepartmentTaskFactory();
             case "LogoutTask" -> taskFactory = new LogoutTaskFactory();
-            case "GetAvailableRoutes" -> taskFactory = new GetAvailableRoutesTaskFactory();
+            case "GetAvailableCourses" -> taskFactory = new GetAvailableCoursesTaskFactory();
             case "GetDepartments" -> taskFactory = new GetDepartmentsTaskFactory();
             case "GetManagers" -> taskFactory = new GetManagersTaskFactory();
             case "GetCars" -> taskFactory = new GetCarsTaskFactory();

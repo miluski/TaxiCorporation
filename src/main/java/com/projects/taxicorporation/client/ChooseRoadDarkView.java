@@ -4,6 +4,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 
 public class ChooseRoadDarkView extends Form {
+    private final String startPoint;
+    private final String destinationPoint;
+
+    public ChooseRoadDarkView(String startPoint, String destinationPoint) {
+        this.startPoint = startPoint;
+        this.destinationPoint = destinationPoint;
+    }
+
     private final ButtonPrototype lightRedButtonPrototype = new LightRedButtonPrototype();
     private ButtonPrototype redButtonPrototype;
     private ButtonPrototype grayButtonPrototype;

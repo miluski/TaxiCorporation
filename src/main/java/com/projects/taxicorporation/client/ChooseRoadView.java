@@ -4,6 +4,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 
 public class ChooseRoadView extends Form {
+    private final String startPoint;
+    private final String destinationPoint;
+
+    public ChooseRoadView(String startPoint, String destinationPoint) {
+        this.startPoint = startPoint;
+        this.destinationPoint = destinationPoint;
+    }
+
     private final ButtonPrototype lightRedButtonPrototype = new LightRedButtonPrototype();
     private ButtonPrototype redButtonPrototype;
     private ButtonPrototype grayButtonPrototype;
@@ -11,12 +19,20 @@ public class ChooseRoadView extends Form {
     public void start() throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(StartForm.class.getResource("ChooseRoad.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+
+        // Get the controller instance
+        ChooseRoadController chooseRoadController = fxmlLoader.getController();
+
+        // Pass the startPoint and destinationPoint to the controller
+        chooseRoadController.setStartAndDestinationPoints(startPoint, destinationPoint);
+
         setButtonPrototypesCredentials();
-        drawAllButtons(fxmlLoader.getController());
+        drawAllButtons(chooseRoadController);
         MainStage.getInstance().setTitle("Wybieranie trasy");
         MainStage.getInstance().setScene(scene);
         MainStage.getInstance().show();
     }
+
     private void setButtonPrototypesCredentials() throws CloneNotSupportedException {
         lightRedButtonPrototype.setHeight(35.0d);
         lightRedButtonPrototype.setWidth(215.0d);
