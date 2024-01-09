@@ -20,10 +20,8 @@ public class ChooseRoadView extends Form {
         FXMLLoader fxmlLoader = new FXMLLoader(StartForm.class.getResource("ChooseRoad.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
-        // Get the controller instance
         ChooseRoadController chooseRoadController = fxmlLoader.getController();
 
-        // Pass the startPoint and destinationPoint to the controller
         chooseRoadController.setStartAndDestinationPoints(startPoint, destinationPoint);
 
         setButtonPrototypesCredentials();

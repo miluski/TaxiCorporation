@@ -27,17 +27,6 @@ public class GetAvailableCoursesCommand implements Command {
             preparedStatement.setString(2, data.get(1)); // destinationPoint
             ResultSet result = preparedStatement.executeQuery();
 
-            String query2 = "SELECT courses.id_course, departures.hour AS departure_date, " +
-                    "(SELECT addresses.street FROM addresses WHERE addresses.id_address = departures.id_address) AS departure_name, " +
-                    "(SELECT addresses.street FROM addresses WHERE addresses.id_address = arrivals.id_address) AS arrival_name " +
-                    "FROM courses " +
-                    "JOIN departures ON courses.id_departure = departures.id_departure " +
-                    "JOIN arrivals ON courses.id_arrival = arrivals.id_arrival " +
-                    "WHERE (SELECT addresses.street FROM addresses WHERE addresses.id_address = departures.id_address) = '" + data.get(0) + "' " +
-                    "AND (SELECT addresses.street FROM addresses WHERE addresses.id_address = arrivals.id_address) = '" + data.get(1) + "'";
-
-            System.out.println(query2);
-
             while (result.next()) {
                 String departureName = result.getString("departure_name");
                 String arrivalName = result.getString("arrival_name");

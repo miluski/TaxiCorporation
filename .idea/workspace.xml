@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69a6e2d8-7d6b-49c1-948b-d54c5bee0429" name="Changes" comment="merge Implemented add driver backend functionallity">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/taxidb-courses.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/taxidb-courses.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadDarkView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadDarkView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ClientPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ClientPanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ConcreteLocationFlyweight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ConcreteLocationFlyweight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetAvailableRoutesCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetAvailableCoursesCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetAvailableRoutesTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetAvailableCoursesTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetAvailableRoutesTaskFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetAvailableCoursesTaskFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ChooseRoad.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ChooseRoad.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ClientPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ClientPanel.fxml" afterDir="false" />
+    <list default="true" id="69a6e2d8-7d6b-49c1-948b-d54c5bee0429" name="Changes" comment="finding available courses">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetAvailableCoursesCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetAvailableCoursesCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +105,7 @@
       <updated>1700752101071</updated>
       <workItem from="1704713474405" duration="520000" />
       <workItem from="1704714275213" duration="167000" />
-      <workItem from="1704820149870" duration="14865000" />
+      <workItem from="1704820149870" duration="15211000" />
     </task>
     <task id="LOCAL-00002" summary="Small bug fixes">
       <option name="closed" value="true" />
@@ -208,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704670529943</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="finding available courses">
+      <option name="closed" value="true" />
+      <created>1704835662025</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1704835662025</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,6 +222,7 @@
     <MESSAGE value="Implemented add driver backend functionallity" />
     <MESSAGE value="Implemented manage manager backend functionallity" />
     <MESSAGE value="merge Implemented add driver backend functionallity" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge Implemented add driver backend functionallity" />
+    <MESSAGE value="finding available courses" />
+    <option name="LAST_COMMIT_MESSAGE" value="finding available courses" />
   </component>
 </project>
