@@ -20,7 +20,7 @@ public class ShowDriverMapController {
         } else {
             new LightTheme().applyTheme();
         }
-        FormFactory formFactory = new ShowDriverMapFactory();
+        FormFactory formFactory = new ShowDriverMapFactory("", "");
         Form form = formFactory.createForm();
         form.start();
     }

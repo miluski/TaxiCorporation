@@ -4,10 +4,11 @@ import com.projects.taxicorporation.models.RouteInfo;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
+import javafx.scene.control.ListCell;
+import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-
+import javafx.util.Callback;
 import java.io.*;
 import java.net.Socket;
 import java.nio.ByteBuffer;
@@ -15,7 +16,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Collectors;
 
 public class ChooseRoadController implements Controller {
 
@@ -23,14 +23,19 @@ public class ChooseRoadController implements Controller {
     private String destinationPoint;
 
     public void setStartAndDestinationPoints(String startPoint, String destinationPoint) {
+        System.out.println("start point: " + startPoint);
         this.startPoint = startPoint;
         this.destinationPoint = destinationPoint;
+        communicateWithServer("GetAvailableCourses");
     }
 
     @FXML
     private AnchorPane buttonsAnchorPane;
+
+    @FXML
+    private ListView<RouteInfo> courseListView;
     public void onMapButtonClicked() throws Exception {
-        FormFactory formFactory = new ShowDriverMapFactory();
+        FormFactory formFactory = new ShowDriverMapFactory(startPoint, destinationPoint);
         Form form = formFactory.createForm();
         form.start();
     }
@@ -40,8 +45,13 @@ public class ChooseRoadController implements Controller {
         userFacade.logOutUser();
     }
 
+    public void onChooseCourseClicked() throws Exception {
+        FormFactory formFactory = new ShowDriverMapFactory(startPoint, destinationPoint);
+        Form form = formFactory.createForm();
+        form.start();
+    }
+
     public void onSubmitCourseClicked(MouseEvent mouseEvent) {
-        communicateWithServer("GetAvailableCourses");
     }
 
     private void communicateWithServer(String operationName) {
@@ -58,7 +68,37 @@ public class ChooseRoadController implements Controller {
         InputStream inputStream = socket.getInputStream();
         ObjectInputStream ois = new ObjectInputStream(inputStream);
         List<RouteInfo> data = (List<RouteInfo>) ois.readObject();
-        System.out.println("data: " + data);
+
+        courseListView.setCellFactory(new Callback<ListView<RouteInfo>, ListCell<RouteInfo>>() {
+            @Override
+            public ListCell<RouteInfo> call(ListView<RouteInfo> param) {
+                return new ListCell<RouteInfo>() {
+                    @Override
+                    protected void updateItem(RouteInfo item, boolean empty) {
+                        super.updateItem(item, empty);
+                        if (item != null && !empty) {
+                            setText("Wyjazd: " + item.departureName + " | Przyjazd: " + item.arrivalName);
+                        } else {
+                            setText(null);
+                        }
+                    }
+                };
+            }
+        });
+
+        // Set the items in the ListView
+        ObservableList<RouteInfo> courseList = FXCollections.observableArrayList(data);
+        courseListView.setItems(courseList);
+    }
+
+    // Handle the click event for the ListView items
+    @FXML
+    private void onCourseClicked(MouseEvent event) {
+        RouteInfo selectedCourse = courseListView.getSelectionModel().getSelectedItem();
+        if (selectedCourse != null) {
+            // Handle the selected course (e.g., open a new form or perform an action)
+            System.out.println("Selected Course: " + selectedCourse);
+        }
     }
 
     private void sendOperationName(Socket socket, String operationName) throws IOException {
@@ -77,7 +117,7 @@ public class ChooseRoadController implements Controller {
         ObjectOutputStream oos = new ObjectOutputStream(bos);
 
         List<String> dataList = new ArrayList<>();
-
+        System.out.println("startPoint: " + startPoint);
         dataList.add(startPoint);
         dataList.add(destinationPoint);
 

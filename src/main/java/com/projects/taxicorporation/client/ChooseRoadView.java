@@ -43,6 +43,7 @@ public class ChooseRoadView extends Form {
         drawFindRouteButton(chooseRoadController);
         drawMapButton(chooseRoadController);
         drawLogoutButton(chooseRoadController);
+        drawChooseCourseButton(chooseRoadController);
     }
     private void drawFindRouteButton(ChooseRoadController chooseRoadController) {
         ButtonDecorator drawButtonDecorator = new RedButtonDecorator(redButtonPrototype);
@@ -61,5 +62,13 @@ public class ChooseRoadView extends Form {
         drawButtonDecorator.setY(419.0d);
         drawButtonDecorator.setText("Wyloguj");
         drawButtonDecorator.draw(chooseRoadController, chooseRoadController::onLogoutButtonClicked);
+    }
+
+    private void drawChooseCourseButton(ChooseRoadController chooseRoadController) {
+        ButtonDecorator drawButtonDecorator = new RedButtonDecorator(redButtonPrototype);
+        drawButtonDecorator.setY(400.0d);
+        drawButtonDecorator.setX(400.0d);
+        drawButtonDecorator.setText("Wybierz");
+        drawButtonDecorator.draw(chooseRoadController, chooseRoadController::onChooseCourseClicked);
     }
 }

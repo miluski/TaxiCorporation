@@ -6,6 +6,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 
 public class RealDriverDarkMap extends Form implements IMap {
+    private final String startPoint;
+    private final String destinationPoint;
+
+    public RealDriverDarkMap(String startPoint, String destinationPoint) {
+        this.startPoint = startPoint;
+        this.destinationPoint = destinationPoint;
+    }
     private ShowDriverMapController showDriverMapController;
 
     @Override
