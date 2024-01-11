@@ -37,11 +37,13 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="251.0" layoutY="121.0" text="Przypisz Menadżera do oddziału">
+                  <Label layoutX="282.0" layoutY="121.0" text="Wybierz oddział z listy">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
+                  <ChoiceBox fx:id="managerChoiceBox" layoutX="43.0" layoutY="190.0" prefWidth="150.0" />
+                  <ChoiceBox fx:id="departmentChoiceBox" layoutX="276.0" layoutY="190.0" prefWidth="150.0" />
                </children></AnchorPane>
         </items>
       </SplitPane>

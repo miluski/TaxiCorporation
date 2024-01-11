@@ -13,6 +13,7 @@ module com.projects.korporacjataxi {
     requires org.slf4j;
     requires java.sql;
     requires com.oracle.database.jdbc;
+    requires org.junit.jupiter.api;
 
     opens com.projects.taxicorporation.client to javafx.fxml, javafx.graphics;
     exports com.projects.taxicorporation.client;

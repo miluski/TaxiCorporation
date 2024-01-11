@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 
 public class AddCarController implements Controller {
     @FXML
-    private TextField carModelField;
+    public TextField carModelField;
     @FXML
     private TextField yearOfProductionField;
     @FXML
@@ -88,7 +88,7 @@ public class AddCarController implements Controller {
         form.start();
     }
 
-    private boolean validateCarModel() {
+    public boolean validateCarModel() {
         String carModel = carModelField.getText();
         return carModel.length() >= 5;
     }
