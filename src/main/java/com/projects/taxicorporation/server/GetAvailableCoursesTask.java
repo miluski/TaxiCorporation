@@ -1,5 +1,7 @@
 package com.projects.taxicorporation.server;
 
+import com.projects.taxicorporation.models.RouteInfo;
+
 import java.io.*;
 import java.net.Socket;
 import java.nio.ByteBuffer;
@@ -64,7 +66,11 @@ public class GetAvailableCoursesTask extends Task implements Runnable {
 
             System.out.println("Database Response: " + databaseResponse);
 
-            returnFeedback(databaseResponse);
+
+            OutputStream outputStream = clientSocket.getOutputStream();
+            ObjectOutputStream oos = new ObjectOutputStream(outputStream);
+            oos.writeObject(databaseResponse);
+            oos.flush();
         } catch (IOException | ClassNotFoundException e) {
             System.out.println(e.getMessage());
         }

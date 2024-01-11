@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Wzorzec projektowy polecenie (command)
  */
-public class LoginCommand implements Command {
+public class LoginCommand implements Command<String> {
     @Override
     public List<String> execute(List<String> data, Connection connect) {
         List<String> selectedData = new ArrayList<>();

@@ -1,5 +1,6 @@
 package com.projects.taxicorporation.client;
 
+import com.projects.taxicorporation.models.RouteInfo;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -55,10 +56,9 @@ public class ChooseRoadController implements Controller {
 
     private void receiveFeedback(Socket socket) throws Exception {
         InputStream inputStream = socket.getInputStream();
-        int receivedBytesSize = inputStream.read();
-        byte[] receivedBytes = new byte[receivedBytesSize];
-        Object receivedObject = new ObjectInputStream(new ByteArrayInputStream(receivedBytes, 0, inputStream.read(receivedBytes))).readObject();
-        List<String> data = new ArrayList<>((List<String>) receivedObject);
+        ObjectInputStream ois = new ObjectInputStream(inputStream);
+        List<RouteInfo> data = (List<RouteInfo>) ois.readObject();
+        System.out.println("data: " + data);
     }
 
     private void sendOperationName(Socket socket, String operationName) throws IOException {
