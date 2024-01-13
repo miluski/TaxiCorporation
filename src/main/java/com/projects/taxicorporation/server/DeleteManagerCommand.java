@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DeleteManagerCommand implements Command {
+public class DeleteManagerCommand implements Command<String> {
     @Override
     public List<String> execute(List<String> data, Connection connect) {
         List<String> informationData = new ArrayList<>();

@@ -1,11 +1,14 @@
 package com.projects.taxicorporation.client;
 
 public class ConcreteLocationFlyweight implements LocationFlyweight {
-    private String name;
-    private double latitude;
-    private double longitude;
-    public ConcreteLocationFlyweight(String name, double latitude, double longitude)
+    public int addressId;
+
+    public String name;
+    public double latitude;
+    public double longitude;
+    public ConcreteLocationFlyweight(int addressId, String name, double latitude, double longitude)
     {
+        this.addressId = addressId;
         this.name = name;
         this.latitude = latitude;
         this.longitude = longitude;
@@ -13,7 +16,7 @@ public class ConcreteLocationFlyweight implements LocationFlyweight {
 
     @Override
     public void showLocation() {
-        System.out.println("Location: " + name + " (" + latitude + ", " + longitude +
+        System.out.println("Location: " + addressId + name + " (" + latitude + ", " + longitude +
                 ")");
     }
 }

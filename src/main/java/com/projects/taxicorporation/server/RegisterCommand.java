@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Wzorzec projektowy polecenie (command)
  */
-public class RegisterCommand implements Command {
+public class RegisterCommand implements Command<String> {
     @Override
     public List<String> execute(List<String> data, Connection connect) {
         List<String> informationData = new ArrayList<>();

@@ -6,6 +6,6 @@ import java.util.List;
 /**
  * Wzorzec projektowy polecenie (command)
  */
-public interface Command {
-    List<String> execute(List<String> data, Connection connect);
+public interface Command<T> {
+    List<T> execute(List<String> data, Connection connect);
 }

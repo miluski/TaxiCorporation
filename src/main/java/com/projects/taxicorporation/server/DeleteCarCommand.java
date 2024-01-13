@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DeleteCarCommand implements Command {
+public class DeleteCarCommand implements Command<String> {
     @Override
     public List<String> execute(List<String> data, Connection connect) {
         List<String> informationData = new ArrayList<>();

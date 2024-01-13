@@ -7,7 +7,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GetCarsCommand implements Command {
+public class GetCarsCommand implements Command<String> {
     @Override
     public List<String> execute(List<String> data, Connection connect) {
         List<String> informationData = new ArrayList<>();
