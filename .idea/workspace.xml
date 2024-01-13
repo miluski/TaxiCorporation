@@ -4,19 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69a6e2d8-7d6b-49c1-948b-d54c5bee0429" name="Changes" comment="refactor Command interface">
+    <list default="true" id="69a6e2d8-7d6b-49c1-948b-d54c5bee0429" name="Changes" comment="add markers to the map">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/M3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/M4.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/M5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/M6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_01_2024_10_00_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_01_2024_10_00__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DriverPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DriverPanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/IMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/IMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RealDriverDarkMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RealDriverDarkMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ClientPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ClientPanelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RealDriverMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RealDriverMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ShowDriverMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ShowDriverMapController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ShowDriverMapFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ShowDriverMapFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/models/RouteInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/models/RouteInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetAvailableCoursesCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetAvailableCoursesCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ChooseRoad.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ChooseRoad.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RealMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RealMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ShowMapFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ShowMapFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +61,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;feature/find-route&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/spryt/IdeaProjects/TaxiCorporation/src/main/java/com/projects/taxicorporation/client&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/spryt/IdeaProjects/TaxiCorporation/src/main/resources/com/projects/taxicorporation/client&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Pawel/Desktop/mapjfx-demo-main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -118,6 +118,12 @@
       <workItem from="1704714275213" duration="167000" />
       <workItem from="1704820149870" duration="15211000" />
       <workItem from="1704992297809" duration="9262000" />
+      <workItem from="1705087739504" duration="3726000" />
+      <workItem from="1705103794283" duration="25000" />
+      <workItem from="1705103866246" duration="3986000" />
+      <workItem from="1705141876081" duration="2313000" />
+      <workItem from="1705144230560" duration="175000" />
+      <workItem from="1705153003165" duration="1965000" />
     </task>
     <task id="LOCAL-00002" summary="Small bug fixes">
       <option name="closed" value="true" />

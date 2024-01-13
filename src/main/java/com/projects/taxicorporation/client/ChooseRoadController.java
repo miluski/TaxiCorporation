@@ -46,6 +46,7 @@ public class ChooseRoadController implements Controller {
     }
 
     public void onChooseCourseClicked() throws Exception {
+        System.out.println(122);
         FormFactory formFactory = new ShowDriverMapFactory(startPoint, destinationPoint);
         Form form = formFactory.createForm();
         form.start();

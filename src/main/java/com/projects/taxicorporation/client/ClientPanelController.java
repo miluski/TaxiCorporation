@@ -49,6 +49,7 @@ public class ClientPanelController implements Controller {
     }
 
     public void onMapButtonClicked() throws Exception {
+        System.out.println("check 0");
         FormFactory formFactory = new ShowMapFactory();
         Form form = formFactory.createForm();
         form.start();
