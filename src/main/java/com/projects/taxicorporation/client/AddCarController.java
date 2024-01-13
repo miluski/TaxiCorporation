@@ -20,9 +20,9 @@ public class AddCarController implements Controller {
     @FXML
     public TextField carModelField;
     @FXML
-    private TextField yearOfProductionField;
+    TextField yearOfProductionField;
     @FXML
-    private ChoiceBox<String> departmentChoiceBox;
+    ChoiceBox<String> departmentChoiceBox;
     @FXML
     private AnchorPane buttonsAnchorPane;
     private List<String> numberOfDepartmentIds;
@@ -93,7 +93,7 @@ public class AddCarController implements Controller {
         return carModel.length() >= 5;
     }
 
-    private boolean validateYearOfProduction() {
+    boolean validateYearOfProduction() {
         boolean isValid;
         String yearOfProduction = yearOfProductionField.getText();
         try {
@@ -110,7 +110,7 @@ public class AddCarController implements Controller {
         communicateWithServer("GetDepartments");
     }
 
-    private void communicateWithServer(String operationName) {
+    void communicateWithServer(String operationName) {
         try (Socket socket = new Socket("localhost", 1523)) {
             sendOperationName(socket, operationName);
             sendData(socket);
