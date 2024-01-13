@@ -14,9 +14,11 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class RealDriverDarkMap extends Form implements IMap  {
+    private final String selectedCourseID;
     private final String startPoint;
     private final String destinationPoint;
-    public RealDriverDarkMap(String startPoint, String destinationPoint) {
+    public RealDriverDarkMap(String selectedCourseID, String startPoint, String destinationPoint) {
+        this.selectedCourseID = selectedCourseID;
         this.startPoint = startPoint;
         this.destinationPoint = destinationPoint;
     }
@@ -24,6 +26,8 @@ public class RealDriverDarkMap extends Form implements IMap  {
 
     @Override
     public void displayMap() {
+
+        showDriverMapController.setCourseId(selectedCourseID);
 
         showDriverMapController.mapView.setMapType(MainStage.getInstance().getProxyMapView().getMapType());
         showDriverMapController.mapView.setZoom(MainStage.getInstance().getProxyMapView().getZoom());
@@ -42,7 +46,6 @@ public class RealDriverDarkMap extends Form implements IMap  {
                 showDriverMapController.mapView.addMarker(startMarker);
                 showDriverMapController.mapView.addMarker(destinationMarker);
 
-                // Add the CoordinateLine to the map
                 showDriverMapController.mapView.addCoordinateLine(correctCoordinateLine);
             }
         });

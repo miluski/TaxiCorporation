@@ -64,9 +64,6 @@ public class GetAvailableCoursesTask extends Task implements Runnable {
             ConcreteCommunicateMediator concreteCommunicateMediator = new ConcreteCommunicateMediator(getAvailableCoursesCommand, abstractDataBase);
             List<String> databaseResponse = new ArrayList<>(concreteCommunicateMediator.mediate(data));
 
-            System.out.println("Database Response: " + databaseResponse);
-
-
             OutputStream outputStream = clientSocket.getOutputStream();
             ObjectOutputStream oos = new ObjectOutputStream(outputStream);
             oos.writeObject(databaseResponse);

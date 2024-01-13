@@ -53,6 +53,7 @@ public class Server implements Runnable {
             case "RegisterTask" -> taskFactory = new RegisterTaskFactory();
             case "AddCar" -> taskFactory = new AddCarTaskFactory();
             case "AddDepartment" -> taskFactory = new AddDepartmentTaskFactory();
+            case "AddPassenger" -> taskFactory = new AddPassengerTaskFactory();
             case "DeleteCar" -> taskFactory = new DeleteCarTaskFactory();
             case "DeleteDriver" -> taskFactory = new DeleteDriverTaskFactory();
             case "DeleteManager" -> taskFactory = new DeleteManagerTaskFactory();

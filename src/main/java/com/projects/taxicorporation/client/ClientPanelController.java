@@ -29,7 +29,9 @@ public class ClientPanelController implements Controller {
         startPointChoiceBox.getItems().addAll(location1.name, location2.name, location3.name, location4.name);
         destinationChoiceBox.getItems().addAll(location1.name, location2.name, location3.name, location4.name);
 
-        // update the other ChoiceBox when an option is selected
+        startPointChoiceBox.setValue("Świętokrzyska");
+        destinationChoiceBox.setValue("Warszawska");
+
         startPointChoiceBox.setOnAction(event -> updateDestinationChoiceBox());
         destinationChoiceBox.setOnAction(event -> updateStartPointChoiceBox());
     }

@@ -11,7 +11,7 @@ public class DriverPanelController implements Controller {
     private AnchorPane buttonsAnchorPane;
 
     public void onMapButtonClicked() throws Exception {
-        FormFactory formFactory = new ShowDriverMapFactory("", "");
+        FormFactory formFactory = new ShowDriverMapFactory("","", "");
         Form form = formFactory.createForm();
         form.start();
     }

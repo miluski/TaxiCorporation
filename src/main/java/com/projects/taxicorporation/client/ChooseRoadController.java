@@ -21,11 +21,11 @@ import java.time.format.DateTimeFormatter;
 
 public class ChooseRoadController implements Controller {
 
+    private String selectedCourseID;
     private String startPoint;
     private String destinationPoint;
 
     public void setStartAndDestinationPoints(String startPoint, String destinationPoint) {
-        System.out.println("start point: " + startPoint);
         this.startPoint = startPoint;
         this.destinationPoint = destinationPoint;
         communicateWithServer("GetAvailableCourses");
@@ -37,7 +37,7 @@ public class ChooseRoadController implements Controller {
     @FXML
     private ListView<RouteInfo> courseListView;
     public void onMapButtonClicked() throws Exception {
-        FormFactory formFactory = new ShowDriverMapFactory(startPoint, destinationPoint);
+        FormFactory formFactory = new ShowDriverMapFactory(selectedCourseID, startPoint, destinationPoint);
         Form form = formFactory.createForm();
         form.start();
     }
@@ -48,8 +48,7 @@ public class ChooseRoadController implements Controller {
     }
 
     public void onChooseCourseClicked() throws Exception {
-        System.out.println(122);
-        FormFactory formFactory = new ShowDriverMapFactory(startPoint, destinationPoint);
+        FormFactory formFactory = new ShowDriverMapFactory(selectedCourseID, startPoint, destinationPoint);
         Form form = formFactory.createForm();
         form.start();
     }
@@ -92,18 +91,15 @@ public class ChooseRoadController implements Controller {
             }
         });
 
-        // Set the items in the ListView
         ObservableList<RouteInfo> courseList = FXCollections.observableArrayList(data);
         courseListView.setItems(courseList);
     }
 
-    // Handle the click event for the ListView items
     @FXML
     private void onCourseClicked(MouseEvent event) {
         RouteInfo selectedCourse = courseListView.getSelectionModel().getSelectedItem();
         if (selectedCourse != null) {
-            // Handle the selected course (e.g., open a new form or perform an action)
-            System.out.println("Selected Course: " + selectedCourse);
+            selectedCourseID = String.valueOf(selectedCourse.courseId);
         }
     }
 
@@ -123,7 +119,6 @@ public class ChooseRoadController implements Controller {
         ObjectOutputStream oos = new ObjectOutputStream(bos);
 
         List<String> dataList = new ArrayList<>();
-        System.out.println("startPoint: " + startPoint);
         dataList.add(startPoint);
         dataList.add(destinationPoint);
 

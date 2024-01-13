@@ -11,7 +11,7 @@ public class LoginCommand implements Command<String> {
     public List<String> execute(List<String> data, Connection connect) {
         List<String> selectedData = new ArrayList<>();
         try {
-            String query = "SELECT users.username, users.email, users.department, users.city, users.street, user_roles.name, users.loggedIn " +
+            String query = "SELECT users.id_user, users.username, users.email, users.department, users.city, users.street, user_roles.name, users.loggedIn " +
                     "FROM users " +
                     "LEFT JOIN user_roles ON users.id_user_role = user_roles.id_user_role " +
                     "WHERE username = ? AND password = ? ";
@@ -20,14 +20,15 @@ public class LoginCommand implements Command<String> {
             preparedStatement.setString(2, data.get(1));
             ResultSet result = preparedStatement.executeQuery();
             if (result.next()) {
-                setUserLoggedInFlag(result.getString(1), connect);
-                selectedData.add(result.getString(1));
+                setUserLoggedInFlag(result.getString(2), connect);
                 selectedData.add(result.getString(2));
                 selectedData.add(result.getString(3));
                 selectedData.add(result.getString(4));
                 selectedData.add(result.getString(5));
                 selectedData.add(result.getString(6));
-                selectedData.add(result.getString(7)); // flaga czy zalogowany
+                selectedData.add(result.getString(7));
+                selectedData.add(result.getString(8)); // flaga czy zalogowany
+                selectedData.add(result.getString(1)); // user id
             }
         }
         catch (SQLException e) {

@@ -17,14 +17,20 @@ public class ChooseRoadDarkView extends Form {
     private ButtonPrototype grayButtonPrototype;
     @Override
     public void start() throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(StartForm.class.getResource("ChooseRoadDark.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(StartForm.class.getResource("ChooseRoad.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+
+        ChooseRoadController chooseRoadController = fxmlLoader.getController();
+
+        chooseRoadController.setStartAndDestinationPoints(startPoint, destinationPoint);
+
         setButtonPrototypesCredentials();
-        drawAllButtons(fxmlLoader.getController());
+        drawAllButtons(chooseRoadController);
         MainStage.getInstance().setTitle("Wybieranie trasy");
         MainStage.getInstance().setScene(scene);
         MainStage.getInstance().show();
     }
+
     private void setButtonPrototypesCredentials() throws CloneNotSupportedException {
         lightRedButtonPrototype.setHeight(35.0d);
         lightRedButtonPrototype.setWidth(215.0d);
@@ -37,6 +43,7 @@ public class ChooseRoadDarkView extends Form {
         drawFindRouteButton(chooseRoadController);
         drawMapButton(chooseRoadController);
         drawLogoutButton(chooseRoadController);
+        drawChooseCourseButton(chooseRoadController);
     }
     private void drawFindRouteButton(ChooseRoadController chooseRoadController) {
         ButtonDecorator drawButtonDecorator = new RedButtonDecorator(redButtonPrototype);
@@ -55,5 +62,13 @@ public class ChooseRoadDarkView extends Form {
         drawButtonDecorator.setY(419.0d);
         drawButtonDecorator.setText("Wyloguj");
         drawButtonDecorator.draw(chooseRoadController, chooseRoadController::onLogoutButtonClicked);
+    }
+
+    private void drawChooseCourseButton(ChooseRoadController chooseRoadController) {
+        ButtonDecorator drawButtonDecorator = new RedButtonDecorator(redButtonPrototype);
+        drawButtonDecorator.setY(400.0d);
+        drawButtonDecorator.setX(400.0d);
+        drawButtonDecorator.setText("Wybierz");
+        drawButtonDecorator.draw(chooseRoadController, chooseRoadController::onChooseCourseClicked);
     }
 }
