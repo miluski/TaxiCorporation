@@ -16,6 +16,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class ChooseRoadController implements Controller {
 
@@ -78,7 +80,10 @@ public class ChooseRoadController implements Controller {
                     protected void updateItem(RouteInfo item, boolean empty) {
                         super.updateItem(item, empty);
                         if (item != null && !empty) {
-                            setText("Wyjazd: " + item.departureName + " | Przyjazd: " + item.arrivalName);
+                            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+                            LocalDateTime dateTime = LocalDateTime.parse(item.departureDate, formatter);
+                            String formattedTime = dateTime.format(DateTimeFormatter.ofPattern("HH:mm"));
+                            setText("Wyjazd: " + item.departureName + " | Przyjazd: " + item.arrivalName  + " | Godzina: " + formattedTime);
                         } else {
                             setText(null);
                         }

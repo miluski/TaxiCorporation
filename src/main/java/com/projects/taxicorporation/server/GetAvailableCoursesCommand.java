@@ -33,10 +33,9 @@ public class GetAvailableCoursesCommand implements Command<RouteInfo> {
                 String departureName = result.getString("departure_name");
                 String arrivalName = result.getString("arrival_name");
                 String departure_date = result.getString("departure_date");
-                System.out.println("departure_date: "+departure_date);
                 int courseId = result.getInt("id_course");
-
-                RouteInfo routeInfo = new RouteInfo(departureName, arrivalName, courseId);
+                System.out.println("departure_date: " + departure_date);
+                RouteInfo routeInfo = new RouteInfo(courseId, departureName, arrivalName, departure_date);
 
                 availableRoutes.add(routeInfo);
 

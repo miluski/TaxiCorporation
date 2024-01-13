@@ -30,19 +30,52 @@ public class RealDriverMap extends Form implements IMap  {
         showDriverMapController.mapView.setCenter(MainStage.getInstance().getProxyMapView().getCenter());
         showDriverMapController.mapView.initialize(Configuration.builder().projection(Projection.WEB_MERCATOR).build());
 
-        ConcreteLocationFlyweight location1 = new ConcreteLocationFlyweight(1, "Świętokrzyska", 50.877781, 20.661020);
-        ConcreteLocationFlyweight location2 = new ConcreteLocationFlyweight(2, "Warszawska", 50.880063, 20.637531);
-        ConcreteLocationFlyweight location3 = new ConcreteLocationFlyweight(3,"Sandomierska", 50.870842, 20.645495);
-        ConcreteLocationFlyweight location4 = new ConcreteLocationFlyweight(4, "Piekoszowska", 50.875466, 20.612858);
+        Marker startMarker = createMarker(startPoint);
+        Marker destinationMarker = createMarker(destinationPoint);
 
-        // Create Coordinate objects from the locations
-        Coordinate coord1 = new Coordinate(location1.latitude, location1.longitude);
-        Coordinate coord2 = new Coordinate(location2.latitude, location2.longitude);
+        CoordinateLine correctCoordinateLine = getCorrectCoordinateLine(startPoint, destinationPoint);
 
-        // Create Marker objects and add them to the map
-        Marker marker1 = Marker.createProvided(Marker.Provided.BLUE).setPosition(coord1).setVisible(true);
-        Marker marker2 = Marker.createProvided(Marker.Provided.BLUE).setPosition(coord2).setVisible(true);
+        correctCoordinateLine.setVisible(true);
 
+        showDriverMapController.mapView.initializedProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue) {
+                showDriverMapController.mapView.addMarker(startMarker);
+                showDriverMapController.mapView.addMarker(destinationMarker);
+
+                // Add the CoordinateLine to the map
+                showDriverMapController.mapView.addCoordinateLine(correctCoordinateLine);
+            }
+        });
+
+        showDriverMapController.mapView.initialize(Configuration.builder().projection(Projection.WEB_MERCATOR).build());
+    }
+
+    private Marker createMarker(String streetName) {
+        ConcreteLocationFlyweight location;
+
+        switch (streetName) {
+            case "Świętokrzyska":
+                location = new ConcreteLocationFlyweight(1, streetName, 50.877781, 20.661020);
+                break;
+            case "Warszawska":
+                location = new ConcreteLocationFlyweight(2, streetName, 50.880063, 20.637531);
+                break;
+            case "Sandomierska":
+                location = new ConcreteLocationFlyweight(3, streetName, 50.870842, 20.645495);
+                break;
+            case "Piekoszowska":
+                location = new ConcreteLocationFlyweight(4, streetName, 50.875466, 20.612858);
+                break;
+            default:
+                location = new ConcreteLocationFlyweight(0, "Unknown", 0, 0);
+                break;
+        }
+
+        Coordinate coordinate = new Coordinate(location.latitude, location.longitude);
+        return Marker.createProvided(Marker.Provided.BLUE).setPosition(coordinate).setVisible(true);
+    }
+
+    private CoordinateLine getCorrectCoordinateLine(String startPoint, String destinationPoint) {
         CoordinateLine track_loc_1_2 =  loadCoordinateLine(getClass().getResource("/M1.csv")).orElse(new CoordinateLine()).setColor(Color.MAGENTA);
         CoordinateLine track_loc_1_3 =  loadCoordinateLine(getClass().getResource("/M2.csv")).orElse(new CoordinateLine()).setColor(Color.MAGENTA);
         CoordinateLine track_loc_1_4 =  loadCoordinateLine(getClass().getResource("/M3.csv")).orElse(new CoordinateLine()).setColor(Color.MAGENTA);
@@ -50,24 +83,21 @@ public class RealDriverMap extends Form implements IMap  {
         CoordinateLine track_loc_2_4 =  loadCoordinateLine(getClass().getResource("/M5.csv")).orElse(new CoordinateLine()).setColor(Color.MAGENTA);
         CoordinateLine track_loc_3_4 =  loadCoordinateLine(getClass().getResource("/M6.csv")).orElse(new CoordinateLine()).setColor(Color.MAGENTA);
 
-        track_loc_1_2.setVisible(true);
-        track_loc_1_3.setVisible(true);
-        track_loc_1_4.setVisible(true);
-        track_loc_2_3.setVisible(true);
-        track_loc_2_4.setVisible(true);
-        track_loc_3_4.setVisible(true);
+        if (("Świętokrzyska".equals(startPoint) && "Warszawska".equals(destinationPoint)) || ("Warszawska".equals(startPoint) && "Świętokrzyska".equals(destinationPoint))) {
+            return track_loc_1_2;
+        } else if (("Świętokrzyska".equals(startPoint) && "Sandomierska".equals(destinationPoint)) || ("Sandomierska".equals(startPoint) && "Świętokrzyska".equals(destinationPoint))) {
+            return track_loc_1_3;
+        } else if (("Świętokrzyska".equals(startPoint) && "Piekoszowska".equals(destinationPoint)) || ("Piekoszowska".equals(startPoint) && "Świętokrzyska".equals(destinationPoint))) {
+            return track_loc_1_4;
+        } else if (("Warszawska".equals(startPoint) && "Sandomierska".equals(destinationPoint)) || ("Sandomierska".equals(startPoint) && "Warszawska".equals(destinationPoint))) {
+            return track_loc_2_3;
+        } else if (("Warszawska".equals(startPoint) && "Piekoszowska".equals(destinationPoint)) || ("Piekoszowska".equals(startPoint) && "Warszawska".equals(destinationPoint))) {
+            return track_loc_2_4;
+        } else if (("Sandomierska".equals(startPoint) && "Piekoszowska".equals(destinationPoint)) || ("Piekoszowska".equals(startPoint) && "Sandomierska".equals(destinationPoint))) {
+            return track_loc_3_4;
+        }
 
-        showDriverMapController.mapView.initializedProperty().addListener((observable, oldValue, newValue) -> {
-            if (newValue) {
-                showDriverMapController.mapView.addMarker(marker1);
-                showDriverMapController.mapView.addMarker(marker2);
-
-                // Add the CoordinateLine to the map
-                showDriverMapController.mapView.addCoordinateLine(track_loc_1_2);
-            }
-        });
-
-        showDriverMapController.mapView.initialize(Configuration.builder().projection(Projection.WEB_MERCATOR).build());
+        return new CoordinateLine();
     }
 
     private Optional<CoordinateLine> loadCoordinateLine(URL url) {

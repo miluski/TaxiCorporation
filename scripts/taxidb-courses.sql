@@ -46,12 +46,16 @@ INSERT INTO taxi_drivers (id_driver, id_user) VALUES (taxi_drivers_seq.NEXTVAL, 
 
 INSERT INTO courses (id_course, id_departure, id_arrival, id_driver) VALUES (courses_seq.NEXTVAL, 1, 2, 1);
 INSERT INTO courses (id_course, id_departure, id_arrival, id_driver) VALUES (courses_seq.NEXTVAL, 2, 3, 2);
+INSERT INTO courses (id_course, id_departure, id_arrival, id_driver) VALUES (courses_seq.NEXTVAL, 2, 4, 3);
 INSERT INTO courses (id_course, id_departure, id_arrival, id_driver) VALUES (courses_seq.NEXTVAL, 3, 4, 3);
-INSERT INTO courses (id_course, id_departure, id_arrival, id_driver) VALUES (courses_seq.NEXTVAL, 4, 5, 4);
-INSERT INTO courses (id_course, id_departure, id_arrival, id_driver) VALUES (courses_seq.NEXTVAL, 5, 6, 1);
-INSERT INTO courses (id_course, id_departure, id_arrival, id_driver) VALUES (courses_seq.NEXTVAL, 6, 7, 2);
-INSERT INTO courses (id_course, id_departure, id_arrival, id_driver) VALUES (courses_seq.NEXTVAL, 7, 8, 3);
-INSERT INTO courses (id_course, id_departure, id_arrival, id_driver) VALUES (courses_seq.NEXTVAL, 8, 1, 4);
+INSERT INTO courses (id_course, id_departure, id_arrival, id_driver) VALUES (courses_seq.NEXTVAL, 4, 8, 4);
+INSERT INTO courses (id_course, id_departure, id_arrival, id_driver) VALUES (courses_seq.NEXTVAL, 5, 7, 1);
+INSERT INTO courses (id_course, id_departure, id_arrival, id_driver) VALUES (courses_seq.NEXTVAL, 6, 5, 2);
+INSERT INTO courses (id_course, id_departure, id_arrival, id_driver) VALUES (courses_seq.NEXTVAL, 5, 4, 3);
+INSERT INTO courses (id_course, id_departure, id_arrival, id_driver) VALUES (courses_seq.NEXTVAL, 4, 3, 1);
+INSERT INTO courses (id_course, id_departure, id_arrival, id_driver) VALUES (courses_seq.NEXTVAL, 4, 2, 1);
+INSERT INTO courses (id_course, id_departure, id_arrival, id_driver) VALUES (courses_seq.NEXTVAL, 3, 2, 2);
+INSERT INTO courses (id_course, id_departure, id_arrival, id_driver) VALUES (courses_seq.NEXTVAL, 2, 1, 3);
 
 INSERT INTO users (id_user, email, rank, username, password, department, city, street, id_user_role)
 VALUES (96, 'admin@example.com', 'Admin', 'admin', 'admin123', 'Admin Department', 'CityA', 'StreetA1', 1);
