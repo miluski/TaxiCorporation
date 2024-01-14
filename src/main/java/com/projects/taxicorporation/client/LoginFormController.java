@@ -17,11 +17,11 @@ import java.util.regex.Pattern;
 public class LoginFormController implements Controller {
     private final Pattern passPattern = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–{}:;',?/*~$^+=<>]).{8,20}$");
     @FXML
-    private TextField loginTextField;
+    public TextField loginTextField;
     @FXML
-    private AnchorPane buttonsAnchorPane;
+    public AnchorPane buttonsAnchorPane;
     @FXML
-    private PasswordField passwordTextField;
+    public PasswordField passwordTextField;
 
     public void onRegisterButtonClicked() throws Exception {
         FormFactory formFactory = new RegisterFormFactory();
@@ -34,7 +34,7 @@ public class LoginFormController implements Controller {
             communicateWithServer();
     }
 
-    private boolean validateData() {
+    public boolean validateData() {
         if (loginTextField.getText().isEmpty()) {
             AlertDialog.getInstance().setParametersAndShow("Nie wprowadzono loginu!", AlertType.ERROR);
             return false;
@@ -49,12 +49,12 @@ public class LoginFormController implements Controller {
         return true;
     }
 
-    private boolean validatePassword() {
+    public boolean validatePassword() {
         String password = passwordTextField.getText();
         return password.length() >= 9 && passPattern.matcher(password).matches();
     }
 
-    private void communicateWithServer() {
+    public void communicateWithServer() {
         try (Socket socket = new Socket("localhost", 1523)) {
             sendOperationName(socket);
             sendData(socket);

@@ -16,13 +16,13 @@ import java.util.stream.Collectors;
 
 public class ManageManagerController implements Controller {
     @FXML
-    private AnchorPane buttonsAnchorPane;
+    public AnchorPane buttonsAnchorPane;
     @FXML
-    private ChoiceBox<String> managerChoiceBox;
+    public ChoiceBox<String> managerChoiceBox;
     @FXML
-    private ChoiceBox<String> departmentChoiceBox;
-    private List<String> numberOfManagerIds;
-    private List<String> numberOfDepartmentStreets;
+    public ChoiceBox<String> departmentChoiceBox;
+    public List<String> numberOfManagerIds;
+    public List<String> numberOfDepartmentStreets;
 
     public void onAddMenagerButtonClicked() throws Exception {
         FormFactory formFactory = new AddManagerFactory();

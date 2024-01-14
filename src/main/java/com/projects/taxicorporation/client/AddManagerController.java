@@ -21,20 +21,20 @@ import java.util.stream.Collectors;
 
 public class AddManagerController implements Controller {
     @FXML
-    private AnchorPane buttonsAnchorPane;
+    public AnchorPane buttonsAnchorPane;
     @FXML
-    private TextField nameField;
+    public TextField nameField;
     @FXML
-    private TextField emailField;
+    public TextField emailField;
     @FXML
-    private TextField phoneNumberField;
+    public TextField phoneNumberField;
     @FXML
-    private TextField loginField;
+    public TextField loginField;
     @FXML
-    private PasswordField passwordField;
+    public PasswordField passwordField;
     @FXML
-    private ChoiceBox<String> departmentChoiceBox;
-    private List<String> numberOfDepartmentStreets;
+    public ChoiceBox<String> departmentChoiceBox;
+    public List<String> numberOfDepartmentStreets;
 
     public void onDeleteMenagerButtonClicked() throws Exception {
         FormFactory formFactory = new DeleteManagerFactory();
@@ -85,7 +85,7 @@ public class AddManagerController implements Controller {
             AlertDialog.getInstance().setParametersAndShow("Wprowadzone dane są nieprawidłowe!", Alert.AlertType.ERROR);
     }
 
-    private boolean validateData() {
+    public boolean validateData() {
         if (nameField.getText().isEmpty()) {
             AlertDialog.getInstance().setParametersAndShow("Nie wprowadzono imienia!", Alert.AlertType.ERROR);
             return false;
@@ -112,7 +112,7 @@ public class AddManagerController implements Controller {
         return true;
     }
 
-    private boolean validatePassword() {
+    public boolean validatePassword() {
         Pattern passPattern = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–{}:;',?/*~$^+=<>]).{8,20}$");
         String password = passwordField.getText();
         return password.length() >= 9 && passPattern.matcher(password).matches();

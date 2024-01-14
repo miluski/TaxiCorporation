@@ -14,11 +14,11 @@ import java.util.Objects;
 
 public class AddDepartmentController implements Controller {
     @FXML
-    private TextField departmentNameField;
+    public TextField departmentNameField;
     @FXML
-    private TextField departmentCityField;
+    public TextField departmentCityField;
     @FXML
-    private TextField departmentStreetField;
+    public TextField departmentStreetField;
     @FXML
     private AnchorPane buttonsAnchorPane;
 
@@ -78,7 +78,7 @@ public class AddDepartmentController implements Controller {
         form.start();
     }
 
-    private boolean validateDepartmentName() {
+    public boolean validateDepartmentName() {
         String departmentName = departmentNameField.getText();
         try {
             Integer.parseInt(departmentName);
@@ -88,7 +88,7 @@ public class AddDepartmentController implements Controller {
         return false;
     }
 
-    private boolean validateDepartmentCity() {
+    public boolean validateDepartmentCity() {
         String departmentCity = departmentCityField.getText();
         try {
             Integer.parseInt(departmentCity);
@@ -98,7 +98,7 @@ public class AddDepartmentController implements Controller {
         return false;
     }
 
-    private boolean validateDepartmentStreet() {
+    public boolean validateDepartmentStreet() {
         String departmentStreet = departmentStreetField.getText();
         try {
             Integer.parseInt(departmentStreet);

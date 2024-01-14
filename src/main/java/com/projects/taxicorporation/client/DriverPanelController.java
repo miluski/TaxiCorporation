@@ -8,7 +8,7 @@ import java.util.Objects;
 
 public class DriverPanelController implements Controller {
     @FXML
-    private AnchorPane buttonsAnchorPane;
+    public AnchorPane buttonsAnchorPane;
 
     public void onMapButtonClicked() throws Exception {
         FormFactory formFactory = new ShowDriverMapFactory();

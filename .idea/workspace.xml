@@ -4,16 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69a6e2d8-7d6b-49c1-948b-d54c5bee0429" name="Changes" comment="Implemented manage driver backend functionallity">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_01_2024_10_00_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_01_2024_10_00__Changes_1.xml" beforeDir="false" />
+    <list default="true" id="69a6e2d8-7d6b-49c1-948b-d54c5bee0429" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/AddDepartmentControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/AddManagerControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ChooseRoadControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ClientPanelControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/DeleteCarControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/DeleteManagerControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/DriverPanelControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/LoginFormControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ManageDriversControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ManageManagerControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/RegisterFormControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/RenameOrDeleteDepartmentControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ShowDriverMapControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ShowManagerMapControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ShowMapControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/AddCarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/AddCarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/client/AddCarControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/AddCarControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/AddDepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/AddDepartmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/AddManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/AddManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ClientPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ClientPanelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DeleteCarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DeleteCarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DeleteMenagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DeleteMenagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DriverPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DriverPanelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/LoginFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ManageDriversController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ManageDriversController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ManageManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ManageManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RegisterFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RegisterFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RenameOrDeleteDepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RenameOrDeleteDepartmentController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,28 +66,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Client.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Server.executor&quot;: &quot;Run&quot;,
-    &quot;Application.StartForm.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AddCarControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AddCarControllerTest.onEndAddCarButtonClicked_InvalidData_ShowErrorAlert.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AddCarControllerTest.onEndAddCarButtonClicked_ValidData_SuccessfulCommunication.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AddCarControllerTest.validateCarModel_InvalidCarModel_ReturnsFalse.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AddCarControllerTest.validateCarModel_ValidCarModel_ReturnsTrue.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AddCarControllerTest.validateYearOfProduction_InvalidYear_ReturnsFalse.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AddCarControllerTest.validateYearOfProduction_ValidYear_ReturnsTrue.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/unit-tests&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/spryt/IdeaProjects/TaxiCorporation/src/main/java/com/projects/taxicorporation/client&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/spryt/IdeaProjects/TaxiCorporation/src/main/resources/com/projects/taxicorporation/client&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Client.executor": "Run",
+    "Application.Server.executor": "Run",
+    "Application.StartForm.executor": "Run",
+    "JUnit.AddCarControllerTest.executor": "Run",
+    "JUnit.AddCarControllerTest.onEndAddCarButtonClicked_InvalidData_ShowErrorAlert.executor": "Run",
+    "JUnit.AddCarControllerTest.onEndAddCarButtonClicked_ValidData_SuccessfulCommunication.executor": "Run",
+    "JUnit.AddCarControllerTest.validateCarModel_InvalidCarModel_ReturnsFalse.executor": "Run",
+    "JUnit.AddCarControllerTest.validateCarModel_ValidCarModel_ReturnsTrue.executor": "Run",
+    "JUnit.AddCarControllerTest.validateYearOfProduction_InvalidYear_ReturnsFalse.executor": "Run",
+    "JUnit.AddCarControllerTest.validateYearOfProduction_ValidYear_ReturnsTrue.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "feature/find-route",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/spryt/IdeaProjects/TaxiCorporation/src/main/java/com/projects/taxicorporation/client",
+    "last_opened_file_path": "C:/Users/spryt/IdeaProjects/TaxiCorporation/src/main/resources/com/projects/taxicorporation/client",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.projects.taxicorporation.server" />
@@ -83,7 +106,7 @@
       <recent name="com.projects.taxicorporation.client" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AddCarControllerTest">
+  <component name="RunManager" selected="Application.Client">
     <configuration name="Client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.StartForm" />
       <module name="TaxiCorporation" />
@@ -98,7 +121,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddCarControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RegisterFormControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TaxiCorporation" />
       <extension name="coverage">
         <pattern>
@@ -107,13 +130,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.projects.taxicorporation.client" />
-      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.AddCarControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.RegisterFormControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddCarControllerTest.onEndAddCarButtonClicked_InvalidData_ShowErrorAlert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RenameOrDeleteDepartmentControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TaxiCorporation" />
       <extension name="coverage">
         <pattern>
@@ -122,14 +145,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.projects.taxicorporation.client" />
-      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.AddCarControllerTest" />
-      <option name="METHOD_NAME" value="onEndAddCarButtonClicked_InvalidData_ShowErrorAlert" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.RenameOrDeleteDepartmentControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddCarControllerTest.onEndAddCarButtonClicked_ValidData_SuccessfulCommunication" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ShowDriverMapControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TaxiCorporation" />
       <extension name="coverage">
         <pattern>
@@ -138,14 +160,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.projects.taxicorporation.client" />
-      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.AddCarControllerTest" />
-      <option name="METHOD_NAME" value="onEndAddCarButtonClicked_ValidData_SuccessfulCommunication" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.ShowDriverMapControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddCarControllerTest.validateCarModel_ValidCarModel_ReturnsTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ShowManagerMapControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TaxiCorporation" />
       <extension name="coverage">
         <pattern>
@@ -154,14 +175,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.projects.taxicorporation.client" />
-      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.AddCarControllerTest" />
-      <option name="METHOD_NAME" value="validateCarModel_ValidCarModel_ReturnsTrue" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.ShowManagerMapControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddCarControllerTest.validateYearOfProduction_InvalidYear_ReturnsFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ShowMapControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TaxiCorporation" />
       <extension name="coverage">
         <pattern>
@@ -170,9 +190,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.projects.taxicorporation.client" />
-      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.AddCarControllerTest" />
-      <option name="METHOD_NAME" value="validateYearOfProduction_InvalidYear_ReturnsFalse" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.ShowMapControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -180,19 +199,19 @@
     <list>
       <item itemvalue="Application.Client" />
       <item itemvalue="Application.Server" />
-      <item itemvalue="JUnit.AddCarControllerTest.validateCarModel_ValidCarModel_ReturnsTrue" />
-      <item itemvalue="JUnit.AddCarControllerTest" />
-      <item itemvalue="JUnit.AddCarControllerTest.onEndAddCarButtonClicked_InvalidData_ShowErrorAlert" />
-      <item itemvalue="JUnit.AddCarControllerTest.onEndAddCarButtonClicked_ValidData_SuccessfulCommunication" />
-      <item itemvalue="JUnit.AddCarControllerTest.validateYearOfProduction_InvalidYear_ReturnsFalse" />
+      <item itemvalue="JUnit.RegisterFormControllerTest" />
+      <item itemvalue="JUnit.RenameOrDeleteDepartmentControllerTest" />
+      <item itemvalue="JUnit.ShowDriverMapControllerTest" />
+      <item itemvalue="JUnit.ShowManagerMapControllerTest" />
+      <item itemvalue="JUnit.ShowMapControllerTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AddCarControllerTest" />
-        <item itemvalue="JUnit.AddCarControllerTest.onEndAddCarButtonClicked_ValidData_SuccessfulCommunication" />
-        <item itemvalue="JUnit.AddCarControllerTest.validateCarModel_ValidCarModel_ReturnsTrue" />
-        <item itemvalue="JUnit.AddCarControllerTest.onEndAddCarButtonClicked_InvalidData_ShowErrorAlert" />
-        <item itemvalue="JUnit.AddCarControllerTest.validateYearOfProduction_InvalidYear_ReturnsFalse" />
+        <item itemvalue="JUnit.ShowMapControllerTest" />
+        <item itemvalue="JUnit.ShowManagerMapControllerTest" />
+        <item itemvalue="JUnit.ShowDriverMapControllerTest" />
+        <item itemvalue="JUnit.RenameOrDeleteDepartmentControllerTest" />
+        <item itemvalue="JUnit.RegisterFormControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -219,6 +238,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1700752101071</updated>
+      <workItem from="1705248535679" duration="311000" />
     </task>
     <task id="LOCAL-00002" summary="Small bug fixes">
       <option name="closed" value="true" />
@@ -303,6 +323,9 @@
     <option name="localTasksCounter" value="12" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Add car, Delete car panels skeletons" />
@@ -316,5 +339,10 @@
     <MESSAGE value="Implemented delete car backend functionallity" />
     <MESSAGE value="Implemented add driver backend functionallity" />
     <option name="LAST_COMMIT_MESSAGE" value="Implemented add driver backend functionallity" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TaxiCorporation$AddCarControllerTest.ic" NAME="AddCarControllerTest Coverage Results" MODIFIED="1705241418905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.projects.taxicorporation.client.*</FILTER>
+    </SUITE>
   </component>
 </project>

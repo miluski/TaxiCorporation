@@ -17,10 +17,10 @@ import java.util.stream.Collectors;
 
 public class DeleteCarController implements Controller {
     @FXML
-    private ChoiceBox<String> chooseCarChoiceBox;
+    public ChoiceBox<String> chooseCarChoiceBox;
     @FXML
-    private AnchorPane buttonsAnchorPane;
-    private List<String> numberOfCarsIds;
+    public AnchorPane buttonsAnchorPane;
+    public List<String> numberOfCarsIds;
     public void onAddCarButtonClicked() throws Exception {
         FormFactory formFactory = new AddCarFactory();
         Form form = formFactory.createForm();
@@ -119,7 +119,7 @@ public class DeleteCarController implements Controller {
         bos.reset();
     }
 
-    private void receiveFeedback(Socket socket) throws Exception {
+    public void receiveFeedback(Socket socket) throws Exception {
         InputStream inputStream = socket.getInputStream();
         int receivedBytesSize = inputStream.read();
         byte[] receivedBytes = new byte[receivedBytesSize];
