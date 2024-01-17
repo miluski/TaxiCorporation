@@ -11,8 +11,7 @@ import org.testfx.framework.junit5.Start;
 import org.testfx.framework.junit5.Stop;
 import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(ApplicationExtension.class)
 class LoginFormControllerTest {
@@ -34,7 +33,6 @@ class LoginFormControllerTest {
 
     @Test
     void initialize_ShouldInitiateElements() {
-        // Verify that elements are initiated
         assertNotNull(loginFormController.loginTextField);
         assertNotNull(loginFormController.buttonsAnchorPane);
         assertNotNull(loginFormController.passwordTextField);
@@ -42,26 +40,16 @@ class LoginFormControllerTest {
 
     @Test
     void validatePassword_ShouldReturnFalseForInvalidPassword() {
-        // Set an invalid password
         loginFormController.passwordTextField.setText("invalidpassword");
-
-        // Call validatePassword
         boolean result = loginFormController.validatePassword();
-
-        // Verify that the result is false
-        assertEquals(false, result);
+        assertFalse(result);
     }
 
     @Test
     void validatePassword_ShouldReturnTrueForValidPassword() {
-        // Set a valid password
         loginFormController.passwordTextField.setText("ValidPassword123!");
-
-        // Call validatePassword
         boolean result = loginFormController.validatePassword();
-
-        // Verify that the result is true
-        assertEquals(true, result);
+        assertTrue(result);
     }
 
     @Stop

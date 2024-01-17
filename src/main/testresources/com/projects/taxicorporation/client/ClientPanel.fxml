@@ -30,7 +30,7 @@
                 </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="542.0">
                     <children>
-                        <Label layoutX="176.0" layoutY="88.0" text="Znajdź przejazd">
+                        <Label layoutX="176.0" layoutY="88.0" text="Zarezerwuj przejazd">
                             <font>
                                 <Font name="System Bold" size="24.0" />
                             </font>

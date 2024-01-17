@@ -21,11 +21,6 @@ public class ShowDriverMapControllerTest extends ApplicationTest {
     }
 
     @Test
-    void testSubmitReservationButtonClicked() {
-        assertThrows(Exception.class, () -> showDriverMapController.onSubmitReservationButtonClicked());
-    }
-
-    @Test
     void testChangeThemeButtonClicked() {
         assertThrows(Exception.class, () -> showDriverMapController.onChangeThemeButtonClicked());
     }

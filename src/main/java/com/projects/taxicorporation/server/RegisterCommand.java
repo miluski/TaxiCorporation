@@ -87,7 +87,7 @@ public class RegisterCommand implements Command<String> {
     }
     private int getLastAddedDriverId() {
         try {
-            String query = "SELECT MAX(id_users) FROM users";
+            String query = "SELECT MAX(id_user) FROM users";
             Statement statement = connect.createStatement();
             ResultSet resultSet = statement.executeQuery(query);
             if(resultSet.next())

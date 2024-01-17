@@ -29,7 +29,7 @@ public class AssignManagerDepartmentTask extends Task implements Runnable {
     @Override
     public void sendRequest() {
         AbstractDataBase abstractDataBase = new DataBase();
-        Command assignManagerDepartmentCommand = new AssignManagerDepartmentCommand();
+        Command<String> assignManagerDepartmentCommand = new AssignManagerDepartmentCommand();
         ConcreteCommunicateMediator concreteCommunicateMediator = new ConcreteCommunicateMediator(assignManagerDepartmentCommand, abstractDataBase);
         List<String> databaseLoginRequestFeedback = new ArrayList<>(concreteCommunicateMediator.mediate(data));
         returnFeedback(databaseLoginRequestFeedback);

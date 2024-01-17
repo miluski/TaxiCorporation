@@ -42,8 +42,8 @@ class ClientPanelControllerTest {
         assertEquals(8, clientPanelController.startPointChoiceBox.getItems().size());
         assertNotNull(clientPanelController.destinationChoiceBox.getItems());
         assertEquals(8, clientPanelController.destinationChoiceBox.getItems().size());
-        assertEquals("Świętokrzyska", clientPanelController.startPointChoiceBox.getValue());
-        assertEquals("Warszawska", clientPanelController.destinationChoiceBox.getValue());
+        assertEquals("Swietokrzyska", clientPanelController.startPointChoiceBox.getValue());
+        assertEquals("Piekoszowska", clientPanelController.destinationChoiceBox.getValue());
     }
 
     @Stop

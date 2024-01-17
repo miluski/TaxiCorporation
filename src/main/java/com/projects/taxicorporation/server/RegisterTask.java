@@ -4,7 +4,6 @@ import com.projects.taxicorporation.client.*;
 
 import java.io.*;
 import java.net.Socket;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -83,7 +82,7 @@ public class RegisterTask extends Task implements Runnable {
     @Override
     public void sendRequest() {
         AbstractDataBase abstractDataBase = new DataBase();
-        Command registerCommand = new RegisterCommand();
+        Command<String> registerCommand = new RegisterCommand();
         ConcreteCommunicateMediator concreteCommunicateMediator = new ConcreteCommunicateMediator(registerCommand, abstractDataBase);
         List<String> databaseLoginRequestFeedback = new ArrayList<>(concreteCommunicateMediator.mediate(data));
         returnFeedback(databaseLoginRequestFeedback);

@@ -27,7 +27,7 @@ public class RenameDepartmentTask extends Task implements Runnable {
     @Override
     public void sendRequest() {
         AbstractDataBase abstractDataBase = new DataBase();
-        Command renameDepartmentCommand = new RenameDepartmentCommand();
+        Command<String> renameDepartmentCommand = new RenameDepartmentCommand();
         ConcreteCommunicateMediator concreteCommunicateMediator = new ConcreteCommunicateMediator(renameDepartmentCommand, abstractDataBase);
         List<String> databaseLoginRequestFeedback = new ArrayList<>(concreteCommunicateMediator.mediate(data));
         returnFeedback(databaseLoginRequestFeedback);

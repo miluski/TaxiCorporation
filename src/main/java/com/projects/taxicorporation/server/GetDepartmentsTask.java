@@ -30,7 +30,7 @@ public class GetDepartmentsTask extends Task implements Runnable {
     @Override
     public void sendRequest() {
         AbstractDataBase abstractDataBase = new DataBase();
-        Command getDepartmentsCommand = new GetDepartmentsCommand();
+        Command<String> getDepartmentsCommand = new GetDepartmentsCommand();
         ConcreteCommunicateMediator concreteCommunicateMediator = new ConcreteCommunicateMediator(getDepartmentsCommand, abstractDataBase);
         List<String> databaseLoginRequestFeedback = new ArrayList<>(concreteCommunicateMediator.mediate(data));
         returnFeedback(databaseLoginRequestFeedback);

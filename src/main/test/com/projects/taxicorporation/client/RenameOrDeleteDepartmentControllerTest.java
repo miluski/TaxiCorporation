@@ -36,7 +36,6 @@ class RenameOrDeleteDepartmentControllerTest {
 
     @Test
     void initialize_ShouldInitiateElements() {
-        // Verify that elements are initiated
         assertNotNull(controller.departmentNameField);
         assertNotNull(controller.departmentCityField);
         assertNotNull(controller.departmentStreetField);

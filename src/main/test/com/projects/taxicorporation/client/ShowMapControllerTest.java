@@ -9,13 +9,9 @@ public class ShowMapControllerTest {
     @Test
     public void testOnFindRouteButtonClicked() throws Exception {
         ShowMapController controller = mock(ShowMapController.class);
-
         doNothing().when(controller).onFindRouteButtonClicked();
-
         controller.onFindRouteButtonClicked();
-
         verify(controller, times(1)).onFindRouteButtonClicked();
-
         assertTrue(true);
     }
 

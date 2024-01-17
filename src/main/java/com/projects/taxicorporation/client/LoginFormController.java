@@ -124,8 +124,8 @@ public class LoginFormController implements Controller {
         switch (userRank) {
             case "Dyrektor naczelny" -> formFactory = new AddManagerFactory();
             case "Menadzer" -> formFactory = new AddDriverFactory();
-            case "Pracownik techniczny", "Mechanik" -> formFactory = new DriverPanelFactory();
-            case "Kierowca" -> formFactory = new DriverPanelFactory();
+            case "Pracownik techniczny", "Mechanik" -> formFactory = new ChooseRoadFactory();
+            case "Kierowca" -> formFactory = new ChooseRoadFactory();
             case "Klient" -> formFactory = new ClientPanelFactory();
         }
         assert formFactory != null;

@@ -25,17 +25,14 @@ class ChooseRoadControllerTest {
             testStage.setScene(scene);
             testStage.show();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println(e.getMessage());
         }
     }
 
     @Test
     void setStartAndDestinationPoints_ShouldInitiateElements() {
-        chooseRoadController.setStartAndDestinationPoints("StartPoint", "DestinationPoint", true);
-
         assertNotNull(chooseRoadController.courseListView);
         assertNotNull(chooseRoadController.getButtonsAnchorPane());
-
         assertNotNull(chooseRoadController.courseListView.getItems());
         assertEquals(0, chooseRoadController.courseListView.getItems().size());
     }

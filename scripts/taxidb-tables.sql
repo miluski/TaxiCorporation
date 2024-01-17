@@ -75,6 +75,7 @@ CREATE TABLE courses (
 
 -- Tabela "reservations"
 CREATE TABLE reservations (
+    id_reservation NUMBER PRIMARY KEY,
     id_user NUMBER REFERENCES users(id_user),
     id_departure NUMBER REFERENCES departures(id_departure),
     id_arrival NUMBER REFERENCES arrivals(id_arrival)
