@@ -67,13 +67,13 @@ public class ShowDriverMapController {
         dataList.add(courseId);
         dataList.add(user.userId);
         oos.writeObject(dataList);
-        dataList.clear();
         byte[] dataByteArray = bos.toByteArray();
         int dataByteArrayLength = dataByteArray.length;
         outputStream.write(dataByteArrayLength);
         outputStream.flush();
         outputStream.write(dataByteArray);
         outputStream.flush();
+        dataList.clear();
         oos.reset();
         bos.reset();
     }

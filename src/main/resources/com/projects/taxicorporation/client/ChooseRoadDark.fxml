@@ -32,9 +32,8 @@
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                  <ChoiceBox layoutX="192.0" layoutY="137.0" prefWidth="150.0" />
                   <Label layoutX="212.0" layoutY="103.0" text="Dostępne rezerwacje" />
-                  <Button layoutX="230.0" layoutY="295.0" mnemonicParsing="false" text="Zaakceptuj" />
+                  <ListView layoutX="38.0" layoutY="151.0" prefHeight="250.0" prefWidth="460.0" />
                </children></AnchorPane>
         </items>
       </SplitPane>

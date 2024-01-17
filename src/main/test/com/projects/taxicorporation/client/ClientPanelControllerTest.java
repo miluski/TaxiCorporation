@@ -16,45 +16,36 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @ExtendWith(ApplicationExtension.class)
 class ClientPanelControllerTest {
-    private ClientPanelController clientPanelController;
+    private static ClientPanelController clientPanelController;
 
     @Start
     public void start(Stage testStage) {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ClientPanel.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(StartForm.class.getResource("ClientPanel.fxml"));
         try {
             Scene scene = new Scene(fxmlLoader.load());
             clientPanelController = fxmlLoader.getController();
+            testStage.setTitle("Panel klienta");
             testStage.setScene(scene);
             testStage.show();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println(e.getMessage());
         }
     }
 
     @Test
     void initialize_ShouldInitiateElements() {
-        // Call the initialize method
         clientPanelController.initialize();
-
-        // Verify that elements are initiated
         assertNotNull(clientPanelController.startPointChoiceBox);
         assertNotNull(clientPanelController.destinationChoiceBox);
         assertNotNull(clientPanelController.buttonsAnchorPane);
-
-        // You can also assert further based on the expected behavior
-        // For example, you can check that the choice boxes have the expected items
         assertNotNull(clientPanelController.startPointChoiceBox.getItems());
         assertEquals(8, clientPanelController.startPointChoiceBox.getItems().size());
-
         assertNotNull(clientPanelController.destinationChoiceBox.getItems());
         assertEquals(8, clientPanelController.destinationChoiceBox.getItems().size());
-
-        // You can also check that default values are set
         assertEquals("Świętokrzyska", clientPanelController.startPointChoiceBox.getValue());
         assertEquals("Warszawska", clientPanelController.destinationChoiceBox.getValue());
     }
 
-    // Stop method to close the test stage
     @Stop
     private void stop() {
         clientPanelController = null;

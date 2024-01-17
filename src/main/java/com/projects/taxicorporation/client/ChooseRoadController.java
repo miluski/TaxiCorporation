@@ -24,18 +24,16 @@ public class ChooseRoadController implements Controller {
     private String selectedCourseID;
     private String startPoint;
     private String destinationPoint;
-
-    public void setStartAndDestinationPoints(String startPoint, String destinationPoint) {
-        this.startPoint = startPoint;
-        this.destinationPoint = destinationPoint;
-        communicateWithServer("GetAvailableCourses");
-    }
-
     @FXML
     private AnchorPane buttonsAnchorPane;
-
-    @FXML
     public ListView<RouteInfo> courseListView;
+
+    public void setStartAndDestinationPoints(String startPoint, String destinationPoint, boolean isTesting) {
+        this.startPoint = startPoint;
+        this.destinationPoint = destinationPoint;
+        if(!isTesting)
+            communicateWithServer("GetAvailableCourses");
+    }
     public void onMapButtonClicked() throws Exception {
         FormFactory formFactory = new ShowDriverMapFactory(selectedCourseID, startPoint, destinationPoint);
         Form form = formFactory.createForm();
@@ -71,10 +69,10 @@ public class ChooseRoadController implements Controller {
         ObjectInputStream ois = new ObjectInputStream(inputStream);
         List<RouteInfo> data = (List<RouteInfo>) ois.readObject();
 
-        courseListView.setCellFactory(new Callback<ListView<RouteInfo>, ListCell<RouteInfo>>() {
+        courseListView.setCellFactory(new Callback<>() {
             @Override
             public ListCell<RouteInfo> call(ListView<RouteInfo> param) {
-                return new ListCell<RouteInfo>() {
+                return new ListCell<>() {
                     @Override
                     protected void updateItem(RouteInfo item, boolean empty) {
                         super.updateItem(item, empty);
@@ -82,7 +80,7 @@ public class ChooseRoadController implements Controller {
                             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
                             LocalDateTime dateTime = LocalDateTime.parse(item.departureDate, formatter);
                             String formattedTime = dateTime.format(DateTimeFormatter.ofPattern("HH:mm"));
-                            setText("Wyjazd: " + item.departureName + " | Przyjazd: " + item.arrivalName  + " | Godzina: " + formattedTime);
+                            setText("Wyjazd: " + item.departureName + " | Przyjazd: " + item.arrivalName + " | Godzina: " + formattedTime);
                         } else {
                             setText(null);
                         }

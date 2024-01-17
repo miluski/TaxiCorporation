@@ -1,7 +1,7 @@
 package com.projects.taxicorporation.client;
 
-import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
@@ -9,12 +9,9 @@ import java.util.Objects;
 
 
 public class ClientPanelController implements Controller {
-    @FXML
-    private TextField startPointField;
+    public TextField startPointField;
     public ChoiceBox<String> startPointChoiceBox;
-    @FXML
     public ChoiceBox<String> destinationChoiceBox;
-    @FXML
     public AnchorPane buttonsAnchorPane;
 
     public void initialize() {
@@ -73,7 +70,7 @@ public class ClientPanelController implements Controller {
     public void onEndSearchButtonClicked() {
         String startPoint = startPointChoiceBox.getValue();
         String destinationPoint = destinationChoiceBox.getValue();
-
+        System.out.println("cze");
         if (startPoint != null && destinationPoint != null) {
             try {
                 FormFactory chooseRoadFactory = new ChooseRoadFactory(startPoint, destinationPoint);

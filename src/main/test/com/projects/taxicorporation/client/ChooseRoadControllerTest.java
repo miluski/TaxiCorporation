@@ -14,11 +14,11 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @ExtendWith(ApplicationExtension.class)
 class ChooseRoadControllerTest {
-    private ChooseRoadController chooseRoadController;
+    private static ChooseRoadController chooseRoadController;
 
     @Start
     public void start(Stage testStage) {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ChooseRoad.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(StartForm.class.getResource("ChooseRoad.fxml"));
         try {
             Scene scene = new Scene(fxmlLoader.load());
             chooseRoadController = fxmlLoader.getController();
@@ -31,7 +31,7 @@ class ChooseRoadControllerTest {
 
     @Test
     void setStartAndDestinationPoints_ShouldInitiateElements() {
-        chooseRoadController.setStartAndDestinationPoints("StartPoint", "DestinationPoint");
+        chooseRoadController.setStartAndDestinationPoints("StartPoint", "DestinationPoint", true);
 
         assertNotNull(chooseRoadController.courseListView);
         assertNotNull(chooseRoadController.getButtonsAnchorPane());

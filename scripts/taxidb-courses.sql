@@ -15,6 +15,15 @@ DELETE FROM departures;
 DELETE FROM addresses;
 
 -- inserts
+INSERT INTO users (id_user, email, username, password, department, city, street, id_user_role)
+VALUES (96, 'admin@example.com', 'Admin',  'Admin@1234', 'Admin Department', 'CityA', 'StreetA1', 1);
+INSERT INTO users (id_user, email, username, password, department, city, street, id_user_role)
+VALUES (97, 'driver1@example.com', 'Driver1', 'Driver@1234', 'Driver Department', 'CityB', 'StreetB1', 5);
+INSERT INTO users (id_user, email, username, password, department, city, street, id_user_role)
+VALUES (98, 'driver2@example.com', 'Driver2', 'Driver@1234', 'Driver Department', 'CityA', 'StreetA2', 5);
+INSERT INTO users (id_user, email, username, password, department, city, street, id_user_role)
+VALUES (99, 'passenger1@example.com', 'Passenger', 'Pass@1234', 'Passenger Department', 'CityA', 'StreetA1', 6);
+
 INSERT INTO addresses (id_address, city, street) VALUES (addresses_seq.NEXTVAL, 'Kielce', 'Świętokrzyska');
 INSERT INTO addresses (id_address, city, street) VALUES (addresses_seq.NEXTVAL, 'Kielce', 'Warszawska');
 INSERT INTO addresses (id_address, city, street) VALUES (addresses_seq.NEXTVAL, 'Kielce', 'Sandomierska');
@@ -56,15 +65,3 @@ INSERT INTO courses (id_course, id_departure, id_arrival, id_driver) VALUES (cou
 INSERT INTO courses (id_course, id_departure, id_arrival, id_driver) VALUES (courses_seq.NEXTVAL, 4, 2, 1);
 INSERT INTO courses (id_course, id_departure, id_arrival, id_driver) VALUES (courses_seq.NEXTVAL, 3, 2, 2);
 INSERT INTO courses (id_course, id_departure, id_arrival, id_driver) VALUES (courses_seq.NEXTVAL, 2, 1, 3);
-
-INSERT INTO users (id_user, email, rank, username, password, department, city, street, id_user_role)
-VALUES (96, 'admin@example.com', 'Admin', 'admin', 'admin123', 'Admin Department', 'CityA', 'StreetA1', 1);
-
-INSERT INTO users (id_user, email, rank, username, password, department, city, street, id_user_role)
-VALUES (97, 'driver1@example.com', 'Driver', 'driver1', 'driver123', 'Driver Department', 'CityB', 'StreetB1', 2);
-
-INSERT INTO users (id_user, email, rank, username, password, department, city, street, id_user_role)
-VALUES (98, 'driver2@example.com', 'Driver', 'driver2', 'driver123', 'Driver Department', 'CityA', 'StreetA2', 2);
-
-INSERT INTO users (id_user, email, rank, username, password, department, city, street, id_user_role)
-VALUES (99, 'passenger1@example.com', 'Passenger', 'passenger1', 'pass123', 'Passenger Department', 'CityA', 'StreetA1', 3);

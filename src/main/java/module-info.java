@@ -16,4 +16,5 @@ module com.projects.taxicorporation {
 
     opens com.projects.taxicorporation.client to javafx.fxml, javafx.graphics, org.testfx.junit5;
     exports com.projects.taxicorporation.client;
+    exports com.projects.taxicorporation.models;
 }

@@ -22,7 +22,7 @@ public class ChooseRoadDarkView extends Form {
 
         ChooseRoadController chooseRoadController = fxmlLoader.getController();
 
-        chooseRoadController.setStartAndDestinationPoints(startPoint, destinationPoint);
+        chooseRoadController.setStartAndDestinationPoints(startPoint, destinationPoint, false);
 
         setButtonPrototypesCredentials();
         drawAllButtons(chooseRoadController);
