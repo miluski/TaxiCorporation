@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AddDepartmentCommand implements Command {
+public class AddDepartmentCommand implements Command<String> {
     private final List<String> data = new ArrayList<>();
     private Connection connect;
     @Override

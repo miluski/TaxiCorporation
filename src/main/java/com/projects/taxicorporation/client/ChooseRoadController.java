@@ -1,22 +1,43 @@
 package com.projects.taxicorporation.client;
 
+import com.projects.taxicorporation.models.RouteInfo;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.ListCell;
+import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-
+import javafx.util.Callback;
+import java.io.*;
+import java.net.Socket;
+import java.nio.ByteBuffer;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class ChooseRoadController implements Controller {
+
+    private String selectedCourseID;
+    private String startPoint;
+    private String destinationPoint;
+
+    public void setStartAndDestinationPoints(String startPoint, String destinationPoint) {
+        this.startPoint = startPoint;
+        this.destinationPoint = destinationPoint;
+        communicateWithServer("GetAvailableCourses");
+    }
+
     @FXML
     private AnchorPane buttonsAnchorPane;
-<<<<<<< HEAD
-=======
 
     @FXML
     public ListView<RouteInfo> courseListView;
->>>>>>> 9dac993 (add to tests on FE)
     public void onMapButtonClicked() throws Exception {
-        FormFactory formFactory = new ShowDriverMapFactory();
+        FormFactory formFactory = new ShowDriverMapFactory(selectedCourseID, startPoint, destinationPoint);
         Form form = formFactory.createForm();
         form.start();
     }
@@ -26,8 +47,6 @@ public class ChooseRoadController implements Controller {
         userFacade.logOutUser();
     }
 
-<<<<<<< HEAD
-=======
     public void onChooseCourseClicked() throws Exception {
         FormFactory formFactory = new ShowDriverMapFactory(selectedCourseID, startPoint, destinationPoint);
         Form form = formFactory.createForm();
@@ -113,7 +132,7 @@ public class ChooseRoadController implements Controller {
         outputStream.flush();
     }
 
->>>>>>> 9dac993 (add to tests on FE)
+
     @Override
     public AnchorPane getButtonsAnchorPane() {
         return this.buttonsAnchorPane;
@@ -125,7 +144,7 @@ public class ChooseRoadController implements Controller {
         } else {
             new LightTheme().applyTheme();
         }
-        FormFactory formFactory = new ChooseRoadFactory();
+        FormFactory formFactory = new ChooseRoadFactory(startPoint, destinationPoint);
         Form form = formFactory.createForm();
         form.start();
     }

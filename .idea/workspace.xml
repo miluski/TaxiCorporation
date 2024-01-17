@@ -34,6 +34,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RegisterFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RegisterFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RenameOrDeleteDepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RenameOrDeleteDepartmentController.java" afterDir="false" />
     </list>
+    <list default="true" id="69a6e2d8-7d6b-49c1-948b-d54c5bee0429" name="Changes" comment="add reservation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,6 +55,9 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -90,8 +94,26 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Client.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Server.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StartForm.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/find-route&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/spryt/IdeaProjects/TaxiCorporation/src/main/java/com/projects/taxicorporation/client&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Pawel/Desktop/mapjfx-demo-main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.projects.taxicorporation.server" />
@@ -239,6 +261,16 @@
       <option name="presentableId" value="Default" />
       <updated>1700752101071</updated>
       <workItem from="1705248535679" duration="311000" />
+      <workItem from="1704713474405" duration="520000" />
+      <workItem from="1704714275213" duration="167000" />
+      <workItem from="1704820149870" duration="15211000" />
+      <workItem from="1704992297809" duration="9262000" />
+      <workItem from="1705087739504" duration="3726000" />
+      <workItem from="1705103794283" duration="25000" />
+      <workItem from="1705103866246" duration="3986000" />
+      <workItem from="1705141876081" duration="2313000" />
+      <workItem from="1705144230560" duration="175000" />
+      <workItem from="1705153003165" duration="15451000" />
     </task>
     <task id="LOCAL-00002" summary="Small bug fixes">
       <option name="closed" value="true" />
@@ -320,7 +352,63 @@
       <option name="project" value="LOCAL" />
       <updated>1704666026386</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="merge Implemented add driver backend functionallity">
+      <option name="closed" value="true" />
+      <created>1704670529943</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1704670529943</updated>
+    </task>
+    <task id="LOCAL-00013" summary="finding available courses">
+      <option name="closed" value="true" />
+      <created>1704835662025</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1704835662025</updated>
+    </task>
+    <task id="LOCAL-00014" summary="refactor Command interface">
+      <option name="closed" value="true" />
+      <created>1704997507546</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1704997507546</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add markers to the map">
+      <option name="closed" value="true" />
+      <created>1705155218085</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1705155218085</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add markers to the map">
+      <option name="closed" value="true" />
+      <created>1705155224228</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1705155224228</updated>
+    </task>
+    <task id="LOCAL-00017" summary="show departure date">
+      <option name="closed" value="true" />
+      <created>1705160173527</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1705160173527</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add reservation">
+      <option name="closed" value="true" />
+      <created>1705168580748</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1705168580748</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,11 +422,17 @@
     <MESSAGE value="Implemented adding car backend functionallity" />
     <MESSAGE value="Fixed adding car and fetching departments data bugs" />
     <MESSAGE value="Implemented delete manager backend functionallity" />
-    <MESSAGE value="Implemented manage manager backend functionallity" />
     <MESSAGE value="Implemented rename/delete department backend functionallity" />
     <MESSAGE value="Implemented delete car backend functionallity" />
     <MESSAGE value="Implemented add driver backend functionallity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented add driver backend functionallity" />
+    <MESSAGE value="Implemented manage manager backend functionallity" />
+    <MESSAGE value="merge Implemented add driver backend functionallity" />
+    <MESSAGE value="finding available courses" />
+    <MESSAGE value="refactor Command interface" />
+    <MESSAGE value="add markers to the map" />
+    <MESSAGE value="show departure date" />
+    <MESSAGE value="add reservation" />
+    <option name="LAST_COMMIT_MESSAGE" value="add reservation" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TaxiCorporation$AddCarControllerTest.ic" NAME="AddCarControllerTest Coverage Results" MODIFIED="1705241418905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

@@ -100,12 +100,13 @@ public class LoginFormController implements Controller {
         byte[] receivedBytes = new byte[receivedBytesSize];
         Object receivedObject = new ObjectInputStream(new ByteArrayInputStream(receivedBytes, 0, inputStream.read(receivedBytes))).readObject();
         List<String> data = new ArrayList<>((List<String>) receivedObject);
+
         if (data.isEmpty())
             AlertDialog.getInstance().setParametersAndShow("Wprowadzono nieprawidłowe dane!", AlertType.ERROR);
         else if (!data.get(0).equals("LoginFailed")) {
             if (!Objects.equals(data.get(6), "true")) {
                 AlertDialog.getInstance().setParametersAndShow("Pomyślnie zalogowano!", AlertType.INFORMATION);
-                setUserDetails(data.get(0));
+                setUserDetails(data.get(7), data.get(0));
                 redirectUser(data.get(5));
             } else
                 AlertDialog.getInstance().setParametersAndShow("Na podane konto ktoś jest już zalogowany!", AlertType.ERROR);
@@ -113,7 +114,8 @@ public class LoginFormController implements Controller {
             AlertDialog.getInstance().setParametersAndShow("Wystąpił nieoczekiwany błąd!", AlertType.ERROR);
     }
 
-    private void setUserDetails(String username) {
+    private void setUserDetails(String userId, String username) {
+        MainStage.getInstance().getUser().userId = userId;
         MainStage.getInstance().getUser().userName = username;
     }
 

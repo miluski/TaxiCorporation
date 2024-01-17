@@ -1,22 +1,16 @@
 package com.projects.taxicorporation.client;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.TextField;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 import java.util.Objects;
 
+
 public class ClientPanelController implements Controller {
     @FXML
-<<<<<<< HEAD
     private TextField startPointField;
-
-    @FXML
-    private TextField destinationField;
-    @FXML
-    private AnchorPane buttonsAnchorPane;
-=======
     public ChoiceBox<String> startPointChoiceBox;
     @FXML
     public ChoiceBox<String> destinationChoiceBox;
@@ -57,22 +51,17 @@ public class ClientPanelController implements Controller {
         }
     }
 
->>>>>>> 9dac993 (add to tests on FE)
     public void onMapButtonClicked() throws Exception {
+        System.out.println("check 0");
         FormFactory formFactory = new ShowMapFactory();
         Form form = formFactory.createForm();
         form.start();
     }
 
     public void onFindRouteButtonClicked(MouseEvent mouseEvent) throws Exception {
-        String startPoint = startPointField.getText();
-        String destinationPoint = destinationField.getText();
-
-        // TODO
-
-        FormFactory chooseRoadFactory = new ChooseRoadFactory();
-        Form form = chooseRoadFactory.createForm();
-        form.start();
+        //FormFactory chooseRoadFactory = new ChooseRoadFactory();
+        //Form form = chooseRoadFactory.createForm();
+        //form.start();
     }
 
     public void onLogoutButtonClicked() {
@@ -82,6 +71,18 @@ public class ClientPanelController implements Controller {
     }
 
     public void onEndSearchButtonClicked() {
+        String startPoint = startPointChoiceBox.getValue();
+        String destinationPoint = destinationChoiceBox.getValue();
+
+        if (startPoint != null && destinationPoint != null) {
+            try {
+                FormFactory chooseRoadFactory = new ChooseRoadFactory(startPoint, destinationPoint);
+                Form form = chooseRoadFactory.createForm();
+                form.start();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     @Override
