@@ -28,7 +28,7 @@ public class AssignDriverDepartmentTask extends Task implements Runnable {
     @Override
     public void sendRequest() {
         AbstractDataBase abstractDataBase = new DataBase();
-        Command assignDriverDepartmentCommand = new AssignDriverDepartmentCommand();
+        Command<String> assignDriverDepartmentCommand = new AssignDriverDepartmentCommand();
         ConcreteCommunicateMediator concreteCommunicateMediator = new ConcreteCommunicateMediator(assignDriverDepartmentCommand, abstractDataBase);
         List<String> databaseLoginRequestFeedback = new ArrayList<>(concreteCommunicateMediator.mediate(data));
         returnFeedback(databaseLoginRequestFeedback);

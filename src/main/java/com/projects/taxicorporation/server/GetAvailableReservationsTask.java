@@ -9,16 +9,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class GetAvailableCoursesTask extends Task implements Runnable {
+public class GetAvailableReservationsTask extends Task implements Runnable {
     private final Socket clientSocket;
 
-    public GetAvailableCoursesTask(Socket clientSocket) {
+    public GetAvailableReservationsTask(Socket clientSocket) {
         this.clientSocket = clientSocket;
     }
 
     @Override
     public void run() {
-        System.out.println("GetAvailableCoursesTask is running");
         sendRequest();
     }
 
@@ -60,8 +59,8 @@ public class GetAvailableCoursesTask extends Task implements Runnable {
             List<String> data = (List<String>) ois.readObject();
 
             AbstractDataBase abstractDataBase = new DataBase();
-            Command getAvailableCoursesCommand = new GetAvailableCoursesCommand();
-            ConcreteCommunicateMediator concreteCommunicateMediator = new ConcreteCommunicateMediator(getAvailableCoursesCommand, abstractDataBase);
+            Command<RouteInfo> getAvailableReservationsCommand = new GetAvailableReservationsCommand();
+            ConcreteCommunicateMediator concreteCommunicateMediator = new ConcreteCommunicateMediator(getAvailableReservationsCommand, abstractDataBase);
             List<String> databaseResponse = new ArrayList<>(concreteCommunicateMediator.mediate(data));
 
             OutputStream outputStream = clientSocket.getOutputStream();

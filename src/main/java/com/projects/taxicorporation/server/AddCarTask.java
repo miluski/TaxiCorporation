@@ -30,7 +30,7 @@ public class AddCarTask extends Task implements Runnable {
     @Override
     public void sendRequest() {
         AbstractDataBase abstractDataBase = new DataBase();
-        Command addCarCommand = new AddCarCommand();
+        Command<String> addCarCommand = new AddCarCommand();
         ConcreteCommunicateMediator concreteCommunicateMediator = new ConcreteCommunicateMediator(addCarCommand, abstractDataBase);
         List<String> databaseLoginRequestFeedback = new ArrayList<>(concreteCommunicateMediator.mediate(data));
         returnFeedback(databaseLoginRequestFeedback);

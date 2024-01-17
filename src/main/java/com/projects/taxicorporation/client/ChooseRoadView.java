@@ -4,13 +4,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 
 public class ChooseRoadView extends Form {
-    private final String startPoint;
-    private final String destinationPoint;
-
-    public ChooseRoadView(String startPoint, String destinationPoint) {
-        this.startPoint = startPoint;
-        this.destinationPoint = destinationPoint;
-    }
 
     private final ButtonPrototype lightRedButtonPrototype = new LightRedButtonPrototype();
     private ButtonPrototype redButtonPrototype;
@@ -19,11 +12,8 @@ public class ChooseRoadView extends Form {
     public void start() throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(StartForm.class.getResource("ChooseRoad.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-
         ChooseRoadController chooseRoadController = fxmlLoader.getController();
-
-        chooseRoadController.setStartAndDestinationPoints(startPoint, destinationPoint);
-
+        chooseRoadController.communicateWithServer("GetAvailableReservations");
         setButtonPrototypesCredentials();
         drawAllButtons(chooseRoadController);
         MainStage.getInstance().setTitle("Wybieranie trasy");
@@ -33,7 +23,7 @@ public class ChooseRoadView extends Form {
 
     private void setButtonPrototypesCredentials() throws CloneNotSupportedException {
         lightRedButtonPrototype.setHeight(35.0d);
-        lightRedButtonPrototype.setWidth(215.0d);
+        lightRedButtonPrototype.setWidth(180.0d);
         lightRedButtonPrototype.setX(13.0d);
         lightRedButtonPrototype.setY(74.0d);
         redButtonPrototype = lightRedButtonPrototype.clone();
@@ -47,13 +37,13 @@ public class ChooseRoadView extends Form {
     }
     private void drawFindRouteButton(ChooseRoadController chooseRoadController) {
         ButtonDecorator drawButtonDecorator = new RedButtonDecorator(redButtonPrototype);
-        drawButtonDecorator.setY(119.0d);
+        drawButtonDecorator.setY(189.0d);
         drawButtonDecorator.setText("Rezerwacje");
         drawButtonDecorator.draw(chooseRoadController, null);
     }
     private void drawMapButton(ChooseRoadController chooseRoadController) {
         ButtonDecorator drawButtonDecorator = new LightRedButtonDecorator(lightRedButtonPrototype);
-        drawButtonDecorator.setY(156.0d);
+        drawButtonDecorator.setY(234.0d);
         drawButtonDecorator.setText("Mapa");
         drawButtonDecorator.draw(chooseRoadController, chooseRoadController::onMapButtonClicked);
     }

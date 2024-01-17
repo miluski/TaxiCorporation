@@ -5,11 +5,10 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AddPassengerTask extends Task implements Runnable {
+public class AddCourseTask extends Task implements Runnable {
     private final Socket clientSocket;
     private List<String> data;
-
-    public AddPassengerTask(Socket clientSocket) {
+    public AddCourseTask(Socket clientSocket) {
         this.clientSocket = clientSocket;
     }
 
@@ -30,8 +29,8 @@ public class AddPassengerTask extends Task implements Runnable {
     @Override
     public void sendRequest() {
         AbstractDataBase abstractDataBase = new DataBase();
-        Command addCarCommand = new AddPassengerCommand();
-        ConcreteCommunicateMediator concreteCommunicateMediator = new ConcreteCommunicateMediator(addCarCommand, abstractDataBase);
+        Command<String> addCourseCommand = new AddCourseCommand();
+        ConcreteCommunicateMediator concreteCommunicateMediator = new ConcreteCommunicateMediator(addCourseCommand, abstractDataBase);
         List<String> databaseLoginRequestFeedback = new ArrayList<>(concreteCommunicateMediator.mediate(data));
         returnFeedback(databaseLoginRequestFeedback);
     }
@@ -56,5 +55,4 @@ public class AddPassengerTask extends Task implements Runnable {
             System.out.println(e.getMessage());
         }
     }
-
 }

@@ -14,20 +14,19 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class RealDriverDarkMap extends Form implements IMap  {
-    private final String selectedCourseID;
     private final String startPoint;
     private final String destinationPoint;
-    public RealDriverDarkMap(String selectedCourseID, String startPoint, String destinationPoint) {
-        this.selectedCourseID = selectedCourseID;
+    private final boolean isRouteStarted;
+    private ShowDriverMapController showDriverMapController;
+    public RealDriverDarkMap(String startPoint, String destinationPoint, boolean isRouteStarted) {
         this.startPoint = startPoint;
         this.destinationPoint = destinationPoint;
+        this.isRouteStarted = isRouteStarted;
     }
-    private ShowDriverMapController showDriverMapController;
 
     @Override
     public void displayMap() {
 
-        showDriverMapController.setCourseId(selectedCourseID);
 
         showDriverMapController.mapView.setMapType(MainStage.getInstance().getProxyMapView().getMapType());
         showDriverMapController.mapView.setZoom(MainStage.getInstance().getProxyMapView().getZoom());
@@ -54,25 +53,13 @@ public class RealDriverDarkMap extends Form implements IMap  {
     }
 
     private Marker createMarker(String streetName) {
-        ConcreteLocationFlyweight location;
-
-        switch (streetName) {
-            case "Świętokrzyska":
-                location = new ConcreteLocationFlyweight(1, streetName, 50.877781, 20.661020);
-                break;
-            case "Warszawska":
-                location = new ConcreteLocationFlyweight(2, streetName, 50.880063, 20.637531);
-                break;
-            case "Sandomierska":
-                location = new ConcreteLocationFlyweight(3, streetName, 50.870842, 20.645495);
-                break;
-            case "Piekoszowska":
-                location = new ConcreteLocationFlyweight(4, streetName, 50.875466, 20.612858);
-                break;
-            default:
-                location = new ConcreteLocationFlyweight(0, "Unknown", 0, 0);
-                break;
-        }
+        ConcreteLocationFlyweight location = switch (streetName) {
+            case "Swietokrzyska" -> new ConcreteLocationFlyweight(1, streetName, 50.877781, 20.661020);
+            case "Warszawska" -> new ConcreteLocationFlyweight(2, streetName, 50.880063, 20.637531);
+            case "Sandomierska" -> new ConcreteLocationFlyweight(3, streetName, 50.870842, 20.645495);
+            case "Piekoszowska" -> new ConcreteLocationFlyweight(4, streetName, 50.875466, 20.612858);
+            default -> new ConcreteLocationFlyweight(0, "Unknown", 0, 0);
+        };
 
         Coordinate coordinate = new Coordinate(location.latitude, location.longitude);
         return Marker.createProvided(Marker.Provided.BLUE).setPosition(coordinate).setVisible(true);
@@ -86,11 +73,11 @@ public class RealDriverDarkMap extends Form implements IMap  {
         CoordinateLine track_loc_2_4 =  loadCoordinateLine(getClass().getResource("/M5.csv")).orElse(new CoordinateLine()).setColor(Color.MAGENTA);
         CoordinateLine track_loc_3_4 =  loadCoordinateLine(getClass().getResource("/M6.csv")).orElse(new CoordinateLine()).setColor(Color.MAGENTA);
 
-        if (("Świętokrzyska".equals(startPoint) && "Warszawska".equals(destinationPoint)) || ("Warszawska".equals(startPoint) && "Świętokrzyska".equals(destinationPoint))) {
+        if (("Swietokrzyska".equals(startPoint) && "Warszawska".equals(destinationPoint)) || ("Warszawska".equals(startPoint) && "Swietokrzyska".equals(destinationPoint))) {
             return track_loc_1_2;
-        } else if (("Świętokrzyska".equals(startPoint) && "Sandomierska".equals(destinationPoint)) || ("Sandomierska".equals(startPoint) && "Świętokrzyska".equals(destinationPoint))) {
+        } else if (("Swietokrzyska".equals(startPoint) && "Sandomierska".equals(destinationPoint)) || ("Sandomierska".equals(startPoint) && "Swietokrzyska".equals(destinationPoint))) {
             return track_loc_1_3;
-        } else if (("Świętokrzyska".equals(startPoint) && "Piekoszowska".equals(destinationPoint)) || ("Piekoszowska".equals(startPoint) && "Świętokrzyska".equals(destinationPoint))) {
+        } else if (("Swietokrzyska".equals(startPoint) && "Piekoszowska".equals(destinationPoint)) || ("Piekoszowska".equals(startPoint) && "Swietokrzyska".equals(destinationPoint))) {
             return track_loc_1_4;
         } else if (("Warszawska".equals(startPoint) && "Sandomierska".equals(destinationPoint)) || ("Sandomierska".equals(startPoint) && "Warszawska".equals(destinationPoint))) {
             return track_loc_2_3;
@@ -113,15 +100,17 @@ public class RealDriverDarkMap extends Form implements IMap  {
                             .map(values -> new Coordinate(Double.valueOf(values[0]), Double.valueOf(values[1])))
                             .collect(Collectors.toList())));
         } catch (IOException | NumberFormatException e) {
+            System.out.println(e.getMessage());
         }
         return Optional.empty();
     }
 
     @Override
     public void start() throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(StartForm.class.getResource("DriverMap.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(StartForm.class.getResource("DriverMapDark.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         showDriverMapController = fxmlLoader.getController();
+        showDriverMapController.isRouteStarted = this.isRouteStarted;
         displayMap();
         MainStage.getInstance().setTitle("Mapa");
         MainStage.getInstance().setScene(scene);

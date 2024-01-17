@@ -44,12 +44,12 @@
                      </font>
                   </Label>
                   <ChoiceBox fx:id="departmentChoiceBox" layoutX="294.0" layoutY="163.0" prefWidth="150.0" />
-                  <Label layoutX="64.0" layoutY="214.0" text="Nazwisko">
+                  <Label layoutX="64.0" layoutY="214.0" text="Email">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="surnameField" layoutX="64.0" layoutY="234.0" />
+                  <TextField fx:id="emailField" layoutX="64.0" layoutY="234.0" />
                   <Label layoutX="294.0" layoutY="214.0" text="Numer telefonu">
                      <font>
                         <Font size="14.0" />
@@ -65,7 +65,7 @@
                      <font>
                         <Font size="14.0" />
                      </font></Label>
-                  <TextField fx:id="passwordField" layoutX="294.0" layoutY="308.0" />
+                  <PasswordField fx:id="passwordField" layoutX="294.0" layoutY="308.0" />
                </children></AnchorPane>
         </items>
       </SplitPane>

@@ -18,10 +18,10 @@ import java.util.stream.Collectors;
 
 public class DeleteMenagerController implements Controller {
     @FXML
-    private AnchorPane buttonsAnchorPane;
+    public AnchorPane buttonsAnchorPane;
     @FXML
-    private ChoiceBox<String> chooseManagerChoiceBox;
-    private List<String> numberOfManagerIds;
+    public ChoiceBox<String> chooseManagerChoiceBox;
+    public List<String> numberOfManagerIds;
     public void onAddManagerButtonClicked() throws Exception {
         FormFactory formFactory = new AddManagerFactory();
         Form form = formFactory.createForm();

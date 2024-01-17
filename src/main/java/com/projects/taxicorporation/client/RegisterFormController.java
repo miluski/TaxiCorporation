@@ -12,13 +12,13 @@ import javafx.scene.layout.AnchorPane;
 
 public class RegisterFormController implements Controller {
     @FXML
-    private TextField nameTextField;
+    public TextField nameTextField;
     @FXML
-    private TextField emailTextField;
+    public TextField emailTextField;
     @FXML
-    private TextField userNameTextField;
+    public TextField userNameTextField;
     @FXML
-    private PasswordField passwordTextField;
+    public PasswordField passwordTextField;
     private final Pattern passPattern = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–{}:;',?/*~$^+=<>]).{8,20}$");
     public void onReturnButtonClicked() throws Exception {
         FormFactory formFactory = new LoginFormFactory();
@@ -29,7 +29,7 @@ public class RegisterFormController implements Controller {
         if(validateData())
             communicateWithServer();
     }
-    private boolean validateData() {
+    public boolean validateData() {
         if(nameTextField.getText().isEmpty()) {
             AlertDialog.getInstance().setParametersAndShow("Nie wprowadzono imienia!", Alert.AlertType.ERROR);
             return false;

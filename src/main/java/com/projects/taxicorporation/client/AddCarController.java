@@ -18,9 +18,9 @@ import java.util.stream.Collectors;
 
 public class AddCarController implements Controller {
     @FXML
-    private TextField carModelField;
+    public TextField carModelField;
     @FXML
-    private TextField yearOfProductionField;
+    TextField yearOfProductionField;
     @FXML
     private ChoiceBox<String> departmentChoiceBox;
     @FXML
@@ -88,12 +88,12 @@ public class AddCarController implements Controller {
         form.start();
     }
 
-    private boolean validateCarModel() {
+    public boolean validateCarModel() {
         String carModel = carModelField.getText();
         return carModel.length() >= 5;
     }
 
-    private boolean validateYearOfProduction() {
+    boolean validateYearOfProduction() {
         boolean isValid;
         String yearOfProduction = yearOfProductionField.getText();
         try {
@@ -110,7 +110,7 @@ public class AddCarController implements Controller {
         communicateWithServer("GetDepartments");
     }
 
-    private void communicateWithServer(String operationName) {
+    void communicateWithServer(String operationName) {
         try (Socket socket = new Socket("localhost", 1523)) {
             sendOperationName(socket, operationName);
             sendData(socket);

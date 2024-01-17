@@ -16,13 +16,13 @@ import java.util.stream.Collectors;
 
 public class ManageDriversController implements Controller {
     @FXML
-    private AnchorPane buttonsAnchorPane;
+    public AnchorPane buttonsAnchorPane;
     @FXML
-    private ChoiceBox<String> driverChoiceBox;
+    public ChoiceBox<String> driverChoiceBox;
     @FXML
-    private ChoiceBox<String> departmentChoiceBox;
-    private List<String> numberOfDriverIds;
-    private List<String> numberOfDepartmentStreets;
+    public ChoiceBox<String> departmentChoiceBox;
+    public List<String> numberOfDriverIds;
+    public List<String> numberOfDepartmentStreets;
 
     public void onChangeThemeButtonClicked() throws Exception {
         if (Objects.equals(MainStage.getInstance().getThemeName(), "Light")) {

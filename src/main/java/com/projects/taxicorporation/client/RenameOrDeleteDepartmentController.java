@@ -17,16 +17,16 @@ import java.util.stream.Collectors;
 
 public class RenameOrDeleteDepartmentController implements Controller {
     @FXML
-    private AnchorPane buttonsAnchorPane;
+    public AnchorPane buttonsAnchorPane;
     @FXML
-    private TextField departmentNameField;
+    public TextField departmentNameField;
     @FXML
-    private TextField departmentCityField;
+    public TextField departmentCityField;
     @FXML
-    private TextField departmentStreetField;
+    public TextField departmentStreetField;
     @FXML
-    private ChoiceBox<String> departmentChoiceBox;
-    private List<String> numberOfDepartmentIds;
+    public ChoiceBox<String> departmentChoiceBox;
+    public List<String> numberOfDepartmentIds;
 
     public void onAddMenagerButtonClicked() throws Exception {
         FormFactory formFactory = new AddManagerFactory();
@@ -81,7 +81,7 @@ public class RenameOrDeleteDepartmentController implements Controller {
         communicateWithServer("DeleteDepartment");
     }
 
-    private boolean validateDepartmentName() {
+    public boolean validateDepartmentName() {
         String departmentName = departmentNameField.getText();
         try {
             Integer.parseInt(departmentName);

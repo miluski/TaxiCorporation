@@ -53,20 +53,22 @@ public class Server implements Runnable {
             case "RegisterTask" -> taskFactory = new RegisterTaskFactory();
             case "AddCar" -> taskFactory = new AddCarTaskFactory();
             case "AddDepartment" -> taskFactory = new AddDepartmentTaskFactory();
-            case "AddPassenger" -> taskFactory = new AddPassengerTaskFactory();
+            case "AddReservation" -> taskFactory = new AddReservationTaskFactory();
             case "DeleteCar" -> taskFactory = new DeleteCarTaskFactory();
             case "DeleteDriver" -> taskFactory = new DeleteDriverTaskFactory();
             case "DeleteManager" -> taskFactory = new DeleteManagerTaskFactory();
             case "RenameDepartment" -> taskFactory = new RenameDepartmentTaskFactory();
             case "DeleteDepartment" -> taskFactory = new DeleteDepartmentTaskFactory();
             case "LogoutTask" -> taskFactory = new LogoutTaskFactory();
-            case "GetAvailableCourses" -> taskFactory = new GetAvailableCoursesTaskFactory();
+            case "GetAvailableReservations" -> taskFactory = new GetAvailableReservationsTaskFactory();
             case "GetDepartments" -> taskFactory = new GetDepartmentsTaskFactory();
             case "GetManagers" -> taskFactory = new GetManagersTaskFactory();
             case "GetCars" -> taskFactory = new GetCarsTaskFactory();
             case "GetDrivers" -> taskFactory = new GetDriversTaskFactory();
             case "AssignManagerDepartment" -> taskFactory = new AssignManagerDepartmentTaskFactory();
             case "AssignDriverDepartment" -> taskFactory = new AssignDriverDepartmentTaskFactory();
+            case "DeleteReservation" -> taskFactory = new DeleteReservationTaskFactory();
+            case "AddCourse" -> taskFactory = new AddCourseTaskFactory();
         }
         assert taskFactory != null;
         Task task = taskFactory.createTask(clientSocket);

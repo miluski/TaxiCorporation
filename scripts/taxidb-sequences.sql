@@ -28,5 +28,5 @@ CREATE SEQUENCE taxi_drivers_seq START WITH 1;
 -- Sekwencja "courses_seq"
 CREATE SEQUENCE courses_seq START WITH 1;
 
--- Sekwencja "passengers_seq"
-CREATE SEQUENCE passengers_seq START WITH 1;
+-- Sekwencja "reservations_seq"
+CREATE SEQUENCE reservations_seq START WITH 1;

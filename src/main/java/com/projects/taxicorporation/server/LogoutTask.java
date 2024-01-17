@@ -27,7 +27,7 @@ public class LogoutTask extends Task implements Runnable {
     @Override
     public void sendRequest() {
         AbstractDataBase abstractDataBase = new DataBase();
-        Command logoutCommand = new LogoutCommand();
+        Command<String> logoutCommand = new LogoutCommand();
         ConcreteCommunicateMediator concreteCommunicateMediator = new ConcreteCommunicateMediator(logoutCommand, abstractDataBase);
         List<String> databaseLogoutRequestFeedback = new ArrayList<>(concreteCommunicateMediator.mediate(data));
         returnFeedback(databaseLogoutRequestFeedback);

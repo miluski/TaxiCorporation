@@ -2,7 +2,6 @@ package com.projects.taxicorporation.server;
 
 import java.net.Socket;
 import java.io.*;
-import java.sql.SQLException;
 import java.util.*;
 
 public class LoginTask extends Task implements Runnable {
@@ -27,7 +26,7 @@ public class LoginTask extends Task implements Runnable {
     @Override
     public void sendRequest() {
         AbstractDataBase abstractDataBase = new DataBase();
-        Command loginCommand = new LoginCommand();
+        Command<String> loginCommand = new LoginCommand();
         ConcreteCommunicateMediator concreteCommunicateMediator = new ConcreteCommunicateMediator(loginCommand, abstractDataBase);
         List<String> databaseLoginRequestFeedback = new ArrayList<>(concreteCommunicateMediator.mediate(data));
         returnFeedback(databaseLoginRequestFeedback);

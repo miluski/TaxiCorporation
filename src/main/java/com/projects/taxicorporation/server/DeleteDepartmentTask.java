@@ -27,7 +27,7 @@ public class DeleteDepartmentTask extends Task implements Runnable {
     @Override
     public void sendRequest() {
         AbstractDataBase abstractDataBase = new DataBase();
-        Command deleteDepartmentCommand = new DeleteDepartmentCommand();
+        Command<String> deleteDepartmentCommand = new DeleteDepartmentCommand();
         ConcreteCommunicateMediator concreteCommunicateMediator = new ConcreteCommunicateMediator(deleteDepartmentCommand, abstractDataBase);
         List<String> databaseLoginRequestFeedback = new ArrayList<>(concreteCommunicateMediator.mediate(data));
         returnFeedback(databaseLoginRequestFeedback);

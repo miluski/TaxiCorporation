@@ -28,8 +28,8 @@ DROP SEQUENCE taxi_drivers_seq;
 -- Drop sekwencji "courses_seq"
 DROP SEQUENCE courses_seq;
 
--- Drop sekwencji "passengers_seq"
-DROP SEQUENCE passengers_seq;
+-- Drop sekwencji "reservations_seq"
+DROP SEQUENCE reservations_seq;
 
 -- Drop tabeli "user_roles"
 DROP TABLE user_roles CASCADE CONSTRAINTS;
@@ -61,5 +61,5 @@ DROP TABLE taxi_drivers CASCADE CONSTRAINTS;
 -- Drop tabeli "courses"
 DROP TABLE courses CASCADE CONSTRAINTS;
 
--- Drop tabeli "passengers"
-DROP TABLE passengers CASCADE CONSTRAINTS;
+-- Drop tabeli "reservations"
+DROP TABLE reservations CASCADE CONSTRAINTS;
