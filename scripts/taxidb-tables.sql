@@ -73,9 +73,9 @@ CREATE TABLE courses (
     id_driver NUMBER REFERENCES taxi_drivers(id_driver)
 );
 
--- Tabela "passengers"
-CREATE TABLE passengers (
-    id_passenger NUMBER PRIMARY KEY,
+-- Tabela "reservations"
+CREATE TABLE reservations (
     id_user NUMBER REFERENCES users(id_user),
-    id_course NUMBER REFERENCES courses(id_course)
+    id_departure NUMBER REFERENCES departures(id_departure),
+    id_arrival NUMBER REFERENCES arrivals(id_arrival)
 );
