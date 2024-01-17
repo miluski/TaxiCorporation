@@ -29,11 +29,11 @@ public class ClientPanelView extends Form {
         drawFindRouteButton(clientPanelController);
         drawMapButton(clientPanelController);
         drawLogoutButton(clientPanelController);
-        drawFindRouteFinalButton(clientPanelController);
+        drawReservateButton(clientPanelController);
     }
     private void drawFindRouteButton(ClientPanelController clientPanelController) {
         ButtonDecorator drawButtonDecorator = new RedButtonDecorator(redButtonPrototype);
-        drawButtonDecorator.setText("Wyszukaj trasę");
+        drawButtonDecorator.setText("Zarezerwuj przejazd");
         drawButtonDecorator.draw(clientPanelController, null);
     }
     private void drawMapButton(ClientPanelController clientPanelController) {
@@ -48,11 +48,11 @@ public class ClientPanelView extends Form {
         drawButtonDecorator.setText("Wyloguj");
         drawButtonDecorator.draw(clientPanelController, clientPanelController::onLogoutButtonClicked);
     }
-    private void drawFindRouteFinalButton(ClientPanelController clientPanelController) {
+    private void drawReservateButton(ClientPanelController clientPanelController) {
         ButtonDecorator drawButtonDecorator = new RedButtonDecorator(redButtonPrototype);
         drawButtonDecorator.setX(450.0d);
         drawButtonDecorator.setY(374.0d);
-        drawButtonDecorator.setText("Szukaj");
-        drawButtonDecorator.draw(clientPanelController, clientPanelController::onEndSearchButtonClicked);
+        drawButtonDecorator.setText("Zarezerwuj przejazd");
+        drawButtonDecorator.draw(clientPanelController, clientPanelController::onEndReservateButtonClicked);
     }
 }

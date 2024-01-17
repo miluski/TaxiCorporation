@@ -48,14 +48,11 @@ class RegisterFormControllerTest {
         registerFormController.emailTextField.setText("john@example.com");
         registerFormController.userNameTextField.setText("john_doe");
         registerFormController.passwordTextField.setText("Pass@1234");
-
         assertTrue(registerFormController.validateData());
     }
 
     @Test
     void communicateWithServer_ShouldHandleCommunication(FxRobot robot) {
-
-
         verifyThat("#userNameTextField", hasText(""));
         verifyThat("#passwordTextField", hasText(""));
         verifyThat("#emailTextField", hasText(""));

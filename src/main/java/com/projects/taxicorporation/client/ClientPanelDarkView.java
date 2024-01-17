@@ -33,7 +33,7 @@ public class ClientPanelDarkView extends Form {
     }
     private void drawFindRouteButton(ClientPanelController clientPanelController) {
         ButtonDecorator drawButtonDecorator = new RedButtonDecorator(redButtonPrototype);
-        drawButtonDecorator.setText("Wyszukaj trasę");
+        drawButtonDecorator.setText("Zarezerwuj przejazd");
         drawButtonDecorator.draw(clientPanelController, null);
     }
     private void drawMapButton(ClientPanelController clientPanelController) {
@@ -52,7 +52,7 @@ public class ClientPanelDarkView extends Form {
         ButtonDecorator drawButtonDecorator = new RedButtonDecorator(redButtonPrototype);
         drawButtonDecorator.setX(450.0d);
         drawButtonDecorator.setY(374.0d);
-        drawButtonDecorator.setText("Szukaj");
-        drawButtonDecorator.draw(clientPanelController, clientPanelController::onEndSearchButtonClicked);
+        drawButtonDecorator.setText("Zarezerwuj przejazd");
+        drawButtonDecorator.draw(clientPanelController, clientPanelController::onEndReservateButtonClicked);
     }
 }

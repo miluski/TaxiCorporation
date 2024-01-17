@@ -5,12 +5,14 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DeleteDepartmentTask extends Task implements Runnable {
+public class AddReservationTask extends Task implements Runnable {
     private final Socket clientSocket;
     private List<String> data;
-    public DeleteDepartmentTask(Socket clientSocket) {
+
+    public AddReservationTask(Socket clientSocket) {
         this.clientSocket = clientSocket;
     }
+
     @Override
     public void run() {
         try {
@@ -24,14 +26,16 @@ public class DeleteDepartmentTask extends Task implements Runnable {
             System.out.println(e.getMessage());
         }
     }
+
     @Override
     public void sendRequest() {
         AbstractDataBase abstractDataBase = new DataBase();
-        Command<String> deleteDepartmentCommand = new DeleteDepartmentCommand();
-        ConcreteCommunicateMediator concreteCommunicateMediator = new ConcreteCommunicateMediator(deleteDepartmentCommand, abstractDataBase);
+        Command<String> addReservationCommand = new AddReservationCommand();
+        ConcreteCommunicateMediator concreteCommunicateMediator = new ConcreteCommunicateMediator(addReservationCommand, abstractDataBase);
         List<String> databaseLoginRequestFeedback = new ArrayList<>(concreteCommunicateMediator.mediate(data));
         returnFeedback(databaseLoginRequestFeedback);
     }
+
     @Override
     public void returnFeedback(List<String> retrievedData) {
         try {

@@ -28,7 +28,7 @@
                 </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="542.0">
                     <children>
-                        <Label layoutX="176.0" layoutY="88.0" text="Znajdź przejazd">
+                        <Label layoutX="176.0" layoutY="88.0" text="Zarezerwuj przejazd">
                             <font>
                                 <Font name="System Bold" size="24.0" />
                             </font>
@@ -38,13 +38,13 @@
                                 <Font size="18.0" />
                             </font>
                         </Label>
-                        <TextField fx:id="startPointField" layoutX="190.0" layoutY="187.0" prefHeight="25.0" prefWidth="266.0" />
+                        <ChoiceBox fx:id="startPointChoiceBox" layoutX="190.0" layoutY="187.0" prefHeight="25.0" prefWidth="266.0" />
                         <Label layoutX="116.0" layoutY="264.0" text="Dokąd">
                             <font>
                                 <Font size="18.0" />
                             </font>
                         </Label>
-                        <TextField fx:id="destinationField" layoutX="188.0" layoutY="265.0" prefHeight="25.0" prefWidth="266.0" />
+                        <ChoiceBox fx:id="destinationChoiceBox" layoutX="188.0" layoutY="265.0" prefHeight="25.0" prefWidth="266.0" />
                     </children>
                 </AnchorPane>
             </items>

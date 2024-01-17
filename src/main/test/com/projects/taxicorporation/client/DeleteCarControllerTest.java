@@ -38,23 +38,14 @@ class DeleteCarControllerTest {
 
     @Test
     void initialize_ShouldInitiateElements() {
-        // Call the fetchCarsData method
         deleteCarController.fetchCarsData();
-
-        // Verify that elements are initiated
         assertNotNull(deleteCarController.chooseCarChoiceBox);
         assertNotNull(deleteCarController.buttonsAnchorPane);
-
-        // You can also assert further based on the expected behavior
-        // For example, you can check that the choice box has the expected items
         assertNotNull(deleteCarController.chooseCarChoiceBox.getItems());
     }
 
     @Test
     void receiveFeedback_ShouldPopulateChooseCarChoiceBox(FxRobot robot) {
-        // Manually call the receiveFeedback method with mocked data
-
-        // Verify that the chooseCarChoiceBox is populated with the expected number of items
         assertEquals(0, deleteCarController.chooseCarChoiceBox.getItems().size());
     }
 
