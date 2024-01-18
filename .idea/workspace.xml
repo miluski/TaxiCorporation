@@ -5,96 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78034f17-a5d5-4488-8baa-a74267490aae" name="Changes" comment="Improvement registering driver account system">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AddCourseCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AddCourseTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AddCourseTaskFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DeleteReservationCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DeleteReservationTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DeleteReservationTaskFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/BlackButtonDecoratorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/GrayButtonDecoratorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/LightRedButtonDecoratorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/RedButtonDecoratorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/WhiteButtonDecoratorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/taxidb-courses.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/taxidb-courses.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/taxidb-drops.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/taxidb-drops.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/taxidb-sequences.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/taxidb-sequences.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/taxidb-tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/taxidb-tables.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/AddCarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/AddCarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadDarkView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadDarkView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ClientPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ClientPanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ClientPanelDarkView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ClientPanelDarkView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ClientPanelView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ClientPanelView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DriverPanelController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DriverPanelDarkView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DriverPanelFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/DriverPanelView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/LoginFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RealDarkMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RealDarkMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RealDriverDarkMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RealDriverDarkMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RealDriverMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RealDriverMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RealMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/RealMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ShowDriverMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ShowDriverMapController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ShowDriverMapFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ShowDriverMapFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ShowMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ShowMapController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ShowMapFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ShowMapFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/models/RouteInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/models/RouteInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AddCarTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AddCarTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AddDepartmentTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AddDepartmentTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AddPassengerCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AddReservationCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AddPassengerTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AddReservationTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AddPassengerTaskFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AddReservationTaskFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AssignDriverDepartmentTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AssignDriverDepartmentTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AssignManagerDepartmentTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AssignManagerDepartmentTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DeleteCarTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DeleteCarTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DeleteDepartmentTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DeleteDepartmentTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DeleteDriverTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DeleteDriverTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DeleteManagerTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DeleteManagerTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetAvailableCoursesCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetAvailableReservationsCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetAvailableCoursesTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetAvailableReservationsTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetAvailableCoursesTaskFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetAvailableReservationsTaskFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetCarsTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetCarsTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetDepartmentsTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetDepartmentsTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetDriversTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetDriversTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetManagersTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/GetManagersTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/LoginTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/LoginTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/LogoutTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/LogoutTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/RegisterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/RegisterCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/RegisterTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/RegisterTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/RenameDepartmentTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/RenameDepartmentTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ChooseRoad.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ChooseRoad.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ChooseRoadDark.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ChooseRoadDark.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ClientPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ClientPanel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ClientPanelDark.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ClientPanelDark.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/DriverMap.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/DriverMap.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/DriverPanel.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/DriverPanelDark.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/DriverShowMap.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ShowMap.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ShowMap.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ShowMapDark.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/projects/taxicorporation/client/ShowMapDark.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ChooseRoadControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ChooseRoadControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ClientPanelControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ClientPanelControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/DeleteCarControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/DeleteCarControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/DeleteManagerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/DeleteManagerControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DataBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/DriverPanelControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/LoginFormControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/LoginFormControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ManageDriversControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ManageDriversControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ManageManagerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ManageManagerControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/RegisterFormControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/RegisterFormControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/RenameOrDeleteDepartmentControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/RenameOrDeleteDepartmentControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ShowDriverMapControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ShowDriverMapControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ShowManagerMapControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ShowManagerMapControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ShowMapControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ShowMapControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/testresources/com/projects/taxicorporation/client/ChooseRoad.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/testresources/com/projects/taxicorporation/client/ChooseRoad.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/testresources/com/projects/taxicorporation/client/ChooseRoadDark.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/testresources/com/projects/taxicorporation/client/ChooseRoadDark.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/testresources/com/projects/taxicorporation/client/ClientPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/testresources/com/projects/taxicorporation/client/ClientPanel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/testresources/com/projects/taxicorporation/client/ClientPanelDark.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/testresources/com/projects/taxicorporation/client/ClientPanelDark.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/testresources/com/projects/taxicorporation/client/DriverMap.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/testresources/com/projects/taxicorporation/client/DriverMap.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/testresources/com/projects/taxicorporation/client/DriverPanel.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/testresources/com/projects/taxicorporation/client/DriverPanelDark.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/testresources/com/projects/taxicorporation/client/DriverShowMap.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/testresources/com/projects/taxicorporation/client/ShowMap.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/testresources/com/projects/taxicorporation/client/ShowMap.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/testresources/com/projects/taxicorporation/client/ShowMapDark.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/testresources/com/projects/taxicorporation/client/ShowMapDark.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +57,7 @@
     "JUnit.ClientPanelControllerTest.executor": "Run",
     "JUnit.client in TaxiCorporation.executor": "Run",
     "JUnit.test in TaxiCorporation.executor": "Run",
-    "git-widget-placeholder": "feature/reservations-rebuild"
+    "git-widget-placeholder": "feature/unit-tests"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -156,7 +74,7 @@
       <recent name="com.projects.taxicorporation.client" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.com.projects.taxicorporation.client in TaxiCorporation">
     <configuration name="Client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.StartForm" />
       <module name="TaxiCorporation" />
@@ -167,6 +85,29 @@
     <configuration name="Server" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.server.Server" />
       <module name="TaxiCorporation" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in TaxiCorporation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaxiCorporation" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlackButtonDecoratorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaxiCorporation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.projects.taxicorporation.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.projects.taxicorporation.client" />
+      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.BlackButtonDecoratorTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -186,7 +127,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClientPanelControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="com.projects.taxicorporation.client in TaxiCorporation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TaxiCorporation" />
       <extension name="coverage">
         <pattern>
@@ -195,31 +136,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.projects.taxicorporation.client" />
-      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.ClientPanelControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ShowMapControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TaxiCorporation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.projects.taxicorporation.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.projects.taxicorporation.client" />
-      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.ShowMapControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="client in TaxiCorporation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TaxiCorporation" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -235,19 +152,19 @@
     <list>
       <item itemvalue="Application.Client" />
       <item itemvalue="Application.Server" />
+      <item itemvalue="JUnit.All in TaxiCorporation" />
+      <item itemvalue="JUnit.BlackButtonDecoratorTest" />
+      <item itemvalue="JUnit.com.projects.taxicorporation.client in TaxiCorporation" />
       <item itemvalue="JUnit.ChooseRoadControllerTest" />
-      <item itemvalue="JUnit.ClientPanelControllerTest" />
-      <item itemvalue="JUnit.client in TaxiCorporation" />
       <item itemvalue="JUnit.test in TaxiCorporation" />
-      <item itemvalue="JUnit.ShowMapControllerTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.com.projects.taxicorporation.client in TaxiCorporation" />
+        <item itemvalue="JUnit.All in TaxiCorporation" />
+        <item itemvalue="JUnit.BlackButtonDecoratorTest" />
         <item itemvalue="JUnit.test in TaxiCorporation" />
         <item itemvalue="JUnit.ChooseRoadControllerTest" />
-        <item itemvalue="JUnit.client in TaxiCorporation" />
-        <item itemvalue="JUnit.ClientPanelControllerTest" />
-        <item itemvalue="JUnit.ShowMapControllerTest" />
       </list>
     </recent_temporary>
   </component>
