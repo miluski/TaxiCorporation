@@ -31,7 +31,9 @@ public class AddDepartmentTaskTest {
         // Set test data for AddDepartmentTask
         Database database = new Database();
 
-        assertTrue((boolean)database.sendRequest("AddDepartment", testData));
+        Object dbResponse = database.sendRequest("AddDepartment", testData);
+
+        assertTrue((boolean)dbResponse);
     }
 
     private byte[] serializeTestData() throws IOException {
