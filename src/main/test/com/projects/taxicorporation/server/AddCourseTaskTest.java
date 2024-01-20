@@ -1,5 +1,6 @@
 package com.projects.taxicorporation.server;
 
+import com.projects.taxicorporation.client.Database;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
@@ -9,6 +10,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
 
 public class AddCourseTaskTest {
@@ -27,13 +30,12 @@ public class AddCourseTaskTest {
 
     @Test
     public void testSendRequest() {
-        // Arrange
-        /*AbstractDataBase fakeDatabase = new Database();*/
-        AddCourseTask addCourseTask = new AddCourseTask(Mockito.mock(Socket.class));
+        List<String> testData = Arrays.asList("departmentId", "departmentName", "destinationName");
 
-        // Set test data for AddCourseTask
-        List<String> testData = Arrays.asList("driverId", "tripId", "destinationId", "startId");
-        addCourseTask.data = new ArrayList<>(testData);
+        // Set test data for AddDepartmentTask
+        Database database = new Database();
+
+        assertTrue((boolean)database.sendRequest("AddDepartment", testData));
     }
 
     private byte[] serializeTestData() throws IOException {
