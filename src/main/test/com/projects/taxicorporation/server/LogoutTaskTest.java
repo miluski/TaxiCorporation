@@ -7,36 +7,34 @@ import java.io.*;
 import java.net.Socket;
 import java.util.Arrays;
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
 
-public class AddCourseTaskTest {
+public class LogoutTaskTest {
 
     @Test
     public void testRun() throws IOException {
-        // Arrange
         Socket mockSocket = Mockito.mock(Socket.class);
         InputStream mockInputStream = new ByteArrayInputStream(serializeTestData());
         when(mockSocket.getInputStream()).thenReturn(mockInputStream);
-        AddCourseTask addCourseTask = new AddCourseTask(mockSocket);
+        LogoutTask logoutTask = new LogoutTask(mockSocket);
 
-        // Act
-        addCourseTask.run();
+        logoutTask.run();
     }
 
     @Test
     public void testSendRequest() {
-        List<String> testData = Arrays.asList("departmentId", "departmentName", "destinationName");
+        List<String> testData = Arrays.asList("false");
 
-        // Set test data for AddDepartmentTask
         Database database = new Database();
 
-        assertTrue((boolean)database.sendRequest("AddDepartment", testData));
+        Object dbResponse = database.sendRequest("LogoutTask", testData);
+
+        assertTrue((boolean)dbResponse);
     }
 
     private byte[] serializeTestData() throws IOException {
-        List<String> testData = Arrays.asList("CourseName", "InstructorName");
+        List<String> testData = Arrays.asList("DepartmentName", "NewDepartmentName");
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         ObjectOutputStream oos = new ObjectOutputStream(bos);
         oos.writeObject(testData);

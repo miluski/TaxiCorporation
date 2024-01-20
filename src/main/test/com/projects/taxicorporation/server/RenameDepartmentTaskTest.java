@@ -1,42 +1,48 @@
 package com.projects.taxicorporation.server;
 
 import com.projects.taxicorporation.client.Database;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+
 import java.io.*;
 import java.net.Socket;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
 
-public class AddCourseTaskTest {
+public class RenameDepartmentTaskTest {
 
     @Test
     public void testRun() throws IOException {
-        // Arrange
         Socket mockSocket = Mockito.mock(Socket.class);
         InputStream mockInputStream = new ByteArrayInputStream(serializeTestData());
         when(mockSocket.getInputStream()).thenReturn(mockInputStream);
-        AddCourseTask addCourseTask = new AddCourseTask(mockSocket);
+        RenameDepartmentTask renameDepartmentTask = new RenameDepartmentTask(mockSocket);
 
-        // Act
-        addCourseTask.run();
+        renameDepartmentTask.run();
     }
 
     @Test
-    public void testSendRequest() {
-        List<String> testData = Arrays.asList("departmentId", "departmentName", "destinationName");
+    public void testSendRequest_RenameDepartment() {
+        // Arrange
+        List<String> testData = Arrays.asList("departmentId", "newDepartmentName");
 
-        // Set test data for AddDepartmentTask
         Database database = new Database();
 
-        assertTrue((boolean)database.sendRequest("AddDepartment", testData));
+        // Act
+        Object dbResponse = database.sendRequest("RenameDepartment", testData);
+
+        // Assert
+        assertTrue((boolean) dbResponse);
     }
 
     private byte[] serializeTestData() throws IOException {
-        List<String> testData = Arrays.asList("CourseName", "InstructorName");
+        List<String> testData = Arrays.asList("DepartmentName", "NewDepartmentName");
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         ObjectOutputStream oos = new ObjectOutputStream(bos);
         oos.writeObject(testData);
