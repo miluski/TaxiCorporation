@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78034f17-a5d5-4488-8baa-a74267490aae" name="Changes" comment="add to tests on FE">
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/AlertDialogTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ClientBuilderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/DriverBuilderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ManagerBuilderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/MechanicBuilderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/UserBuilderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/UserFacadeTest.java" afterDir="false" />
+    <list default="true" id="78034f17-a5d5-4488-8baa-a74267490aae" name="Changes" comment="add tests to fe">
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/AbstractDataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/Database.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/AddCourseTaskTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/AddDepartmentTaskTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/AlertDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/AlertDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AddCourseTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AddCourseTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/DeleteCarControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/DeleteCarControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ManageDriversControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ManageDriversControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,25 +47,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Client.executor": "Run",
-    "Application.Server.executor": "Run",
-    "Application.StartForm.executor": "Run",
-    "JUnit.ChooseRoadControllerTest.executor": "Run",
-    "JUnit.ClientPanelControllerTest.executor": "Run",
-    "JUnit.client in TaxiCorporation.executor": "Run",
-    "JUnit.test in TaxiCorporation.executor": "Run",
-    "git-widget-placeholder": "feature/unit-tests",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Client.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Server.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StartForm.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ChooseRoadControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ClientPanelControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.client in TaxiCorporation.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.test in TaxiCorporation.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/unit-tests&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.projects.taxicorporation.server" />
@@ -86,7 +80,7 @@
       <recent name="com.projects.taxicorporation.client" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ManageManagerControllerTest">
+  <component name="RunManager" selected="JUnit.AddDepartmentTaskTest">
     <configuration name="Client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.StartForm" />
       <module name="TaxiCorporation" />
@@ -101,16 +95,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeleteCarControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AddCourseTaskTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TaxiCorporation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.projects.taxicorporation.client.*" />
+          <option name="PATTERN" value="com.projects.taxicorporation.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.projects.taxicorporation.client" />
-      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.DeleteCarControllerTest" />
+      <option name="PACKAGE_NAME" value="com.projects.taxicorporation.server" />
+      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.server.AddCourseTaskTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddDepartmentTaskTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaxiCorporation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.projects.taxicorporation.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.projects.taxicorporation.server" />
+      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.server.AddDepartmentTaskTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -161,30 +170,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="client in TaxiCorporation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TaxiCorporation" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Client" />
       <item itemvalue="Application.Server" />
-      <item itemvalue="JUnit.DeleteCarControllerTest" />
+      <item itemvalue="JUnit.AddCourseTaskTest" />
+      <item itemvalue="JUnit.AddDepartmentTaskTest" />
       <item itemvalue="JUnit.DeleteManagerControllerTest" />
       <item itemvalue="JUnit.ManageDriversControllerTest" />
       <item itemvalue="JUnit.ManageManagerControllerTest" />
-      <item itemvalue="JUnit.client in TaxiCorporation" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AddDepartmentTaskTest" />
+        <item itemvalue="JUnit.AddCourseTaskTest" />
         <item itemvalue="JUnit.ManageManagerControllerTest" />
         <item itemvalue="JUnit.DeleteManagerControllerTest" />
         <item itemvalue="JUnit.ManageDriversControllerTest" />
-        <item itemvalue="JUnit.client in TaxiCorporation" />
-        <item itemvalue="JUnit.DeleteCarControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -376,7 +377,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705594373073</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="add tests to fe">
+      <option name="closed" value="true" />
+      <created>1705776160743</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1705776160743</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,7 +413,8 @@
     <MESSAGE value="Improvement registering driver account system" />
     <MESSAGE value="Decorator project pattern unit tests implementation" />
     <MESSAGE value="add to tests on FE" />
-    <option name="LAST_COMMIT_MESSAGE" value="add to tests on FE" />
+    <MESSAGE value="add tests to fe" />
+    <option name="LAST_COMMIT_MESSAGE" value="add tests to fe" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TaxiCorporation$AddCarControllerTest.ic" NAME="AddCarControllerTest Coverage Results" MODIFIED="1705241418905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
