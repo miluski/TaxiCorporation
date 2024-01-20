@@ -15,7 +15,7 @@ public class LoginCommandTest {
     public void testExecuteWithEmptyDataList() throws SQLException {
         LoginCommand loginCommand = new LoginCommand();
         List<String> emptyDataList = new ArrayList<>();
-        Connection someMockConnection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "john", "abcd1234");
+        Connection someMockConnection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "admin");
         assertThrows(IndexOutOfBoundsException.class, () -> {
             loginCommand.execute(emptyDataList, someMockConnection);
         });

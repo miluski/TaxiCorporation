@@ -15,7 +15,7 @@ public class RegisterCommandTest {
     public void testExecuteWithEmptyDataList() throws SQLException {
         RegisterCommand registerCommand = new RegisterCommand();
         List<String> emptyDataList = new ArrayList<>();
-        Connection someMockConnection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "john", "abcd1234");
+        Connection someMockConnection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "admin");
         assertThrows(IndexOutOfBoundsException.class, () -> {
             registerCommand.execute(emptyDataList, someMockConnection);
         });

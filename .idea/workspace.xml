@@ -4,22 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78034f17-a5d5-4488-8baa-a74267490aae" name="Changes" comment="add tests to fe">
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/AddCourseCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/AddDepartmentCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/AddReservationCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/AssignDriverDepartmentCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/AssignManagerDepartmentCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/DeleteDepartmentCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/DeleteDriverCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/DeleteManagerCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/DeleteReservationCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/GetAvalaibleReservationsCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/GetCarsCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/GetDepartmentsCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/GetDriversCommandTest.java" afterDir="false" />
+    <list default="true" id="78034f17-a5d5-4488-8baa-a74267490aae" name="Changes" comment="Implemented add driver backend functionallity">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_01_2024_10_00__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_01_2024_10_00__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_11_2023_14_05__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_11_2023_14_05__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/RenameDepartmentTaskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/RenameDepartmentTaskTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/LoginCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/LoginCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/LogoutCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/LogoutCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/RegisterCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/RegisterCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/RenameDepartmentCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/RenameDepartmentCommandTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,13 +33,14 @@
         <entry key="$PROJECT_DIR$" value="feature/unit-tests" />
       </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
-}</component>
+    &quot;associatedIndex&quot;: 0
+    }</component>
   <component name="ProjectId" id="2Ya7yVWcXdWGfvMtu2Uu7qfq6SE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -62,6 +56,7 @@
     "Application.StartForm.executor": "Run",
     "JUnit.AddDepartmentCommandTest.executor": "Run",
     "JUnit.AddReservationCommandTest.executor": "Run",
+    "JUnit.All in TaxiCorporation.executor": "Run",
     "JUnit.AssignDriverDepartmentCommandTest.executor": "Run",
     "JUnit.AssignManagerDepartmentCommandTest.executor": "Run",
     "JUnit.ChooseRoadControllerTest.executor": "Run",
@@ -77,7 +72,9 @@
     "JUnit.client in TaxiCorporation.executor": "Run",
     "JUnit.server in TaxiCorporation.executor": "Run",
     "JUnit.test in TaxiCorporation.executor": "Run",
-    "git-widget-placeholder": "feature/unit-tests",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -101,7 +98,7 @@
       <recent name="com.projects.taxicorporation.client" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GetDriversCommandTest">
+  <component name="RunManager" selected="JUnit.All in TaxiCorporation">
     <configuration name="Client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.StartForm" />
       <module name="TaxiCorporation" />
@@ -116,7 +113,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetAvailableReservationsCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in TaxiCorporation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TaxiCorporation" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeleteManagerCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TaxiCorporation" />
       <extension name="coverage">
         <pattern>
@@ -125,68 +130,32 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.projects.taxicorporation.server" />
-      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.server.GetAvailableReservationsCommandTest" />
+      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.server.DeleteManagerCommandTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetAvalaibleReservationsCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="client in TaxiCorporation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TaxiCorporation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.projects.taxicorporation.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.projects.taxicorporation.server" />
-      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.server.GetAvalaibleReservationsCommandTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetCarsCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="server in TaxiCorporation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TaxiCorporation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.projects.taxicorporation.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.projects.taxicorporation.server" />
-      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.server.GetCarsCommandTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetDepartmentsCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="test in TaxiCorporation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TaxiCorporation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.projects.taxicorporation.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.projects.taxicorporation.server" />
-      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.server.GetDepartmentsCommandTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GetDriversCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TaxiCorporation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.projects.taxicorporation.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.projects.taxicorporation.server" />
-      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.server.GetDriversCommandTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/main/test" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -194,21 +163,28 @@
     <list>
       <item itemvalue="Application.Client" />
       <item itemvalue="Application.Server" />
-      <item itemvalue="JUnit.GetAvailableReservationsCommandTest" />
-      <item itemvalue="JUnit.GetAvalaibleReservationsCommandTest" />
-      <item itemvalue="JUnit.GetCarsCommandTest" />
-      <item itemvalue="JUnit.GetDepartmentsCommandTest" />
-      <item itemvalue="JUnit.GetDriversCommandTest" />
+      <item itemvalue="JUnit.All in TaxiCorporation" />
+      <item itemvalue="JUnit.DeleteManagerCommandTest" />
+      <item itemvalue="JUnit.client in TaxiCorporation" />
+      <item itemvalue="JUnit.server in TaxiCorporation" />
+      <item itemvalue="JUnit.test in TaxiCorporation" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GetDriversCommandTest" />
-        <item itemvalue="JUnit.GetDepartmentsCommandTest" />
-        <item itemvalue="JUnit.GetCarsCommandTest" />
-        <item itemvalue="JUnit.GetAvailableReservationsCommandTest" />
-        <item itemvalue="JUnit.GetAvalaibleReservationsCommandTest" />
+        <item itemvalue="JUnit.All in TaxiCorporation" />
+        <item itemvalue="JUnit.client in TaxiCorporation" />
+        <item itemvalue="JUnit.server in TaxiCorporation" />
+        <item itemvalue="JUnit.DeleteManagerCommandTest" />
+        <item itemvalue="JUnit.test in TaxiCorporation" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.9-corretto-17.0.9-249ae16d76d6-98297cd8" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -221,7 +197,7 @@
       <updated>1700144320379</updated>
     </task>
     <task active="true" id="Default" summary="Default task">
-      <changelist id="69a6e2d8-7d6b-49c1-948b-d54c5bee0429" name="Changes" comment="Add car, Delete car panels skeletons" />
+      <changelist id="78034f17-a5d5-4488-8baa-a74267490aae" name="Changes" comment="Implemented add driver backend functionallity" />
       <created>1700752101071</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -422,7 +398,6 @@
     <MESSAGE value="Implemented delete manager backend functionallity" />
     <MESSAGE value="Implemented rename/delete department backend functionallity" />
     <MESSAGE value="Implemented delete car backend functionallity" />
-    <MESSAGE value="Implemented add driver backend functionallity" />
     <MESSAGE value="Implemented manage manager backend functionallity" />
     <MESSAGE value="merge Implemented add driver backend functionallity" />
     <MESSAGE value="finding available courses" />
@@ -435,7 +410,8 @@
     <MESSAGE value="Decorator project pattern unit tests implementation" />
     <MESSAGE value="add to tests on FE" />
     <MESSAGE value="add tests to fe" />
-    <option name="LAST_COMMIT_MESSAGE" value="add tests to fe" />
+    <MESSAGE value="Implemented add driver backend functionallity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented add driver backend functionallity" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TaxiCorporation$AddCarControllerTest.ic" NAME="AddCarControllerTest Coverage Results" MODIFIED="1705241418905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
