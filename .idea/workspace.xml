@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78034f17-a5d5-4488-8baa-a74267490aae" name="Changes" comment="add tests to fe">
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/AbstractDataBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/Database.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/AddCourseTaskTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/AddDepartmentTaskTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/GetManagersCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/LoginCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/LogoutCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/RegisterCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server/RenameDepartmentCommandTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AddCourseTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/AddCourseTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DataBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,25 +46,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Client.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Server.executor&quot;: &quot;Run&quot;,
-    &quot;Application.StartForm.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ChooseRoadControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ClientPanelControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.client in TaxiCorporation.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.test in TaxiCorporation.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/unit-tests&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Client.executor": "Run",
+    "Application.Server.executor": "Run",
+    "Application.StartForm.executor": "Run",
+    "JUnit.ChooseRoadControllerTest.executor": "Run",
+    "JUnit.ClientPanelControllerTest.executor": "Run",
+    "JUnit.client in TaxiCorporation.executor": "Run",
+    "JUnit.test in TaxiCorporation.executor": "Run",
+    "git-widget-placeholder": "task-pattern-tests",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.projects.taxicorporation.server" />
@@ -80,7 +79,7 @@
       <recent name="com.projects.taxicorporation.client" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AddDepartmentTaskTest">
+  <component name="RunManager" selected="JUnit.server in TaxiCorporation">
     <configuration name="Client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.StartForm" />
       <module name="TaxiCorporation" />
@@ -95,7 +94,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddCourseTaskTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GetManagersCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TaxiCorporation" />
       <extension name="coverage">
         <pattern>
@@ -104,13 +103,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.projects.taxicorporation.server" />
-      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.server.AddCourseTaskTest" />
+      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.server.GetManagersCommandTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddDepartmentTaskTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TaxiCorporation" />
       <extension name="coverage">
         <pattern>
@@ -119,53 +118,46 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.projects.taxicorporation.server" />
-      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.server.AddDepartmentTaskTest" />
+      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.server.LoginCommandTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeleteManagerControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LogoutCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TaxiCorporation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.projects.taxicorporation.client.*" />
+          <option name="PATTERN" value="com.projects.taxicorporation.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.projects.taxicorporation.client" />
-      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.DeleteManagerControllerTest" />
+      <option name="PACKAGE_NAME" value="com.projects.taxicorporation.server" />
+      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.server.LogoutCommandTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManageDriversControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RegisterCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TaxiCorporation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.projects.taxicorporation.client.*" />
+          <option name="PATTERN" value="com.projects.taxicorporation.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.projects.taxicorporation.client" />
-      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.ManageDriversControllerTest" />
+      <option name="PACKAGE_NAME" value="com.projects.taxicorporation.server" />
+      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.server.RegisterCommandTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManageManagerControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="server in TaxiCorporation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TaxiCorporation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.projects.taxicorporation.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.projects.taxicorporation.client" />
-      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.ManageManagerControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/server" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -173,19 +165,19 @@
     <list>
       <item itemvalue="Application.Client" />
       <item itemvalue="Application.Server" />
-      <item itemvalue="JUnit.AddCourseTaskTest" />
-      <item itemvalue="JUnit.AddDepartmentTaskTest" />
-      <item itemvalue="JUnit.DeleteManagerControllerTest" />
-      <item itemvalue="JUnit.ManageDriversControllerTest" />
-      <item itemvalue="JUnit.ManageManagerControllerTest" />
+      <item itemvalue="JUnit.GetManagersCommandTest" />
+      <item itemvalue="JUnit.LoginCommandTest" />
+      <item itemvalue="JUnit.LogoutCommandTest" />
+      <item itemvalue="JUnit.RegisterCommandTest" />
+      <item itemvalue="JUnit.server in TaxiCorporation" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AddDepartmentTaskTest" />
-        <item itemvalue="JUnit.AddCourseTaskTest" />
-        <item itemvalue="JUnit.ManageManagerControllerTest" />
-        <item itemvalue="JUnit.DeleteManagerControllerTest" />
-        <item itemvalue="JUnit.ManageDriversControllerTest" />
+        <item itemvalue="JUnit.server in TaxiCorporation" />
+        <item itemvalue="JUnit.GetManagersCommandTest" />
+        <item itemvalue="JUnit.LoginCommandTest" />
+        <item itemvalue="JUnit.LogoutCommandTest" />
+        <item itemvalue="JUnit.RegisterCommandTest" />
       </list>
     </recent_temporary>
   </component>
@@ -385,7 +377,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705776160743</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="add tests to fe">
+      <option name="closed" value="true" />
+      <created>1705787869130</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1705787869130</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
