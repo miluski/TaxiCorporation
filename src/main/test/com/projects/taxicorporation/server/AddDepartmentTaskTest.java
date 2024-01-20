@@ -16,20 +16,16 @@ public class AddDepartmentTaskTest {
 
     @Test
     public void testRun() throws IOException {
-        // Arrange
         Socket mockSocket = Mockito.mock(Socket.class);
         InputStream mockInputStream = new ByteArrayInputStream(serializeTestData());
         when(mockSocket.getInputStream()).thenReturn(mockInputStream);
         AddDepartmentTask addDepartmentTask = new AddDepartmentTask(mockSocket);
 
-        // Act
         addDepartmentTask.run();
     }
 
     @Test
     public void testSendRequest() {
-        AddDepartmentTask addDepartmentTask = new AddDepartmentTask(Mockito.mock(Socket.class));
-
         List<String> testData = Arrays.asList("departmentId", "departmentName", "location");
 
         // Set test data for AddDepartmentTask
