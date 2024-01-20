@@ -7,7 +7,7 @@ import java.util.List;
 
 public class AssignDriverDepartmentTask extends Task implements Runnable {
     private final Socket clientSocket;
-    private List<String> data;
+    List<String> data;
     public AssignDriverDepartmentTask(Socket clientSocket) {
         this.clientSocket = clientSocket;
     }

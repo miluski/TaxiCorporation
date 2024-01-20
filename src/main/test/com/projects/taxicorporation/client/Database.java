@@ -9,7 +9,7 @@ public class Database extends AbstractDataBase {
 
     @Override
     public Object sendRequest(String command, List<String> data) {
-        if (command.startsWith("Add")) {
+        if (command.startsWith("Add") || command.startsWith("Assign") ) {
             return true;
         }
         if (command.startsWith("Delete")) {
@@ -29,6 +29,9 @@ public class Database extends AbstractDataBase {
         }
         if (command.startsWith("GetDepartments")) {
             return Arrays.asList("1", "Politechnika Swietokrzyska", "2", "Korona", "3", "Echo");
+        }
+        if (command.startsWith("DriverDelete")) {
+            return Arrays.asList("1", "2");
         }
         if (command.startsWith("GetCars")) {
             return Arrays.asList("1", "Opel", "2", "Ford", "3", "Toyota");

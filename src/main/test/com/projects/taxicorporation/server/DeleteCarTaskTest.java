@@ -1,50 +1,54 @@
 package com.projects.taxicorporation.server;
 
 import com.projects.taxicorporation.client.Database;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import java.io.*;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
-public class RenameDepartmentTaskTest {
+public class DeleteCarTaskTest {
 
     @Test
-    public void testRun() throws IOException {
+    public void testRun() throws IOException, ClassNotFoundException {
+        // Arrange
         Socket mockSocket = Mockito.mock(Socket.class);
         InputStream mockInputStream = new ByteArrayInputStream(serializeTestData());
         when(mockSocket.getInputStream()).thenReturn(mockInputStream);
-        RenameDepartmentTask renameDepartmentTask = new RenameDepartmentTask(mockSocket);
 
-        renameDepartmentTask.run();
+        ByteArrayOutputStream mockOutputStream = new ByteArrayOutputStream();
+        when(mockSocket.getOutputStream()).thenReturn(new ByteArrayOutputStream());
+
+        DeleteCarTask deleteCarTask = new DeleteCarTask(mockSocket);
+
+        // Act
+        deleteCarTask.run();
     }
 
     @Test
-    public void testSendRequest_RenameDepartment() {
+    public void testSendRequest() {
         // Arrange
-        List<String> testData = Arrays.asList("departmentId", "newDepartmentName");
+        DeleteCarTask deleteCarTask = new DeleteCarTask(Mockito.mock(Socket.class));
 
+        List<String> testData = new ArrayList<>();
+        testData.add("CarId");
         Database database = new Database();
-
-        // Act
-        Object dbResponse = database.sendRequest("RenameDepartment", testData);
-
-        // Assert
-        assertFalse(Boolean.parseBoolean((String) dbResponse));
+        assertTrue((boolean)database.sendRequest("DeleteCar", testData));
     }
 
     private byte[] serializeTestData() throws IOException {
+        List<String> testData = new ArrayList<>();
+        testData.add("CarId");
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         ObjectOutputStream oos = new ObjectOutputStream(bos);
+        oos.writeObject(testData);
         return bos.toByteArray();
     }
 }
