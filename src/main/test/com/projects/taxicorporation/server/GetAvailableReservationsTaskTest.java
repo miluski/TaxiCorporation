@@ -5,12 +5,11 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import java.io.*;
 import java.net.Socket;
-import java.util.Arrays;
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
-public class LoginTaskTest {
+public class GetAvailableReservationsTaskTest {
 
     @Test
     public void testRun() throws IOException {
@@ -21,18 +20,28 @@ public class LoginTaskTest {
 
         logoutTask.run();
     }
-
     @Test
     public void testSendRequest() {
-        List<String> testData = Arrays.asList("jan_kowal", "pass#123");
+        List<String> testData = List.of("");
 
         Database database = new Database();
 
-        List<String>  dbResponse = (List<String>) database.sendRequest("Login", testData);
+        List<String> dbResponse = (List<String>) database.sendRequest("GetAvailableReservations", testData);
 
-        assertEquals("jan_kowal", dbResponse.get(0));
-        assertEquals("jan_kowal@gmail.com", dbResponse.get(1));
-        assertEquals("pass#123", dbResponse.get(2));
+        assertEquals("1", dbResponse.get(0));
+        assertEquals("Swietokrzyska", dbResponse.get(1));
+        assertEquals("Pietroszewska", dbResponse.get(2));
+        assertEquals("21.01.2024", dbResponse.get(3));
+
+        assertEquals("2", dbResponse.get(4));
+        assertEquals("Warszawska", dbResponse.get(5));
+        assertEquals("Kochanowska", dbResponse.get(6));
+        assertEquals("15.01.2024", dbResponse.get(7));
+
+        assertEquals("3", dbResponse.get(8));
+        assertEquals("Rynkowa", dbResponse.get(9));
+        assertEquals("Kowalska", dbResponse.get(10));
+        assertEquals("25.01.2024", dbResponse.get(11));
     }
 
     private byte[] serializeTestData() throws IOException {

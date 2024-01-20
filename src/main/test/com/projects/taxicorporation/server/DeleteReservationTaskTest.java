@@ -7,10 +7,10 @@ import java.io.*;
 import java.net.Socket;
 import java.util.Arrays;
 import java.util.List;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
 
-public class LoginTaskTest {
+public class DeleteReservationTaskTest {
 
     @Test
     public void testRun() throws IOException {
@@ -24,15 +24,13 @@ public class LoginTaskTest {
 
     @Test
     public void testSendRequest() {
-        List<String> testData = Arrays.asList("jan_kowal", "pass#123");
+        List<String> testData = Arrays.asList("35");
 
         Database database = new Database();
 
-        List<String>  dbResponse = (List<String>) database.sendRequest("Login", testData);
+        Object dbResponse = database.sendRequest("DeleteReservation", testData);
 
-        assertEquals("jan_kowal", dbResponse.get(0));
-        assertEquals("jan_kowal@gmail.com", dbResponse.get(1));
-        assertEquals("pass#123", dbResponse.get(2));
+        assertTrue((boolean) dbResponse);
     }
 
     private byte[] serializeTestData() throws IOException {
