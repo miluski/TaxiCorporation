@@ -7,7 +7,7 @@ import java.util.List;
 
 public class AddCourseTask extends Task implements Runnable {
     private final Socket clientSocket;
-    private List<String> data;
+    List<String> data;
     public AddCourseTask(Socket clientSocket) {
         this.clientSocket = clientSocket;
     }
