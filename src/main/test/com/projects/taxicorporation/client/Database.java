@@ -8,7 +8,7 @@ public class Database extends AbstractDataBase {
 
     @Override
     public Object sendRequest(String command, List<String> data) {
-        if (command.startsWith("Add")) {
+        if (command.startsWith("Add") || command.startsWith("Assign") || command.startsWith("Delete") ) {
             return true;
         }
         return data;
