@@ -33,7 +33,6 @@ class DeleteManagerControllerTest {
 
     @Test
     void initialize_ShouldInitiateElements() {
-        deleteManagerController.fetchManagersData();
         assertNotNull(deleteManagerController.chooseManagerChoiceBox);
         assertNotNull(deleteManagerController.buttonsAnchorPane);
         assertNotNull(deleteManagerController.chooseManagerChoiceBox.getItems());

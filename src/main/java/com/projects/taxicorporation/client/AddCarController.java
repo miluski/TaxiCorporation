@@ -22,7 +22,7 @@ public class AddCarController implements Controller {
     @FXML
     TextField yearOfProductionField;
     @FXML
-    private ChoiceBox<String> departmentChoiceBox;
+    ChoiceBox<String> departmentChoiceBox;
     @FXML
     private AnchorPane buttonsAnchorPane;
     private List<String> numberOfDepartmentIds;

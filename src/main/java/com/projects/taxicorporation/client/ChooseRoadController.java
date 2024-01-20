@@ -40,7 +40,9 @@ public class ChooseRoadController implements Controller {
 
     public void onChooseCourseClicked() throws Exception {
         if(!Objects.equals(startPoint, "") && !Objects.equals(destinationPoint, "")) {
+            System.out.println("before");
             communicateWithServer("DeleteReservation");
+            System.out.println("after");
             FormFactory formFactory = new ShowDriverMapFactory(startPoint, destinationPoint, true);
             Form form = formFactory.createForm();
             form.start();

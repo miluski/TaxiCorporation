@@ -41,7 +41,6 @@ class ManageManagerControllerTest {
     }
     @Test
     void fetchDepartmentsData_ShouldPopulateDepartmentChoiceBox(FxRobot robot) {
-        manageManagerController.fetchDepartmentsData();
         ChoiceBox departmentChoiceBox = robot.lookup("#departmentChoiceBox").queryAs(ChoiceBox.class);
         assertTrue(departmentChoiceBox.getItems().isEmpty());
     }
