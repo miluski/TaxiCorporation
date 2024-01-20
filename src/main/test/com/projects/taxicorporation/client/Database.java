@@ -12,6 +12,9 @@ public class Database extends AbstractDataBase {
         if (command.startsWith("Add")) {
             return true;
         }
+        if (command.startsWith("Delete")) {
+            return true;
+        }
         if (command.startsWith("Rename")) {
             return data.get(1);
         }
@@ -26,6 +29,12 @@ public class Database extends AbstractDataBase {
         }
         if (command.startsWith("GetDepartments")) {
             return Arrays.asList("1", "Politechnika Swietokrzyska", "2", "Korona", "3", "Echo");
+        }
+        if (command.startsWith("GetCars")) {
+            return Arrays.asList("1", "Opel", "2", "Ford", "3", "Toyota");
+        }
+        if (command.startsWith("GetAvailableReservations")) {
+            return Arrays.asList("1","Swietokrzyska", "Pietroszewska", "21.01.2024", "2","Warszawska", "Kochanowska", "15.01.2024", "3","Rynkowa", "Kowalska", "25.01.2024");
         }
         return data;
     }

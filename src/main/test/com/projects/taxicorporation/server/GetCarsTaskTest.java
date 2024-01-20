@@ -5,12 +5,11 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import java.io.*;
 import java.net.Socket;
-import java.util.Arrays;
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
-public class LoginTaskTest {
+public class GetCarsTaskTest {
 
     @Test
     public void testRun() throws IOException {
@@ -24,15 +23,20 @@ public class LoginTaskTest {
 
     @Test
     public void testSendRequest() {
-        List<String> testData = Arrays.asList("jan_kowal", "pass#123");
+        List<String> testData = List.of("");
 
         Database database = new Database();
 
-        List<String>  dbResponse = (List<String>) database.sendRequest("Login", testData);
+        List<String> dbResponse = (List<String>) database.sendRequest("GetCars", testData);
 
-        assertEquals("jan_kowal", dbResponse.get(0));
-        assertEquals("jan_kowal@gmail.com", dbResponse.get(1));
-        assertEquals("pass#123", dbResponse.get(2));
+        assertEquals("1", dbResponse.get(0));
+        assertEquals("Opel", dbResponse.get(1));
+
+        assertEquals("2", dbResponse.get(2));
+        assertEquals("Ford", dbResponse.get(3));
+
+        assertEquals("3", dbResponse.get(4));
+        assertEquals("Toyota", dbResponse.get(5));
     }
 
     private byte[] serializeTestData() throws IOException {

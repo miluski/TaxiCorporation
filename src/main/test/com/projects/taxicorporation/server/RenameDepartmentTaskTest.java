@@ -42,10 +42,8 @@ public class RenameDepartmentTaskTest {
     }
 
     private byte[] serializeTestData() throws IOException {
-        List<String> testData = Arrays.asList("DepartmentName", "NewDepartmentName");
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         ObjectOutputStream oos = new ObjectOutputStream(bos);
-        oos.writeObject(testData);
         return bos.toByteArray();
     }
 }
