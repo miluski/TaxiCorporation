@@ -42,13 +42,11 @@ class ManageDriversControllerTest {
 
     @Test
     void fetchDepartmentsData_ShouldPopulateDepartmentChoiceBox(FxRobot robot) {
-        manageDriversController.fetchDepartmentsData();
         robot.lookup("#departmentChoiceBox").queryAs(ChoiceBox.class);
     }
 
     @Test
     void fetchDriversData_ShouldPopulateDriverChoiceBox(FxRobot robot) {
-        manageDriversController.fetchDriversData();
         robot.lookup("#driverChoiceBox").queryAs(ChoiceBox.class);
     }
 

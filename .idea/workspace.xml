@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78034f17-a5d5-4488-8baa-a74267490aae" name="Changes" comment="Decorator project pattern unit tests implementation">
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/BlackButtonPrototypeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/GrayButtonPrototypeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/LightRedButtonPrototypeTest.java" afterDir="false" />
+    <list default="true" id="78034f17-a5d5-4488-8baa-a74267490aae" name="Changes" comment="add to tests on FE">
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/AlertDialogTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ClientBuilderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/DriverBuilderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ManagerBuilderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/MechanicBuilderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/UserBuilderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/UserFacadeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/AlertDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/AlertDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/client/ChooseRoadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/taxicorporation/server/DataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/DeleteCarControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/DeleteCarControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ManageDriversControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client/ManageDriversControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +62,14 @@
     "JUnit.ClientPanelControllerTest.executor": "Run",
     "JUnit.client in TaxiCorporation.executor": "Run",
     "JUnit.test in TaxiCorporation.executor": "Run",
-    "git-widget-placeholder": "feature/unit-tests"
+    "git-widget-placeholder": "feature/unit-tests",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -70,7 +86,7 @@
       <recent name="com.projects.taxicorporation.client" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.com.projects.taxicorporation.client in TaxiCorporation">
+  <component name="RunManager" selected="JUnit.ManageManagerControllerTest">
     <configuration name="Client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.StartForm" />
       <module name="TaxiCorporation" />
@@ -85,7 +101,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GrayButtonPrototypeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DeleteCarControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TaxiCorporation" />
       <extension name="coverage">
         <pattern>
@@ -94,13 +110,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.projects.taxicorporation.client" />
-      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.GrayButtonPrototypeTest" />
+      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.DeleteCarControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LightRedButtonPrototypeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DeleteManagerControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TaxiCorporation" />
       <extension name="coverage">
         <pattern>
@@ -109,13 +125,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.projects.taxicorporation.client" />
-      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.LightRedButtonPrototypeTest" />
+      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.DeleteManagerControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RedButtonPrototypeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManageDriversControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TaxiCorporation" />
       <extension name="coverage">
         <pattern>
@@ -124,13 +140,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.projects.taxicorporation.client" />
-      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.RedButtonPrototypeTest" />
+      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.ManageDriversControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WhiteButtonPrototypeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManageManagerControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TaxiCorporation" />
       <extension name="coverage">
         <pattern>
@@ -139,22 +155,16 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.projects.taxicorporation.client" />
-      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.WhiteButtonPrototypeTest" />
+      <option name="MAIN_CLASS_NAME" value="com.projects.taxicorporation.client.ManageManagerControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.projects.taxicorporation.client in TaxiCorporation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="client in TaxiCorporation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TaxiCorporation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.projects.taxicorporation.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.projects.taxicorporation.client" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/main/test/com/projects/taxicorporation/client" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -162,19 +172,19 @@
     <list>
       <item itemvalue="Application.Client" />
       <item itemvalue="Application.Server" />
-      <item itemvalue="JUnit.GrayButtonPrototypeTest" />
-      <item itemvalue="JUnit.LightRedButtonPrototypeTest" />
-      <item itemvalue="JUnit.RedButtonPrototypeTest" />
-      <item itemvalue="JUnit.WhiteButtonPrototypeTest" />
-      <item itemvalue="JUnit.com.projects.taxicorporation.client in TaxiCorporation" />
+      <item itemvalue="JUnit.DeleteCarControllerTest" />
+      <item itemvalue="JUnit.DeleteManagerControllerTest" />
+      <item itemvalue="JUnit.ManageDriversControllerTest" />
+      <item itemvalue="JUnit.ManageManagerControllerTest" />
+      <item itemvalue="JUnit.client in TaxiCorporation" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.com.projects.taxicorporation.client in TaxiCorporation" />
-        <item itemvalue="JUnit.WhiteButtonPrototypeTest" />
-        <item itemvalue="JUnit.RedButtonPrototypeTest" />
-        <item itemvalue="JUnit.LightRedButtonPrototypeTest" />
-        <item itemvalue="JUnit.GrayButtonPrototypeTest" />
+        <item itemvalue="JUnit.ManageManagerControllerTest" />
+        <item itemvalue="JUnit.DeleteManagerControllerTest" />
+        <item itemvalue="JUnit.ManageDriversControllerTest" />
+        <item itemvalue="JUnit.client in TaxiCorporation" />
+        <item itemvalue="JUnit.DeleteCarControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -393,7 +403,8 @@
     <MESSAGE value="Fixed bugs with not passing unit tests" />
     <MESSAGE value="Improvement registering driver account system" />
     <MESSAGE value="Decorator project pattern unit tests implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Decorator project pattern unit tests implementation" />
+    <MESSAGE value="add to tests on FE" />
+    <option name="LAST_COMMIT_MESSAGE" value="add to tests on FE" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TaxiCorporation$AddCarControllerTest.ic" NAME="AddCarControllerTest Coverage Results" MODIFIED="1705241418905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

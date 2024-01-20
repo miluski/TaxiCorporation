@@ -7,7 +7,7 @@ import javafx.scene.control.Alert;
  */
 public class AlertDialog {
     private static final AlertDialog alertDialog = new AlertDialog();
-    private final Alert alert;
+    protected final Alert alert;
     private AlertDialog() {
         this.alert = new Alert(Alert.AlertType.NONE);
     }
