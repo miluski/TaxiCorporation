@@ -10,36 +10,32 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
-public class DeleteDepartmentTaskTest {
+public class DeleteDriverTaskTest {
 
     @Test
     public void testRun() throws IOException {
         Socket mockSocket = Mockito.mock(Socket.class);
         InputStream mockInputStream = new ByteArrayInputStream(serializeTestData());
         when(mockSocket.getInputStream()).thenReturn(mockInputStream);
-        DeleteDepartmentTask deleteDepartmentTask = new DeleteDepartmentTask(mockSocket);
+        DeleteDriverTask deleteDriverTask = new DeleteDriverTask(mockSocket);
 
-        deleteDepartmentTask.run();
+        deleteDriverTask.run();
     }
 
     @Test
     public void testSendRequest() {
-        List<String> testData = Arrays.asList("Politechnika Swietokrzyska", "Korona", "Echo");
+        List<String> testData = Arrays.asList("1","2");
 
         Database database = new Database();
 
-        List<String>  dbResponse = (List<String>) database.sendRequest("GetDepartments", testData);
+        List<String>  dbResponse = (List<String>) database.sendRequest("DriverDelete", testData);
 
         assertEquals("1", dbResponse.get(0));
-        assertEquals("Politechnika Swietokrzyska", dbResponse.get(1));
-        assertEquals("2", dbResponse.get(2));
-        assertEquals("Korona", dbResponse.get(3));
-        assertEquals("3", dbResponse.get(4));
-        assertEquals("Echo", dbResponse.get(5));
+        assertEquals("2", dbResponse.get(1));
     }
 
     private byte[] serializeTestData() throws IOException {
-        List<String> testData = Arrays.asList("DepartmentName", "NewDepartmentName");
+        List<String> testData = Arrays.asList("DriverId");
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         ObjectOutputStream oos = new ObjectOutputStream(bos);
         oos.writeObject(testData);

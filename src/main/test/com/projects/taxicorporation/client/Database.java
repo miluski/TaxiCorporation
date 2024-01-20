@@ -27,6 +27,9 @@ public class Database extends AbstractDataBase {
         if (command.startsWith("GetDepartments")) {
             return Arrays.asList("1", "Politechnika Swietokrzyska", "2", "Korona", "3", "Echo");
         }
+        if (command.startsWith("DriverDelete")) {
+            return Arrays.asList("1", "2");
+        }
         return data;
     }
 
