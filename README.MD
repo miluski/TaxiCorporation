@@ -31,11 +31,11 @@ You need to run client and server sides separately.
 ## Screenshots
 
 ![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20234347.png)
-![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20234036.png)
-![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20234126.png)
-![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20234200.png)
-![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20234322.png)
-![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20234329.png)
+![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20235036.png)
+![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20235126.png)
+![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20235200.png)
+![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20235322.png)
+![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20235329.png)
 ![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20234334.png)
 ![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20234354.png)
 ![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20234404.png)
