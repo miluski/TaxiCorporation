@@ -30,18 +30,22 @@ You need to run client and server sides separately.
 
 ## Screenshots
 
-![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/main/img/)
-![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/main/img/)
-![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/main/img/)
-![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/main/img/)
-![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/main/img/)
-![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/main/img/)
-![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/main/img/)
-![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/main/img/)
-![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/main/img/)
-![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/main/img/)
-![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/main/img/)
-
+![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20234347.png)
+![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20234036.png)
+![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20234126.png)
+![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20234200.png)
+![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20234322.png)
+![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20234329.png)
+![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20234334.png)
+![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20234354.png)
+![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20234404.png)
+![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20234415.png)
+![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20234618.png)
+![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20234632.png)
+![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20234652.png)
+![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20234719.png)
+![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20234726.png)
+![App Screenshot](https://github.com/miluski/TaxiCorporation/blob/master/img/Zrzut%20ekranu%202024-08-16%20234750.png)
 
 ## Authors
 
